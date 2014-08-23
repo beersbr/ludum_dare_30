@@ -1,6 +1,6 @@
 # Ludum Dare 30
 
-#### Theme: <theme>
+#### Theme: Connected Worlds
 
 ### Citations
 Font press-start-2p: http://www.fontspace.com/codeman38/press-start-2p
