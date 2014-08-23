@@ -193,12 +193,10 @@ function GameLevel(){
 		
 					self.context.drawImage(Game.assets[mapJson[r][c]['image']],
 						0, 0, 40, 40,
-						w*tileSize+40, h*tileSize+80, tileSize, tileSize);
+						w*tileSize, h*tileSize+40, tileSize, tileSize);
 						
 				}
 			}
-
-
 		}});
 				
 	}
