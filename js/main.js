@@ -317,6 +317,25 @@ var Game = (function(){
 				gameObjects.splice(i, 1);
 		}
 
+		// the heavy collision detection step :(
+		for(var i in GameObject.collisionList){
+			var o = GameObject.collisionList[i];
+			if(o.dead){
+				GameObject.collisionList.splice(i, 1);
+				i -= 1;
+				continue;
+			}
+
+			for(var j in GameObject.collisionList){
+				var p = GameObject.collisionList[j];
+
+				// lol: get rect!
+				if(rectCollide(o.getRect(), p.getRect())){
+					o.onCollide(p);
+				}
+			}
+
+		}
 	}
 
 	game.render = function(){

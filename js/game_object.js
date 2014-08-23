@@ -29,13 +29,14 @@ function GameObject(args) {
 
 	this.update = function(){};
 	this.render = function(){};
+	this.onCollide = function(go){};
 }
 
 GameObject.prototype._collidable = false;
 GameObject.prototype._renderable = false;
 
-GameObject.prototype.collisionList = [];
-GameObject.prototype.renderList = [];
+GameObject.collisionList = [];
+GameObject.renderList = [];
 
 
 GameObject.prototype._canvas = undefined;
@@ -55,6 +56,7 @@ Object.defineProperty(GameObject.prototype, "collidable", {
 	set: function(v){
 		if(v === true){
 			this._collidable = true;
+			GameObject.collisionList.push(this);
 		}else{
 			this._collidable = false;
 		}

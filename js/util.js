@@ -56,6 +56,16 @@ function Promise(){
 	}
 }
 
+
+
+/**
+ Line aggregate Object
+*/
+function Line(p1, p2){
+	this.p1 = new Vector(p1.x, p1.y);
+	this.p2 = new Vector(p2.x, p2.y);
+}
+
 /**
  Rectangle aggregate Object
 */
@@ -73,8 +83,11 @@ Object.defineProperty(Rect.prototype, "center", {
 	}
 });
 
-// actually rect point
-function rectLineCollide(r, v){
+function rectLineCollide(r, l){
+	
+}
+
+function rectPointCollide(r, v){
 	if(r.x > v.x) return false;
 	if(r.x + r.w < v.x) return false;
 	if(r.y > v.y) return false;
