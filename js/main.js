@@ -77,8 +77,26 @@ function Player(args){
 	this.trinkets = [];
 	this.items = [];
 
+	this.drag = 0.92;
 
 	this.update = function(elapsedTime){
+		var speed = this.moveSpeed * elapsedTime;
+
+		if(KEYBOARD.isKeyDown('a')){
+			this.vel.x -= speed;
+		}
+		if(KEYBOARD.isKeyDown('d')){
+			this.vel.x += speed;
+		}
+		if(KEYBOARD.isKeyDown('w')){
+			this.vel.y -= speed;
+		}
+		if(KEYBOARD.isKeyDown('s')){
+			this.vel.y += speed;
+		}
+
+		this.vel = this.vel.scale(this.drag);
+		this.pos = this.pos.add(this.vel);
 
 	}
 
@@ -161,7 +179,7 @@ var Game = (function(){
 	}
 
 	game.update = function(t){
-		elapsedTime = (t/1000);
+		var elapsedTime = (t/1000);
 
 		for(var i in gameObjects){
 			gameObjects[i].update(elapsedTime);
@@ -180,7 +198,7 @@ var Game = (function(){
 		currentFrameTime = Time.timestamp;
 		var elapsedFrameTime = currentFrameTime - lastFrameTime;
 
-		game.update();
+		game.update(elapsedFrameTime);
 		game.render();
 
 		requestAnimFrame(game.run);

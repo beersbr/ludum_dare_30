@@ -86,3 +86,24 @@ Object.defineProperty(Vector.prototype, "h", {
 	}
 });
 
+Vector.prototype.add = function(vec){
+	return (new Vector(this.x + vec.x, this.y + vec.y));
+}
+
+Vector.prototype.sub = function(vec){
+	return (new Vector(this.x - vec.x, this.y - vec.y));
+}
+
+Vector.prototype.mul = function(vec){
+	return (new Vector(this.x * vec.x, this.y * vec.y));
+}
+
+Vector.prototype.div = function(vec){
+	return (new Vector(this.x / vec.x, this.y / vec.y));
+}
+
+Vector.prototype.scale = function(s){
+	return (new Vector(this.x * s, this.y * s));
+}
+
+
