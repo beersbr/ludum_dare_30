@@ -189,7 +189,7 @@ var Game = (function(){
 			readonly: true
 		});
 
-		game.assetHandler.prepare("wood-tile", "img/tile-wood-1-pixel.png", "image");
+		game.assetHandler.prepare("wood-tile", "img/tile-wood-1.png", "image");
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
 			game.load();
