@@ -142,9 +142,13 @@ function GameLevel(){
 
 
 	this.generateLevelImage = function(){
+		var tile = "";
 		for(var w = 0; w < horizCount; w++){
 			for(var h = 0; h < vertCount; h++){
-				this.context.drawImage(Game.assets["tile-sand"],
+				if(w < horizCount / 2) tile = "tile-sand";
+				else if(w == horizCount / 2) tile = "tile-sand-grass-1";
+				else tile = "tile-grass";
+				this.context.drawImage(Game.assets[tile],
 					0, 0, 40, 40,
 					w*tileSize, h*tileSize, tileSize, tileSize);
 			}
@@ -208,6 +212,8 @@ var Game = (function(){
 
 		game.assetHandler.prepare("tile-wood", "img/tile-wood-1.png", "image");
 		game.assetHandler.prepare("tile-sand", "img/tile-sand-1.png", "image");
+		game.assetHandler.prepare("tile-grass", "img/tile-grass-1.png", "image");
+		game.assetHandler.prepare("tile-sand-grass-1", "img/tile-merge-grass-sand-1.png", "image");
 		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.load().done(function(h){
