@@ -147,13 +147,15 @@ function GameLevel(){
 	this.generateLevelImage = function(){
 		var self = this;
 		$.ajax({url:"json/map1.json",dataType:"json",success:function(mapJson){
-			for(var w in mapJson) {
-				for(var h in mapJson[w]) {	
-					self.context.drawImage(Game.assets[mapJson[w][h]],
+			for(var h in mapJson) {
+				for(var w in mapJson[h]) {
+					console.log(w,h,mapJson[h][w]);	
+					self.context.drawImage(Game.assets[mapJson[h][w]],
 						0, 0, 40, 40,
 						w*tileSize, h*tileSize, tileSize, tileSize);
 						
 				}
+				console.log("end row");
 			}
 		}});
 	}
@@ -216,7 +218,14 @@ var Game = (function(){
 		game.assetHandler.prepare("tile-wood", "img/tile-wood-1.png", "image");
 		game.assetHandler.prepare("tile-sand", "img/tile-sand-1.png", "image");
 		game.assetHandler.prepare("tile-grass", "img/tile-grass-1.png", "image");
-		game.assetHandler.prepare("tile-sand-grass-1", "img/tile-merge-grass-sand-1.png", "image");
+		game.assetHandler.prepare("tile-sand-grass-1", "img/tile-merge-sand-grass-1.png", "image");
+		game.assetHandler.prepare("tile-sand-grass-2", "img/tile-merge-sand-grass-2.png", "image");
+		game.assetHandler.prepare("tile-grass-sand-1", "img/tile-merge-grass-sand-1.png", "image");
+		game.assetHandler.prepare("tile-grass-sand-2", "img/tile-merge-grass-sand-2.png", "image");
+		game.assetHandler.prepare("tile-sggg", "img/tile-merge-sand-grass-grass-grass.png", "image");
+		game.assetHandler.prepare("tile-gsgg", "img/tile-merge-grass-sand-grass-grass.png", "image");
+		game.assetHandler.prepare("tile-ggsg", "img/tile-merge-grass-grass-sand-grass.png", "image");
+		game.assetHandler.prepare("tile-gggs", "img/tile-merge-grass-grass-grass-sand.png", "image");
 		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.load().done(function(h){
