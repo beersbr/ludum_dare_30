@@ -1,4 +1,7 @@
 
+/******************************
+ *	Bullet
+ ******************************/
 function Bullet(args){
 	if(!args) args = {};
 
@@ -38,6 +41,11 @@ function Bullet(args){
 Bullet.prototype = new GameObject;
 Bullet.constructor = Bullet;
 
+
+
+/******************************
+ *	Player 
+ ******************************/
 function Player(args){
 	if(!args) args = {};
 
@@ -132,6 +140,9 @@ Player.prototype = new GameObject;
 Player.constructor = Player;
 
 
+/******************************
+ *	GAME Level
+ ******************************/
 function GameLevel(){
 
 	var width = 800;
@@ -173,8 +184,6 @@ function GameLevel(){
 		}
 	}
 }
-
-
 
 /******************************
  *	GAME 
@@ -243,26 +252,20 @@ var Game = (function(){
 			readonly: true
 		});
 
-		game.assetHandler.prepare("tile-wood", "img/tile-wood-1.png", "image");
-		game.assetHandler.prepare("tile-sand", "img/tile-sand-1.png", "image");
-		game.assetHandler.prepare("tile-stump", "img/tile-stump.png", "image");
-		game.assetHandler.prepare("tile-tree", "img/tile-tree.png", "image");
-		game.assetHandler.prepare("tile-grass", "img/tile-grass-1.png", "image");
-		game.assetHandler.prepare("tile-sand-grass-1", "img/tile-merge-sand-grass-1.png", "image");
-		game.assetHandler.prepare("tile-sand-grass-2", "img/tile-merge-sand-grass-2.png", "image");
-		game.assetHandler.prepare("tile-grass-sand-1", "img/tile-merge-grass-sand-1.png", "image");
-		game.assetHandler.prepare("tile-grass-sand-2", "img/tile-merge-grass-sand-2.png", "image");
-		game.assetHandler.prepare("tile-sggg", "img/tile-merge-sand-grass-grass-grass.png", "image");
-		game.assetHandler.prepare("tile-gsgg", "img/tile-merge-grass-sand-grass-grass.png", "image");
-		game.assetHandler.prepare("tile-ggsg", "img/tile-merge-grass-grass-sand-grass.png", "image");
-		game.assetHandler.prepare("tile-gggs", "img/tile-merge-grass-grass-grass-sand.png", "image");
+
+		$.ajax({ url: "./json/tiles.json" }).success(function(e){
+			for(var k in e)
+				this.assetHandler.prepare(k, e[k], "image");
+		}.bind(game));
+
 		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
+
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
 			game.load();
-		});
+		});		
 	}
 
 	/**

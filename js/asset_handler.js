@@ -26,6 +26,9 @@ function AssetHandler(){
 
 				break;
 			}
+			default:{
+				console.error("Could not load asset type of:", type);
+			}
 		}
 
 		this.shouldLoad += 1;
