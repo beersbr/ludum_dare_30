@@ -67,7 +67,7 @@ function Player(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 100;
+	this.moveSpeed = 60;
 	this.shootSpeed = 100;
 	this.bulletSpeed = 300;
 	this.bulletDamage = 1;
@@ -77,7 +77,7 @@ function Player(args){
 	this.trinkets = [];
 	this.items = [];
 
-	this.drag = 0.92;
+	this.drag = 0.87;
 
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
@@ -103,7 +103,10 @@ function Player(args){
 	this.render = function(){
 		this.context.save();
 			this.context.fillStyle = "rgb(255, 0, 255)";
+			this.context.strokeStyle = "rgb(100, 0, 100)";
 			this.context.fillRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+			this.context.strokeRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+
 		this.context.restore();
 	}
 }
