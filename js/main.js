@@ -6,6 +6,7 @@ function Bullet(args){
 
 	// this.pos = new Vector(args.x, args.y);
 	this.size = new Vector(20, 20);
+	this.pos = new Vector(this.pos.x - this.size.w/2, this.pos.y - this.size.h/2);
 	// this.vel = new Vector(this.)
 
 	this.image = Game.assets["particle-ball"];
