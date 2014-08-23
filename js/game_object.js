@@ -1,5 +1,9 @@
+
+IDS = 0;
 function GameObject(args) {
 	if(!args) args = {};
+
+	this.id = IDS += 1;
 
 	this.dead = false;
 
@@ -58,6 +62,10 @@ Object.defineProperty(GameObject.prototype, "collidable", {
 			this._collidable = true;
 			GameObject.collisionList.push(this);
 		}else{
+			var idx = GameObject.collisionList.find(this);
+			if(dx >= 0)
+				GameObject.collisionList.splice(idx, 1);
+			
 			this._collidable = false;
 		}
 	}

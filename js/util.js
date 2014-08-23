@@ -9,6 +9,32 @@ requestAnimFrame = (function() {
      };
 })();
 
+// returns index of found object
+Array.prototype.find = function(fn){
+	var r = -1;
+	for(var i in this){
+		if(fn(this[i])){
+			r = i;
+			break;
+		}
+	}
+	return r;
+}
+
+Object.defineProperty(Array.prototype, "find", { enumerable: false });
+
+// returns an array of the indexes of the found objects
+Array.prototype.findIndex = function(fn){
+	var r = [];
+	for(var i in this){
+		if(fn(this[i]))
+			r.push(i);
+	}
+	return r;
+}
+
+Object.defineProperty(Array.prototype, "findIndex", { enumerable: false });
+
 /**
 returns random integer between l and h
 */

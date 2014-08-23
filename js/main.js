@@ -36,6 +36,15 @@ function Bullet(args){
 		this.context.restore();
 	}
 
+	this.onCollide = function(go){
+		if(go instanceof Bullet)
+			return;
+
+		this.collidable = false;
+		this.die();
+	}
+
+	this.collidable = true;
 }
 
 Bullet.prototype = new GameObject;
@@ -149,7 +158,6 @@ function Tile(args){
 	GameObject.call(this, args);
 
 	this.update = function(t){
-
 	};
 }
 
@@ -187,6 +195,8 @@ function GameLevel(){
 						
 				}
 			}
+
+
 		}});
 		
 		// Hard coded border
