@@ -25,7 +25,7 @@ function Animator(args){
 		this.currentFrame = (this.currentFrame + 1) % this.totalFrames;
 	}
 
-	this.draw = function(){
+	this.render = function(){
 
 	}
 
@@ -34,10 +34,25 @@ function Animator(args){
 function GameObject(args) {
 	if(!args) args = {};
 
-	this.x = args.x || 0;
-	this.y = args.y || 0;
-	this.vx = args.vx || 0;
-	this.vy = args.vy || 0;
+	this.pos = new Vector(
+		(args.x || 0), 
+		(args.y || 0)
+	);
+
+	// velocity
+	this.vel = new Vector(
+		(args.vx || 0), 
+		(args.vy || 0)
+	);
+
+	this.size = new Vector(
+		(args.w || 0), 
+		(args.h || 0)
+	)
+
+	this.getRect = function(){
+		return new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h)
+	}
 
 	this.update = function(){};
 	this.render = function(){};
@@ -55,6 +70,13 @@ function Player(args){
 
 	this.update = function(){
 
+	}
+
+	this.render = function(){
+		this.context.save();
+			this.context.fillStyle = "rgb(255, 0, 255)";
+			this.context.fillRect(this.x, this.y, this.w, this.h);
+		this.context.restore();
 	}
 }
 
