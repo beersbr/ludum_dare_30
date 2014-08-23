@@ -221,6 +221,7 @@ var Game = (function(){
 		game.assetHandler.prepare("tile-sand-grass-1", "img/tile-merge-grass-sand-1.png", "image");
 		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
+		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
 			game.load();
@@ -271,9 +272,12 @@ var Game = (function(){
 		CONTEXT.drawImage(game.level.image, 0, 0, WIDTH, HEIGHT);
 
 
+
 		for(var i in gameObjects){
 			gameObjects[i].render();
 		}
+
+		CONTEXT.drawImage(game.assets['status-bar'], 0, 0, 800, 40);
 	}
 
 	game.run = function(){
