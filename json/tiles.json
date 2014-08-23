@@ -2,7 +2,7 @@
   "tile-grass": "img/tile-grass-1.png",
   "tile-sand": "img/tile-sand-1.png",
   "tile-stump-grass": "img/tile-stump-grass.png",
-  "tile-stump-dirt": "img/tile-stump-dirt.png",
+  "tile-stump-dirt": "img/tile-stump-sand.png",
   "tile-tree": "img/tile-tree.png",
   "tile-sand-grass-1": "img/tile-merge-sand-grass-1.png",
   "tile-sand-grass-2": "img/tile-merge-sand-grass-2.png",
