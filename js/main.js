@@ -115,8 +115,8 @@ function Player(args){
 		this.canShoot = false;
 
 		Game.pushGameObject(new Bullet({
-			x: this.pos.x,
-			y: this.pos.y,
+			x: this.center.x,
+			y: this.center.y,
 			vx: vdir.x,
 			vy: vdir.y,
 			speed: this.bulletSpeed

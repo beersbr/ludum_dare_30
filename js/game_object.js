@@ -23,10 +23,6 @@ function GameObject(args) {
 		return new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h);
 	}
 
-	this.center = function(){
-		return (new Vector(this.pos.x - (this.size.w/2), this.pos.y - (this.size.h/2)));
-	}
-
 	this.die = function(){
 		this.dead = true;
 	}
@@ -37,3 +33,10 @@ function GameObject(args) {
 
 GameObject.prototype._canvas = undefined;
 GameObject.prototype._context = undefined;
+
+Object.defineProperty(GameObject.prototype, "center", {
+	get: function(){
+		return (new Vector(this.pos.x - (this.size.w/2), this.pos.y - (this.size.h/2)));
+	},
+	readonly: true
+})
