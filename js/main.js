@@ -151,13 +151,11 @@ function GameLevel(){
 		$.ajax({url:"json/testmap.json",dataType:"json",success:function(mapJson){
 			for(var h in mapJson) {
 				for(var w in mapJson[h]) {
-					console.log(w,h,mapJson[h][w]);	
 					self.context.drawImage(Game.assets[mapJson[h][w]],
 						0, 0, 40, 40,
 						w*tileSize+40, h*tileSize+80, tileSize, tileSize);
 						
 				}
-				console.log("end row");
 			}
 		}});
 	}
@@ -234,6 +232,7 @@ var Game = (function(){
 
 		game.assetHandler.prepare("tile-wood", "img/tile-wood-1.png", "image");
 		game.assetHandler.prepare("tile-sand", "img/tile-sand-1.png", "image");
+		game.assetHandler.prepare("tile-stump", "img/tile-stump.png", "image");
 		game.assetHandler.prepare("tile-grass", "img/tile-grass-1.png", "image");
 		game.assetHandler.prepare("tile-sand-grass-1", "img/tile-merge-sand-grass-1.png", "image");
 		game.assetHandler.prepare("tile-sand-grass-2", "img/tile-merge-sand-grass-2.png", "image");
