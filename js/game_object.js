@@ -33,3 +33,10 @@ function GameObject(args) {
 
 GameObject.prototype._canvas = undefined;
 GameObject.prototype._context = undefined;
+
+Object.defineProperty(GameObject.prototype, "center", {
+	get: function(){
+		return (new Vector(this.pos.x + (this.size.w/2), this.pos.y + (this.size.h/2)));
+	},
+	readonly: true
+})
