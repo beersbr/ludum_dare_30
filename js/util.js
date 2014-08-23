@@ -44,7 +44,6 @@ function Promise(){
 	}
 }
 
-
 /**
  Rectangle aggregate Object
 */
@@ -55,6 +54,9 @@ function Rect(x, y, w, h){
 	this.h = h || 1;
 }
 
+/**
+ Vector aggregate Object
+*/
 function Vector(x, y){
 	this.x = x || 0;
 	this.y = y || 0;
@@ -68,18 +70,19 @@ function Vector(x, y){
 
 Object.defineProperty(Vector.prototype, "w", {
 	get: function(){
-		return x;
+		return this.x;
 	},
 	set: function(v){
-		x = v;
+		this.x = v;
 	}
 });
 
 Object.defineProperty(Vector.prototype, "h", {
 	get: function(){
-		return y;
+		return this.y;
 	},
 	set: function(v){
-		y = v;
+		this.y = v;
 	}
 });
+
