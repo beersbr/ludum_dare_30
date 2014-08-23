@@ -185,11 +185,13 @@ function GameLevel(){
 
 	this.generateLevelImage = function(){
 		var self = this;
-		$.ajax({url:"json/testmap.json",dataType:"json",success:function(mapJson){
-			for(var h in mapJson) {
-				for(var w in mapJson[h]) {
-					
-					self.context.drawImage(Game.assets[mapJson[h][w]],
+		$.ajax({url:"json/map-1-1.json",dataType:"json",success:function(mapJson){
+			for(var r in mapJson) {
+				for(var c in mapJson[r]) {
+					w = c.replace("col-","") - 1;
+					h = r.replace("row-","") - 1; 
+		
+					self.context.drawImage(Game.assets[mapJson[r][c]['image']],
 						0, 0, 40, 40,
 						w*tileSize+40, h*tileSize+80, tileSize, tileSize);
 						
@@ -198,18 +200,7 @@ function GameLevel(){
 
 
 		}});
-		
-		// Hard coded border
-		for(var h = 0; h <= 14; h++ ) {
-			for(var w = -1; w <= 19; w++ ) {				
-				if(h == 1 || w == 0 || h == 14 || w == 19) {
-					console.log("go!",w,h);
-					self.context.drawImage(Game.assets['tile-tree'],
-						0, 0, 40, 40,
-						tileSize * w, tileSize * h, tileSize, tileSize);			
-				}
-			}
-		}
+				
 	}
 }
 
