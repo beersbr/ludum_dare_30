@@ -11,7 +11,7 @@ function Bullet(args){
 	this.image = Game.assets["particle-ball"];
 	this.damage = args.damage || 0;
 	this.speed = args.speed || 120;
-	this.liveTime = 3.0;
+	this.liveTime = 2.0;
 	this.startLife = Time.timestamp;
 	this.timeLived = 0.0;
 
@@ -43,7 +43,7 @@ function Player(args){
 	GameObject.call(this, args);
 
 	this.moveSpeed = 65; // pixels per second
-	this.shootSpeed = 1; // per second
+	this.shootSpeed = 3; // per second
 	this.bulletSpeed = 300; // pixels per second
 	this.bulletDamage = 1;
 
@@ -53,6 +53,9 @@ function Player(args){
 	this.items = [];
 
 	this.drag = 0.85;
+
+	this.shootTime = 0;
+	this.canShoot = true;
 
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
@@ -70,47 +73,30 @@ function Player(args){
 			this.vel.y += speed;
 		}
 
+		if(!this.canShoot){
+			if((this.shootTime += elapsedTime) >= (1000/this.shootSpeed/1000)){
+				this.canShoot = true;
+				this.shootTime = 0;
+			}
+		}
+
 		if(KEYBOARD.isKeyDown('up_arrow')){
-			Game.pushGameObject(new Bullet({
-				x: this.pos.x,
-				y: this.pos.y,
-				vx: 0,
-				vy: -1,
-				speed: this.bulletSpeed
-			}));
+			this.shoot(new Vector(0, -1));
 		}
 		if(KEYBOARD.isKeyDown('down_arrow')){
-			Game.pushGameObject(new Bullet({
-				x: this.pos.x,
-				y: this.pos.y,
-				vx: 0,
-				vy: 1,
-				speed: this.bulletSpeed
-			}));
+			this.shoot(new Vector(0, 1));
 		}
 		if(KEYBOARD.isKeyDown('left_arrow')){
-			Game.pushGameObject(new Bullet({
-				x: this.pos.x,
-				y: this.pos.y,
-				vx: -1,
-				vy: 0,
-				speed: this.bulletSpeed
-			}));
+			this.shoot(new Vector(-1, 0));
 		}
 		if(KEYBOARD.isKeyDown('right_arrow')){
-			Game.pushGameObject(new Bullet({
-				x: this.pos.x,
-				y: this.pos.y,
-				vx: 1,
-				vy: 0,
-				speed: this.bulletSpeed
-			}));
+			this.shoot(new Vector(1, 0));
 		}
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
 
-	}
+	};
 
 	this.render = function(){
 		this.context.save();
@@ -120,7 +106,22 @@ function Player(args){
 			this.context.strokeRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
 
 		this.context.restore();
-	}
+	};
+
+	this.shoot = function(vdir){
+		if(!this.canShoot) return;
+
+		this.canShoot = false;
+
+		Game.pushGameObject(new Bullet({
+			x: this.pos.x,
+			y: this.pos.y,
+			vx: vdir.x,
+			vy: vdir.y,
+			speed: this.bulletSpeed
+		}));
+	};
+
 }
 
 Player.prototype = new GameObject;
@@ -246,6 +247,11 @@ var Game = (function(){
 
 		for(var i in gameObjects){
 			gameObjects[i].update(elapsedTime);
+		}
+
+		for(var i in gameObjects){
+			if(gameObjects[i].dead)
+				gameObjects.splice(i, 1);
 		}
 
 	}
