@@ -65,8 +65,7 @@ GameObject.prototype._context = undefined;
 function Player(args){
 	if(!args) args = {};
 
-	this.x = args.x;
-	this.y = args.y;
+	GameObject.call(this, args);
 
 	this.update = function(elapsedTime){
 
