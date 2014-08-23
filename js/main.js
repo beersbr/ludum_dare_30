@@ -323,8 +323,6 @@ var Game = (function(){
 
 		CONTEXT.drawImage(game.level.image, 0, 0, WIDTH, HEIGHT);
 
-
-
 		for(var i = 1; i < gameObjects.length; i++){
 			gameObjects[i].render();
 		}

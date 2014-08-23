@@ -31,6 +31,13 @@ function GameObject(args) {
 	this.render = function(){};
 }
 
+GameObject.prototype._collidable = false;
+GameObject.prototype._renderable = false;
+
+GameObject.prototype.collisionList = [];
+GameObject.prototype.renderList = [];
+
+
 GameObject.prototype._canvas = undefined;
 GameObject.prototype._context = undefined;
 
@@ -39,4 +46,31 @@ Object.defineProperty(GameObject.prototype, "center", {
 		return (new Vector(this.pos.x + (this.size.w/2), this.pos.y + (this.size.h/2)));
 	},
 	readonly: true
-})
+});
+
+Object.defineProperty(GameObject.prototype, "collidable", {
+	get: function(){
+		return _collidable;
+	},
+	set: function(v){
+		if(v === true){
+			this._collidable = true;
+		}else{
+			this._collidable = false;
+		}
+	}
+});
+
+Object.defineProperty(GameObject.prototype, "renderable", {
+	get: function()	{
+		return _renderable;
+	},
+	set: function(v){
+		if(v === true){
+			this._renderable = true;
+
+		}else{
+			this._renderable = false;
+		}
+	}
+});
