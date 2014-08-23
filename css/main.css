@@ -1,5 +1,13 @@
 body { 
-	/*background: #49C url("../img/background.png") repeat;*/
 	background: #133 url("../img/background.png") repeat;
+}
 
+canvas#game {
+	width: 1024px;
+	height: 768px;
+	background: black;
+	position: relative;
+	left: 50%;
+	margin-left: -512px;
+	top: 50px;
 }
