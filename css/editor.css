@@ -17,14 +17,14 @@ img {
 }
 
 #tiles, #states { 
-	-webkit-transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.15s ease-in-out;
 	background-color: #599;
 	opacity: 0.6;
 	padding: 20px;
 }
 
 #tiles:hover, #states:hover {
-	-webkit-transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.15s ease-in-out;
 	opacity: 1.0;
 }
 
