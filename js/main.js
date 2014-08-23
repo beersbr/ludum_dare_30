@@ -154,7 +154,7 @@ function GameLevel(){
 					console.log(w,h,mapJson[h][w]);	
 					self.context.drawImage(Game.assets[mapJson[h][w]],
 						0, 0, 40, 40,
-						w*tileSize, h*tileSize+40, tileSize, tileSize);
+						w*tileSize+40, h*tileSize+80, tileSize, tileSize);
 						
 				}
 				console.log("end row");
