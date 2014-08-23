@@ -1,0 +1,68 @@
+body { 
+	background: #133 url("../img/background.png") repeat;
+}
+
+.content { 
+	position: relative;
+	width: 1000px;
+	left: 50%;
+	margin-left: -500px;
+	min-height: 100px;
+}
+
+img { 
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#tiles { 
+	-webkit-transition: opacity 0.3s ease-in-out;
+	background-color: #599;
+	opacity: 0.6;
+	padding: 20px;
+}
+
+#tiles:hover {
+	-webkit-transition: opacity 0.3s ease-in-out;
+	opacity: 1.0;
+}
+
+#tiles dl { 
+	display: inline-block;
+	width: 200px;
+	position: relative;
+	background: #48f;
+	margin: 10px; 
+	padding: 10px; 
+}
+
+#tiles dl:hover, #tiles dl.selected {
+	background: #26c;
+}
+
+#tiles dl dd{
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+}
+
+
+table { 
+    border-spacing: 0px;
+    /*border-collapse: separate;*/
+    border-width: 0px;
+    border-style: none;
+}
+
+table tr td{
+	-webkit-transition: background-color 0.1s ease-in-out;
+	background: black;
+	width: 40px;
+	height: 40px;
+}
+
+table tr td:hover{
+	background-color: #333;
+	-webkit-transition: background-color 0.1s ease-in-out;
+}

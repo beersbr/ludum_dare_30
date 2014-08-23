@@ -148,13 +148,13 @@ function GameLevel(){
 
 	this.generateLevelImage = function(){
 		var self = this;
-		$.ajax({url:"json/map1.json",dataType:"json",success:function(mapJson){
+		$.ajax({url:"json/testmap.json",dataType:"json",success:function(mapJson){
 			for(var h in mapJson) {
 				for(var w in mapJson[h]) {
 					console.log(w,h,mapJson[h][w]);	
 					self.context.drawImage(Game.assets[mapJson[h][w]],
 						0, 0, 40, 40,
-						w*tileSize, h*tileSize, tileSize, tileSize);
+						w*tileSize, h*tileSize+40, tileSize, tileSize);
 						
 				}
 				console.log("end row");
