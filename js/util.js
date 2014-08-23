@@ -73,7 +73,16 @@ Object.defineProperty(Rect.prototype, "center", {
 	}
 });
 
-function doesCollide(r1, r2){
+// actually rect point
+function rectLineCollide(r, v){
+	if(r.x > v.x) return false;
+	if(r.x + r.w < v.x) return false;
+	if(r.y > v.y) return false;
+	if(r.y+r.h < v.y) return false;
+	return true;
+}
+
+function rectCollide(r1, r2){
 	if(r1.x > r2.x+r2.w) return false;
 	if(r1.x+r1.w < r2.x) return false;
 	if(r1.y > r2.x+r2.h) return false;

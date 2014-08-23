@@ -141,6 +141,22 @@ Player.constructor = Player;
 
 
 /******************************
+ *	Tile
+ ******************************/
+function Tile(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+	this.update = function(t){
+
+	};
+}
+
+Tile.prototype = new GameObject;
+Tile.constructor = Tile;
+
+/******************************
  *	GAME Level
  ******************************/
 function GameLevel(){
@@ -155,6 +171,8 @@ function GameLevel(){
 	this.canvas = $("<canvas width='"+width+"' height='"+height+"' />")[0];
 	this.image = this.canvas;
 	this.context = this.canvas.getContext('2d');
+
+	this.tiles = [];
 
 
 	this.generateLevelImage = function(){
@@ -302,12 +320,6 @@ var Game = (function(){
 	}
 
 	game.render = function(){
-
-		// clear the background
-		// CONTEXT.save();
-		// CONTEXT.fillStyle = "rgb(0, 0, 0)";
-		// CONTEXT.fillRect(0, 0, WIDTH, HEIGHT);
-		// CONTEXT.restore();
 
 		CONTEXT.drawImage(game.level.image, 0, 0, WIDTH, HEIGHT);
 
