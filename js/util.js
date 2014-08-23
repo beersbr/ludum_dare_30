@@ -62,6 +62,22 @@ function Rect(x, y, w, h){
 	this.h = h || 1;
 }
 
+Object.defineProperty(Rect.prototype, "center", {
+	readonly: true,
+	get: function(){
+		return (new Vector(this.x + this.w/2, this.y + this.h/2));
+	}
+});
+
+
+function collides(r1, r2){
+	if(r1.x > r2.x+r2.w) return false;
+	if(r1.x+r1.w < r2.x) return false;
+	if(r1.y > r2.x+r2.h) return false;
+	if(r1.y+r1.h < r2.y) return false;
+	return true;
+}
+
 /**
  Vector aggregate Object
 */
