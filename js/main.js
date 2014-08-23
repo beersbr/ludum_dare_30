@@ -115,10 +115,32 @@ Player.prototype = new GameObject;
 Player.constructor = Player;
 
 
-function GameState(){
-	this.render = function(){};
-	this.update = function(t){};
+function GameLevel(){
+
+	var width = 800;
+	var height = 600;
+	var tileSize = 40;
+
+	var horizCount = width/tileSize;
+	var vertCount = height/tileSize;
+
+	this.canvas = $("<canvas width='"+width+"' height='"+height+"' />")[0];
+	this.image = this.canvas;
+	this.context = this.canvas.getContext('2d');
+
+
+	this.generateLevelImage = function(){
+		for(var w = 0; w < horizCount; w++){
+			for(var h = 0; h < vertCount; h++){
+				this.context.drawImage(Game.assets["wood-tile"],
+					0, 0, 40, 40,
+					w*tileSize, h*tileSize, tileSize, tileSize);
+			}
+		}
+	}
 }
+
+
 
 /******************************
  *	GAME 
@@ -138,6 +160,11 @@ var Game = (function(){
 	var currentFrameTime = 0.0;
 
 	var gameObjects = [];
+
+	game.assetHandler = new AssetHandler();
+	game.assets = {};
+
+	game.level = undefined;
 
 	/**
 	 Initialize resources. Images, sounds so load can init objects
@@ -162,13 +189,20 @@ var Game = (function(){
 			readonly: true
 		});
 
-		game.load();
+		game.assetHandler.prepare("wood-tile", "img/tile-wood-1-pixel.png", "image");
+		game.assetHandler.load().done(function(h){
+			game.assets = h;
+			game.load();
+		});
 	}
 
 	/**
 	 Load the game. Organize the resources so the game can start
 	*/
 	game.load = function(){
+
+		game.level = new GameLevel();
+		game.level.generateLevelImage();
 
 		var player = new Player({
 			x: 100, y: 100,
@@ -193,10 +227,13 @@ var Game = (function(){
 	game.render = function(){
 
 		// clear the background
-		CONTEXT.save();
-		CONTEXT.fillStyle = "rgb(0, 0, 0)";
-		CONTEXT.fillRect(0, 0, WIDTH, HEIGHT);
-		CONTEXT.restore();
+		// CONTEXT.save();
+		// CONTEXT.fillStyle = "rgb(0, 0, 0)";
+		// CONTEXT.fillRect(0, 0, WIDTH, HEIGHT);
+		// CONTEXT.restore();
+
+		CONTEXT.drawImage(game.level.image, 0, 0, WIDTH, HEIGHT);
+
 
 		for(var i in gameObjects){
 			gameObjects[i].render();
