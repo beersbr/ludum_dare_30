@@ -45,7 +45,7 @@ function Player(args){
 
 	this.moveSpeed = 65; // pixels per second
 	this.shootSpeed = 2.5; // per second
-	this.bulletSpeed = 300; // pixels per second
+	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
 
 	this.health = 3;
@@ -82,17 +82,19 @@ function Player(args){
 			}
 		}
 
+		var bulletVel = this.vel.scale(0.06);
+
 		if(KEYBOARD.isKeyDown('up_arrow')){
-			this.shoot(new Vector(0, -1));
+			this.shoot((new Vector(0, -1)).add(bulletVel));
 		}
 		if(KEYBOARD.isKeyDown('down_arrow')){
-			this.shoot(new Vector(0, 1));
+			this.shoot((new Vector(0, 1)).add(bulletVel));
 		}
 		if(KEYBOARD.isKeyDown('left_arrow')){
-			this.shoot(new Vector(-1, 0));
+			this.shoot((new Vector(-1, 0)).add(bulletVel));
 		}
 		if(KEYBOARD.isKeyDown('right_arrow')){
-			this.shoot(new Vector(1, 0));
+			this.shoot((new Vector(1, 0)).add(bulletVel));
 		}
 
 		this.vel = this.vel.scale(this.drag);
@@ -228,6 +230,7 @@ var Game = (function(){
 		game.assetHandler.prepare("tile-gggs", "img/tile-merge-grass-grass-grass-sand.png", "image");
 		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
+		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
 			game.load();
@@ -278,9 +281,12 @@ var Game = (function(){
 		CONTEXT.drawImage(game.level.image, 0, 0, WIDTH, HEIGHT);
 
 
+
 		for(var i in gameObjects){
 			gameObjects[i].render();
 		}
+
+		CONTEXT.drawImage(game.assets['status-bar'], 0, 0, 800, 40);
 	}
 
 	game.run = function(){

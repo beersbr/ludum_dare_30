@@ -16,11 +16,15 @@ Math.randomInt = function(l, h) {
 	return Math.floor(Math.random()*(h-l+1)+l);
 }
 
-Number.prototype.toRadians = function(){
+Math.sign = function(n) {
+	return (n / Math.abs(n));
+}
+
+Number.prototype.toRadians = function() {
 	return (this*(Math.PI/180));
 }
 
-Number.prototype.toDegrees = function(){
+Number.prototype.toDegrees = function() {
 	return ((this/180)*Math.PI);
 }
 
@@ -60,6 +64,33 @@ function Rect(x, y, w, h){
 	this.y = y || 0;
 	this.w = w || 1;
 	this.h = h || 1;
+}
+
+Object.defineProperty(Rect.prototype, "center", {
+	readonly: true,
+	get: function(){
+		return (new Vector(this.x + this.w/2, this.y + this.h/2));
+	}
+});
+
+function doesCollide(r1, r2){
+	if(r1.x > r2.x+r2.w) return false;
+	if(r1.x+r1.w < r2.x) return false;
+	if(r1.y > r2.x+r2.h) return false;
+	if(r1.y+r1.h < r2.y) return false;
+	return true;
+}
+
+// returns a vector that will move r1 out of r2 :: untested
+function uncollide(r1, r2){
+	var c1 = r1.center;
+	var c2 = r2.center;
+	var cd = c1.sub(c2);
+	var vMin = cd.abs().minP();
+	var sign = new Vector(Math.sign(cd.x), Math.sign(cd.y));
+
+	vMin = vMin.mul(sign);
+	return vMin;
 }
 
 /**
@@ -123,3 +154,14 @@ Vector.prototype.normalize = function(){
 	return (new Vector(this.x/length, this.y/length));
 }
 
+Vector.prototype.abs = function(){
+	return new Vector(Math.abs(this.x), Math.abs(this.y));
+}
+
+// returns new vector containing the smallest parameter
+Vector.prototype.smallP = function(){
+	if(this.x < this.y)
+		return new Vector(this.x, 0);
+	else
+	 	return new Vector(0, this.y);
+}
