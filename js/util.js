@@ -151,7 +151,7 @@ Vector.prototype.normalize = function(){
 	if(len <= 0)
 		throw "LENGTH < 1 on vector...";
 
-	return (new Vector(this.x/length, this.y/length));
+	return (new Vector(this.x/len, this.y/len));
 }
 
 Vector.prototype.abs = function(){

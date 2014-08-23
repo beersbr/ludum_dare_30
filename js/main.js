@@ -203,6 +203,8 @@ var Game = (function(){
 
 		GameObject.prototype._canvas = CANVAS;
 		GameObject.prototype._context = CONTEXT;
+		Particle.prototype._canvas = CANVAS;
+		Particle.prototype._context = CONTEXT;
 
 		Object.defineProperty(GameObject.prototype, "canvas", {
 			get: function(){
@@ -211,6 +213,19 @@ var Game = (function(){
 			readonly: true
 		});
 		Object.defineProperty(GameObject.prototype, "context", {
+			get: function(){
+				return this._context;
+			},
+			readonly: true
+		});
+
+		Object.defineProperty(Particle.prototype, "canvas", {
+			get: function(){
+				return this._canvas;
+			},
+			readonly: true
+		});
+		Object.defineProperty(Particle.prototype, "context", {
 			get: function(){
 				return this._context;
 			},
@@ -282,9 +297,11 @@ var Game = (function(){
 
 
 
-		for(var i in gameObjects){
+		for(var i = 1; i < gameObjects.length; i++){
 			gameObjects[i].render();
 		}
+
+		gameObjects[0].render();
 
 		CONTEXT.drawImage(game.assets['status-bar'], 0, 0, 800, 40);
 	}
