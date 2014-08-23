@@ -11,7 +11,7 @@ function Bullet(args){
 	this.image = Game.assets["particle-ball"];
 	this.damage = args.damage || 0;
 	this.speed = args.speed || 120;
-	this.liveTime = 2.0;
+	this.liveTime = 6.0;
 	this.startLife = Time.timestamp;
 	this.timeLived = 0.0;
 
@@ -43,7 +43,7 @@ function Player(args){
 	GameObject.call(this, args);
 
 	this.moveSpeed = 65; // pixels per second
-	this.shootSpeed = 3; // per second
+	this.shootSpeed = 2.5; // per second
 	this.bulletSpeed = 300; // pixels per second
 	this.bulletDamage = 1;
 
@@ -73,6 +73,7 @@ function Player(args){
 			this.vel.y += speed;
 		}
 
+		// handle being able to shoot SUPER EFFING FAST
 		if(!this.canShoot){
 			if((this.shootTime += elapsedTime) >= (1000/this.shootSpeed/1000)){
 				this.canShoot = true;
