@@ -67,6 +67,17 @@ function Player(args){
 
 	GameObject.call(this, args);
 
+	this.moveSpeed = 100;
+	this.shootSpeed = 100;
+	this.bulletSpeed = 300;
+	this.bulletDamage = 1;
+
+	this.health = 3;
+	this.armor = 0;
+	this.trinkets = [];
+	this.items = [];
+
+
 	this.update = function(elapsedTime){
 
 	}
