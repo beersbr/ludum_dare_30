@@ -1,6 +1,8 @@
 function GameObject(args) {
 	if(!args) args = {};
 
+	this.dead = false;
+
 	this.pos = new Vector(
 		(args.x || 0), 
 		(args.y || 0)
@@ -19,6 +21,10 @@ function GameObject(args) {
 
 	this.getRect = function(){
 		return new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+	}
+
+	this.die = function(){
+		this.dead = true;
 	}
 
 	this.update = function(){};

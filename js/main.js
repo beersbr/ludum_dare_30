@@ -1,12 +1,50 @@
 
+function Bullet(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+	// this.pos = new Vector(args.x, args.y);
+	this.size = new Vector(20, 20);
+	// this.vel = new Vector(this.)
+
+	this.image = Game.assets["particle-ball"];
+	this.damage = args.damage || 0;
+	this.speed = args.speed || 120;
+	this.liveTime = 3.0;
+	this.startLife = Time.timestamp;
+	this.timeLived = 0.0;
+
+	this.update = function(t){
+		var power = this.speed*t;
+		var vel = new Vector(this.vel.x * power, this.vel.y * power);
+		this.pos = this.pos.add(vel);
+
+		if((Time.timestamp - this.startLife)/1000 > this.liveTime)
+			this.die();
+	}
+
+	this.render = function(){
+		this.context.save();
+		this.context.drawImage(this.image, 
+			0, 0, this.size.w, this.size.h,
+			this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.context.restore();
+	}
+
+}
+
+Bullet.prototype = new GameObject;
+Bullet.constructor = Bullet;
+
 function Player(args){
 	if(!args) args = {};
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 60;
-	this.shootSpeed = 100;
-	this.bulletSpeed = 300;
+	this.moveSpeed = 65; // pixels per second
+	this.shootSpeed = 1; // per second
+	this.bulletSpeed = 300; // pixels per second
 	this.bulletDamage = 1;
 
 	this.health = 3;
@@ -14,7 +52,7 @@ function Player(args){
 	this.trinkets = [];
 	this.items = [];
 
-	this.drag = 0.87;
+	this.drag = 0.85;
 
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
@@ -30,6 +68,43 @@ function Player(args){
 		}
 		if(KEYBOARD.isKeyDown('s')){
 			this.vel.y += speed;
+		}
+
+		if(KEYBOARD.isKeyDown('up_arrow')){
+			Game.pushGameObject(new Bullet({
+				x: this.pos.x,
+				y: this.pos.y,
+				vx: 0,
+				vy: -1,
+				speed: this.bulletSpeed
+			}));
+		}
+		if(KEYBOARD.isKeyDown('down_arrow')){
+			Game.pushGameObject(new Bullet({
+				x: this.pos.x,
+				y: this.pos.y,
+				vx: 0,
+				vy: 1,
+				speed: this.bulletSpeed
+			}));
+		}
+		if(KEYBOARD.isKeyDown('left_arrow')){
+			Game.pushGameObject(new Bullet({
+				x: this.pos.x,
+				y: this.pos.y,
+				vx: -1,
+				vy: 0,
+				speed: this.bulletSpeed
+			}));
+		}
+		if(KEYBOARD.isKeyDown('right_arrow')){
+			Game.pushGameObject(new Bullet({
+				x: this.pos.x,
+				y: this.pos.y,
+				vx: 1,
+				vy: 0,
+				speed: this.bulletSpeed
+			}));
 		}
 
 		this.vel = this.vel.scale(this.drag);
@@ -69,7 +144,7 @@ function GameLevel(){
 	this.generateLevelImage = function(){
 		for(var w = 0; w < horizCount; w++){
 			for(var h = 0; h < vertCount; h++){
-				this.context.drawImage(Game.assets["wood-tile"],
+				this.context.drawImage(Game.assets["tile-sand"],
 					0, 0, 40, 40,
 					w*tileSize, h*tileSize, tileSize, tileSize);
 			}
@@ -103,6 +178,11 @@ var Game = (function(){
 
 	game.level = undefined;
 
+
+	game.pushGameObject = function(ob){
+		gameObjects.push(ob);
+	}
+
 	/**
 	 Initialize resources. Images, sounds so load can init objects
 	*/
@@ -126,7 +206,10 @@ var Game = (function(){
 			readonly: true
 		});
 
-		game.assetHandler.prepare("wood-tile", "img/tile-wood-1.png", "image");
+		game.assetHandler.prepare("tile-wood", "img/tile-wood-1.png", "image");
+		game.assetHandler.prepare("tile-sand", "img/tile-sand-1.png", "image");
+		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
+		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
 			game.load();

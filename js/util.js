@@ -16,6 +16,14 @@ Math.randomInt = function(l, h) {
 	return Math.floor(Math.random()*(h-l+1)+l);
 }
 
+Number.prototype.toRadians = function(){
+	return (this*(Math.PI/180));
+}
+
+Number.prototype.toDegrees = function(){
+	return ((this/180)*Math.PI);
+}
+
 var Time = {};
 Object.defineProperty(Time, "timestamp", {
 	get: function(){
@@ -106,4 +114,12 @@ Vector.prototype.scale = function(s){
 	return (new Vector(this.x * s, this.y * s));
 }
 
+Vector.prototype.normalize = function(){
+	var len = this.length();
+
+	if(len <= 0)
+		throw "LENGTH < 1 on vector...";
+
+	return (new Vector(this.x/length, this.y/length));
+}
 
