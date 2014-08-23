@@ -142,17 +142,17 @@ function GameLevel(){
 
 
 	this.generateLevelImage = function(){
-		var tile = "";
-		for(var w = 0; w < horizCount; w++){
-			for(var h = 0; h < vertCount; h++){
-				if(w < horizCount / 2) tile = "tile-sand";
-				else if(w == horizCount / 2) tile = "tile-sand-grass-1";
-				else tile = "tile-grass";
-				this.context.drawImage(Game.assets[tile],
-					0, 0, 40, 40,
-					w*tileSize, h*tileSize, tileSize, tileSize);
+		var self = this;
+		$.ajax({url:"json/map1.json",dataType:"json",success:function(mapJson){
+			for(var w in mapJson) {
+				for(var h in mapJson[w]) {	
+					self.context.drawImage(Game.assets[mapJson[w][h]],
+						0, 0, 40, 40,
+						w*tileSize, h*tileSize, tileSize, tileSize);
+						
+				}
 			}
-		}
+		}});
 	}
 }
 
