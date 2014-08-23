@@ -16,19 +16,19 @@ img {
 	height: 100%;
 }
 
-#tiles { 
+#tiles, #states { 
 	-webkit-transition: opacity 0.3s ease-in-out;
 	background-color: #599;
 	opacity: 0.6;
 	padding: 20px;
 }
 
-#tiles:hover {
+#tiles:hover, #states:hover {
 	-webkit-transition: opacity 0.3s ease-in-out;
 	opacity: 1.0;
 }
 
-#tiles dl { 
+#tiles dl, #states dl { 
 	display: inline-block;
 	width: 200px;
 	position: relative;
@@ -37,17 +37,20 @@ img {
 	padding: 10px; 
 }
 
-#tiles dl:hover, #tiles dl.selected {
+#tiles dl:hover, #states dl:hover, #tiles dl.selected , #states dl.selected {
 	background: #26c;
 }
 
-#tiles dl dd{
+#tiles dl dd, #states dl dd{
 	padding: 5px;
 	width: 40px;
 	height: 40px;
 }
 
-
+#states { margin-top:-35px; }
+#states dl { width: 116px; }
+#tile-damage { width:10px; }
+dl.blank { background:inherit !important; }
 table { 
     border-spacing: 0px;
     /*border-collapse: separate;*/
@@ -66,3 +69,4 @@ table tr td:hover{
 	background-color: #333;
 	-webkit-transition: background-color 0.1s ease-in-out;
 }
+
