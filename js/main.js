@@ -143,8 +143,8 @@ var Game = (function(){
 	 Initialize resources. Images, sounds so load can init objects
 	*/
 	game.init = function(){
-		var CANVAS = $("#game")[0];
-		var CONTEXT = CANVAS.getContext("2d");
+		CANVAS = $("#game")[0];
+		CONTEXT = CANVAS.getContext("2d");
 
 		GameObject.prototype._canvas = CANVAS;
 		GameObject.prototype._context = CONTEXT;
@@ -191,6 +191,13 @@ var Game = (function(){
 	}
 
 	game.render = function(){
+
+		// clear the background
+		CONTEXT.save();
+		CONTEXT.fillStyle = "rgb(0, 0, 0)";
+		CONTEXT.fillRect(0, 0, WIDTH, HEIGHT);
+		CONTEXT.restore();
+
 		for(var i in gameObjects){
 			gameObjects[i].render();
 		}
