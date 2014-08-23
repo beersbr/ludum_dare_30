@@ -8,6 +8,8 @@
 * code up the animator object
 * make more sprites
 * make the walls and doors for each level
+* * should each wall and door be apart of the map json?
+* * * or just have a wall and door properties in the json and render accordingly?
 
 ##### Map editor at /editor.html
 
