@@ -216,8 +216,10 @@ function Bear(args){
 		this.context.save();
 		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
 
-		for(var i in this.animations)
-			this.context.putImageData(this.animations[i].pixelData, this.pos.x, this.pos.y);
+		for(var i in this.animations){
+			this.animations[i].render(this.context, this.pos.x, this.pos.y, 40, 40);
+			// this.context.putImageData(this.animations[i].pixelData, this.pos.x, this.pos.y);
+		}
 
 		this.context.restore();
 	};

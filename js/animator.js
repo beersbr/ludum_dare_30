@@ -23,11 +23,12 @@ function Animation(image, callback){
 	this.id = AID++;
 
 	this.image = image;
-	this.canvas = $("<canvas width='"+image.w+"px' height'"+image.h+"px'>")[0];
+	this.canvas = $("<canvas width='"+this.image.width+"px' height'"+this.image.height+"px'>")[0];
 	this.context = this.canvas.getContext('2d');
 	this.context.drawImage(this.image, 0, 0, this.image.width, this.image.height);
 
 	this.pixelData = this.context.getImageData(0, 0, this.image.width, this.image.height);
+	
 
 	this.up = callback;
 
@@ -35,6 +36,7 @@ function Animation(image, callback){
 	this.frames = 0;
 
 	this.update = function(t){
+
 		for(var i = 0; i < this.pixelData.data.length; i+=4){
 			var a = this.up([this.pixelData.data[i], 
 							 this.pixelData.data[i+1], 
@@ -51,6 +53,13 @@ function Animation(image, callback){
 		this.frames++;
 	}
 
+	this.render = function(c, x, y, w, h){
+		var canvas = $("<canvas width='"+this.image.width+"px' height'"+this.image.height+"px'>")[0];
+		var context = canvas.getContext('2d');
+		context.putImageData(this.pixelData, 0, 0);
+
+		c.drawImage(canvas, 0, 0, 40, 40, x, y, w, h);
+	}
 
 
 	this.finished = function(){
