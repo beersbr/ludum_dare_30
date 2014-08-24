@@ -26,10 +26,16 @@ function AssetHandler(){
 
 				break;
 			}
+
+			case "audio": {
+				var audio = new Audio;
+			}
+
 			default:{
 				console.error("Could not load asset type of:", type);
 			}
 		}
+
 
 		this.shouldLoad += 1;
 	}
