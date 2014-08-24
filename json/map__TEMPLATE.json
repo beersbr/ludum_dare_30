@@ -1,0 +1,39 @@
+{
+	
+	"tiles":{											/* Tiles */		
+		"row-1":{										/* Rows, keyed by row number */
+			"col-1":{									/* Columns, keyed by column number */				
+				"image":"tile-fire",		/* Image for tile */
+				"state":"solid",				/* Physical State of tile - [solid] Stops all movement */
+				"door":0,								/* If tile is a door */
+				"damage":10							/* Amount of damage taken when touching tile */
+			},
+			"col-2":{
+				"door":0,
+				"image":"tile-grass",
+				"state":"passable",			/* Physical State of tile - [passable] Objects move freely through */
+				"damage":0
+			}
+		},
+		"row-2":{
+			"col-1":{
+				"door":0,
+				"image":"tile-water",		
+				"state":"liquid",				/* Physical State of tile - [liquid] Increases drag on objects */
+				"damage":0
+			},
+			"col-2":{
+				"door":0,
+				"image":"tile-ice",			
+				"state":"slick",				/* Physical State of tile - [slick] Decreases the drag on objects */
+				"damage":0
+			}
+		}
+	},
+	"items": {
+		
+	},
+	"enemies": {
+		
+	}
+}
