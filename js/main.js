@@ -338,7 +338,7 @@ function GameLevel(level){
 			}
 			
 			// Add enemies
-			for(var e in enemies) {
+			for(var e in mapJson['enemies']) {
 				// Check likelyhood of spawn
 				if(!0) break;
 
