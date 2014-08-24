@@ -19,7 +19,7 @@ img {
 	background-color: #599;
 	opacity: 0.6;
 	padding: 5px;
-	width:350px;
+	width:375px;
 }
 
 #tiles:hover, #states:hover {
@@ -45,7 +45,13 @@ img {
 	width: 40px;
 	height: 40px;
 }
-#states { margin-top:-21px; }
+
+#tiles {
+    margin-top: -21px;
+    max-height: 700px;
+    overflow: auto;
+}
+#states {  }
 #states dl { width: 116px; }
 #tile-damage { width:10px; }
 dl.blank { background:inherit !important; }
