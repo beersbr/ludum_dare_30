@@ -301,6 +301,8 @@ function GameLevel(level){
 	this.generateLevelImage = function(){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json",success:function(mapJson){
+			
+			// Place tiles
 			var mapTiles = mapJson['tiles'];
 			for(var r in mapTiles) {
 				for(var c in mapTiles[r]) {
@@ -329,6 +331,25 @@ function GameLevel(level){
 						w*tileSize, h*tileSize+40, tileSize, tileSize);
 				}
 			}
+			
+			// Add items
+			for(var i in items) {
+				
+			}
+			
+			// Add enemies
+			for(var e in enemies) {
+/*
+				var enemy = new enemies[e]({
+			x: 400, y: 500,
+			w: 40,  h: 40,
+			image: Game.assets["enemy-bear"]
+		});
+
+		Game.gameObjects.push(bear);				
+	*/
+			}
+			
 		}});
 	}
 
