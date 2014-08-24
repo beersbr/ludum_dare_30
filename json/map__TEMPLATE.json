@@ -1,5 +1,7 @@
 {
-	
+	"name": "World 1 Level 1",		/* Name of the level */
+	"description": "stuff here",	/* Description of the level */
+	"dimensions": [10,20],				/* Size of the level */	
 	"tiles":{											/* Tiles */		
 		"row-1":{										/* Rows, keyed by row number */
 			"col-1":{									/* Columns, keyed by column number */				
@@ -8,14 +10,14 @@
 				"door":0,								/* If tile is a door */
 				"damage":10							/* Amount of damage taken when touching tile */
 			},
-			"col-2":{
+			"col-2":{									/* Columns repeat as up to the specified dimension */
 				"door":0,
 				"image":"tile-grass",
 				"state":"passable",			/* Physical State of tile - [passable] Objects move freely through */
 				"damage":0
 			}
 		},
-		"row-2":{
+		"row-2":{										/* Rows repeat as up to the specified dimension */
 			"col-1":{
 				"door":0,
 				"image":"tile-water",		
@@ -28,12 +30,28 @@
 				"state":"slick",				/* Physical State of tile - [slick] Decreases the drag on objects */
 				"damage":0
 			}
+		}														
+	},
+	"items": [										/* Items on the level */
+		{
+			"name":"health",					/* Name of the item */
+			"image":"item-heart",			/* Image for the item */
+			"location":[							/* Location the item could appear */
+					5,										/* Row position of spawn point */
+					8											/* Column position of spawn point */
+			],																	
+			"probability":0.15,				/* Likelyhood of the item spawning */	
 		}
-	},
-	"items": {
-		
-	},
-	"enemies": {
-		
-	}
+	],
+	"enemies": [
+			{
+			"name":"bear",						/* Name of the emeny */
+			"image":"enemy-bear",			/* Image for the enemy */
+			"location":[							/* Location the enemy could appear */
+					10,										/* Row position of spawn point */
+					2											/* Column position of spawn point */
+			],																	
+			"probability":0.86,				/* Likelyhood of the enemy spawning */	
+		}
+	]
 }
