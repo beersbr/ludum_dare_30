@@ -374,7 +374,7 @@ function GameLevel(level){
 	this.load = function(){
 		// TODO: this will all be based on the level json
 		var player = new Player({
-			x: 100, y: 100,
+			x: 400, y: 300,
 			w: 40,  h: 40
 		});
 

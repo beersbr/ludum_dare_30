@@ -48,7 +48,6 @@ function Bullet(args){
 
 		this.collidable = false;
 		this.die();
-
 	}
 
 	this.collidable = true;

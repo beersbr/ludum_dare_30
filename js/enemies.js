@@ -165,6 +165,12 @@ function Crow(args){
 			this.vel = this.vel.add(d);
 			this.health -= 1;
 		}
+
+		if(o instanceof Player){
+			var d = this.pos.sub(Game.player.pos).normalize().scale(5.0);
+			this.vel = this.vel.add(d);
+		}
+
 	}
 
 	this.animationDieUpdate = function(t){
