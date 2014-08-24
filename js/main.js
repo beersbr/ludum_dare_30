@@ -333,7 +333,7 @@ function GameLevel(level){
 			}
 			
 			// Add items
-			for(var i in items) {
+			for(var i in mapJson['items']) {
 				
 			}
 			
