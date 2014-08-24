@@ -342,7 +342,8 @@ function GameLevel(level){
 			var mapEnemies = mapJson.enemies;
 			for(var e in mapEnemies) {
 				// Check likelyhood of spawn
-				if(!1) break;
+				var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
+				if(mapEnemies[e].probability < rnd) break;
 				var enemy = new window[mapEnemies[e].name]({
 					x: 40 * mapEnemies[e].location[0], y: 40 * mapEnemies[e].location[1],
 					w: mapEnemies[e].location[2],  h: mapEnemies[e].location[3],
