@@ -199,7 +199,7 @@ function Bear(args){
 
 	this.animations = [];
 
-	this.update = function(elapsedTime){
+	this._update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
 		this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.4));
@@ -213,19 +213,12 @@ function Bear(args){
 
 		if(this.health == 0)
 			this.die();
+
 	};
 
-	this.render = function(){
-		this.context.save();
+	this._render = function(){
 		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
-
-		for(var i in this.animations){
-			this.animations[i].render(this.context, this.pos.x, this.pos.y, 40, 40);
-			// this.context.putImageData(this.animations[i].pixelData, this.pos.x, this.pos.y);
-		}
-
-		this.context.restore();
-	};
+	}
 
 	this.onCollide = function(o){
 		if(o instanceof Tile){
@@ -235,34 +228,11 @@ function Bear(args){
 
 		if(o instanceof Bullet){
 
-			var self = this;
-			this.health -= 1;
-
-			var anim = new Animation(this.image, function(p, t, c){
-				if(c.frames == 0){
-					p[0] = 255;	
-					// c.dir = this.pos.sub(Game.player.pos).scale(-1).scale(0.1);
-				}
-
-				p[0] -= 25;
-
-				if(c.frames > 8)
-					c.finished();
-
-				return p;
-			}.bind(this));
+			this.addAnimation(new TurnRed(this, 0.3));
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
 			this.vel = this.vel.add(d);
-
-			anim.done(function(){
-				var i = self.animations.find(function(a){
-					return (this.id == a.id)
-				})
-				self.animations.splice(i, 1);
-			});
-
-			this.animations.push(anim);
+			this.health -= 1;
 		}
 	}
 
@@ -278,20 +248,22 @@ function Bear(args){
 
 		this.pos.x += d/2;
 		this.pos.y += d/2;
+
+		for(var i in this.animations){
+			this.animations[i].update(t);
+		}
 	}
 
 	this.animationDieRender = function(){
-		
+		for(var i in this.animations){
+			this.animations[i].render();
+		}
 	}
 
 	this.die = function(){
-		this.timeLeft = 1.5;
-		this.rotate = 90; // /s
 
-		this.update = this.animationDieUpdate;
-		this.draw = this.animationDieRender;
-
-		this.animations = [];
+		this.addAnimation(new Shrink(this, 1.8), true);
+		this.collidable = false;
 	}
 
 }

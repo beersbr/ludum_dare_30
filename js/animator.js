@@ -20,78 +20,84 @@ function Animator(args){
 
 
 AID = 0;
-function Animation(scope, totalTime){
+function Animation(scope, totalTime, construct){
 
 	this.id = AID++;
 
 	this.done = false;
 	this.scope = scope;
+	_done = function(){};
+
+	this.state = {};
+
+	construct.bind(scope)(this.state)
 
 	this.update = function(t){
-		this._update.bind(scope)(t, totalTime);
+		this._update.bind(scope)(t, totalTime, this.state);
+
 		totalTime -= t;
-		if(totalTime <= 0)
+		if(totalTime <= 0){
 			this.done = true;
+			_done(this.id);
+		}
 	}
 
 	this.render = function(){
-		this._render.bind(scope);
-	}
-
-	this.done = function(){
-
-	}
-}
-
-AID = 0;
-function Animation(image, callback){
-	this.id = AID++;
-
-	this.image = image;
-	this.canvas = $("<canvas width='"+this.image.width+"px' height'"+this.image.height+"px'>")[0];
-	this.context = this.canvas.getContext('2d');
-	this.context.drawImage(this.image, 0, 0, this.image.width, this.image.height);
-
-	this.pixelData = this.context.getImageData(0, 0, this.image.width, this.image.height);
-	
-
-	this.up = callback;
-
-	var _done = function(){};
-	this.frames = 0;
-
-	this.update = function(t){
-
-		for(var i = 0; i < this.pixelData.data.length; i+=4){
-			var a = this.up([this.pixelData.data[i], 
-							 this.pixelData.data[i+1], 
-							 this.pixelData.data[i+2], 
-							 this.pixelData.data[i+3]], 
-							 t, this);
-
-			this.pixelData.data[i]   = a[0];
-			this.pixelData.data[i+1] = a[1];
-			this.pixelData.data[i+2] = a[2];
-			this.pixelData.data[i+3] = a[3];
-
-		}
-		this.frames++;
-	}
-
-	this.render = function(c, x, y, w, h){
-		var canvas = $("<canvas width='"+this.image.width+"px' height'"+this.image.height+"px'>")[0];
-		var context = canvas.getContext('2d');
-		context.putImageData(this.pixelData, 0, 0);
-
-		c.drawImage(canvas, 0, 0, 40, 40, x, y, w, h);
-	}
-
-
-	this.finished = function(){
-		_done()
+		this._render.bind(scope)(this.state);
 	}
 
 	this.done = function(cb){
 		_done = cb;
 	}
+}
+
+function TurnRed(scope, totalTime){
+
+	Animation.call(this, scope, totalTime, function(s){
+		s.image = this.image;
+		s.canvas = $("<canvas width='"+s.image.width+"px' height'"+s.image.height+"px'>")[0];
+		s.context = s.canvas.getContext('2d');
+		s.context.drawImage(s.image, 0, 0, s.image.width, s.image.height);
+		s.pixelData = s.context.getImageData(0, 0, s.image.width, s.image.height);
+		s.rate = 255/totalTime;
+		s.total = 255;
+	});
+
+	this._update = function(t, timeLeft, s){
+		s.total -= s.rate*t;
+
+		for(var i = 0; i < s.pixelData.data.length; i+=4){
+			s.pixelData.data[i]   = s.total;
+
+		}
+	}
+
+	this._render = function(s){
+		var canvas = $("<canvas width='"+s.image.width+"px' height'"+s.image.height+"px'>")[0];
+		var context = canvas.getContext('2d');
+		context.putImageData(s.pixelData, 0, 0);
+
+		this.context.drawImage(canvas, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
+	}
+}
+
+function Shrink(scope, totalTime){
+
+	Animation.call(this, scope, totalTime, function(s){
+		s.shrinkRate = (this.size.w/totalTime);
+	});
+
+	this._update = function(t, timeLeft, s){
+		var d = s.shrinkRate * t;
+		this.size.w -= d;
+		this.size.h -= d;
+
+		this.pos.x += d/2;
+		this.pos.y += d/2;
+	}
+
+	this.render = function(t, timeLeft, s){
+
+	}
+
 }

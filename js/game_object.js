@@ -7,6 +7,19 @@ function GameObject(args) {
 	this.image = args.image || null;
 	this.dead = false;
 
+	this.animations = [];
+
+	this.addAnimation = function(anim, last){
+		this.animations.push(anim);
+		anim.done(function(id){
+			var i = this.animations.find(function(){ return id == anim.id });
+			this.animations.splice(i, 1);
+
+			if(last)
+				this.dead = true;
+		}.bind(this));
+	}
+
 	this.pos = new Vector(
 		(args.x || 0), 
 		(args.y || 0)
@@ -31,8 +44,26 @@ function GameObject(args) {
 		this.dead = true;
 	}
 
-	this.update = function(){};
-	this.render = function(){};
+	this._update = function(t){}
+	this._render = function(){}
+
+	this.update = function(t){ 
+		this._update(t);  
+
+		for(var i in this.animations){
+			this.animations[i].update(t);
+		}
+	};
+
+	this.render = function(){
+		this.context.save();
+		this._render();
+
+		for(var i in this.animations){
+			this.animations[i].render();
+		}
+		this.context.restore();
+	};
 	this.onCollide = function(go){};
 }
 
