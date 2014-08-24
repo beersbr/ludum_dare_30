@@ -165,7 +165,7 @@ function SimpleEmitter(x, y, image){
 
 function GenerateParticle(x, y, dir, image){
 
-	dir = Math.randomInt(0, 360);
+	dir = Math.random(Math.max(dir-30, 0), Math.min(dir+30, 360));
 
 	var p = new Particle({
 			x: x,

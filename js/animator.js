@@ -38,10 +38,8 @@ function Animation(scope, totalTime, construct){
 		totalTime -= t;
 		if(totalTime <= 0){
 			this.done = true;
-		}
-
-		if(this.done)
 			_done.bind(this)(this.id);
+		}
 	}
 
 	this.render = function(){
