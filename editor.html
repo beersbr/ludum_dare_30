@@ -1,3 +1,12 @@
+
+<?php 
+$rows = 14;
+$cols = 20;
+
+
+$map = array("tiles" => array(), "items" => array(), "enemies" => array());
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -23,16 +32,11 @@
 	<div class="content">
 		<table id="editor-table">
 <?php 
-$rows = 14;
-$cols = 20;
-
-$map = array();
-
 for($r = 1; $r <= $rows; $r++) {
-	$map["row-".$r] = array();
+	$map['tiles']["row-".$r] = array();
 	echo "<tr class='row' id='row-".$r."'>\n";
 	for($c = 1; $c <= $cols; $c++) {
-		$map["row-".$r]["col-".$c] = array("image" => "", "state" => "", "damage" => 0, "door" => 0);
+		$map['tiles']["row-".$r]["col-".$c] = array("image" => "", "state" => "", "damage" => 0, "door" => 0);
 		
 		echo "<td class='col-".$c."' data-col='col-".$c."' data-row='row-".$r."'></td>\n";
 	}
@@ -66,13 +70,12 @@ function setup(){
 
 	$("td").on("click", function(){
 		$(this).html(images[selected_key].outerHTML);
-		map[$(this).data("row")][$(this).data("col")] = {
+		map['tiles'][$(this).data("row")][$(this).data("col")] = {
 			"image": selected_key,
 			"state": $("#tile-state:checked").val(),
 			"damage": $("#tile-damage").val(),
 			"door": $("#tile-door").is(':checked')
 		};
-		console.log(map[$(this).data("row")][$(this).data("col")]);
 	});
 
 	$("#save").on("click", function(){		
@@ -82,9 +85,9 @@ function setup(){
 	$("#load").on("click", function(){	
 		map = JSON.parse($("#output").val());
 		
-		for(var r in map) {
-			for(var c in map[r]) {
-				$("#"+r+" ."+c).html("<img src='"+tiles[map[r][c]['image']]+"' />");
+		for(var r in map['tiles']) {
+			for(var c in map['tiles'][r]) {
+				$("#"+r+" ."+c).html("<img src='"+tiles[map['tiles'][r][c]['image']]+"' />");
 			}
 		}
 	});

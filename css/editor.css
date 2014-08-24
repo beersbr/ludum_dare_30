@@ -47,8 +47,8 @@ img {
 }
 
 #tiles {
-    margin-top: -21px;
-    max-height: 700px;
+    margin-top: -16px;
+    height: 350px;
     overflow: auto;
 }
 #states {  }
