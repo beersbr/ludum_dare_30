@@ -559,6 +559,21 @@ var Game = (function(){
 				_gameObjects.splice(i, 1);
 		}
 
+		for(var i = 0; i < game.level.enemies.length; i++){
+			var o = game.level.enemies[i];
+			var dir = new Vector();
+
+			for(var j = 0; j < game.level.enemies.length; j++){
+				if (i == j) continue;
+
+				var p = game.level.enemies[j];
+				var diff = o.center.sub(p.center).normalize().scale(0.05);
+				dir = dir.add(diff);
+			}
+
+			o.vel = o.vel.add(dir);
+		}
+
 		// the heavy collision detection step :(
 		for(var i = 0; i < GameObject.collisionList.length; i++){
 			var o = GameObject.collisionList[i];

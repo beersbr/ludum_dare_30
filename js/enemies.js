@@ -161,7 +161,7 @@ function Crow(args){
 		if(o instanceof Bullet){
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
-			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
+			var d = this.pos.sub(Game.player.pos).normalize().scale(11.0);
 			this.vel = this.vel.add(d);
 			this.health -= 1;
 		}
@@ -170,6 +170,11 @@ function Crow(args){
 			var d = this.pos.sub(Game.player.pos).normalize().scale(5.0);
 			this.vel = this.vel.add(d);
 		}
+
+		// if(o instanceof Crow){
+		// 	var d = this.pos.sub(Game.player.pos).normalize().scale(1.0);
+		// 	this.vel = this.vel.add(d);
+		// }
 
 	}
 
