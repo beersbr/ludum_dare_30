@@ -210,6 +210,9 @@ function Bear(args){
 		for(var i in this.animations)
 			this.animations[i].update(elapsedTime);
 
+
+		if(this.health == 0)
+			this.die();
 	};
 
 	this.render = function(){
@@ -224,20 +227,6 @@ function Bear(args){
 		this.context.restore();
 	};
 
-	this.shoot = function(vdir){
-		if(!this.canShoot) return;
-
-		this.canShoot = false;
-
-		Game.pushGameObject(new Bullet({
-			x: this.center.x,
-			y: this.center.y,
-			vx: vdir.x,
-			vy: vdir.y,
-			speed: this.bulletSpeed
-		}));
-	};
-
 	this.onCollide = function(o){
 		if(o instanceof Tile){
 			var v = uncollide(this.getRect(), o.getRect());
@@ -247,6 +236,7 @@ function Bear(args){
 		if(o instanceof Bullet){
 
 			var self = this;
+			this.health -= 1;
 
 			var anim = new Animation(this.image, function(p, t, c){
 				if(c.frames == 0){
@@ -262,7 +252,8 @@ function Bear(args){
 				return p;
 			}.bind(this));
 
-			this.vel = this.vel.add(this.pos.sub(Game.player.pos).normalize().scale(13.0));
+			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
+			this.vel = this.vel.add(d);
 
 			anim.done(function(){
 				var i = self.animations.find(function(a){
@@ -273,6 +264,19 @@ function Bear(args){
 
 			this.animations.push(anim);
 		}
+	}
+
+	this.animationDieUpdate = function(t){
+		this.timeLeft -= t;
+		if(this.timeLeft < 0)
+			this.dead = true;
+
+		this.size.w -= 3;
+	}
+
+	this.die = function(){
+		this.timeLeft = 1.5;
+		this.update = this.animationDie;
 	}
 
 }

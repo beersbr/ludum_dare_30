@@ -163,6 +163,23 @@ function SimpleEmitter(x, y, image){
 	return emitter;
 }
 
+function GenerateParticle(x, y, dir, image){
+
+	dir = Math.random(Math.max(dir-30, 0), Math.min(dir+30, 360));
+
+	var p = new Particle({
+			x: x,
+			y: y,
+			vx: Math.cos(dir.toRadians()),
+			vy: Math.sin(dir.toRadians()),
+			lifeTime: Math.randomInt(0.1, 1),
+			rotateRate: Math.randomInt(0.1, 6),
+			speed: Math.randomInt(50, 150),
+			scale: Math.randomInt(0.5, 1.5),
+			image: image
+	});
+	return p;
+}
 
 
 
