@@ -4,9 +4,7 @@ function GameObject(args) {
 	if(!args) args = {};
 
 	this.id = IDS += 1;
-
 	this.image = args.image || null;
-
 	this.dead = false;
 
 	this.pos = new Vector(
