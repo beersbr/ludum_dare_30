@@ -200,8 +200,11 @@ Vector.prototype.scale = function(s){
 Vector.prototype.normalize = function(){
 	var len = this.length();
 
-	if(len <= 0)
+	if(len < 0)
 		throw "LENGTH < 1 on vector...";
+
+	if(len == 0)
+		return (new Vector());
 
 	return (new Vector(this.x/len, this.y/len));
 }
