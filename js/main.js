@@ -245,22 +245,25 @@ function Bear(args){
 		}
 
 		if(o instanceof Bullet){
+
+			var self = this;
+
 			var anim = new Animation(this.image, function(p, t, c){
-				// p[3] = 100;				
-				// if(p[3] == 0) return p;
+				if(c.frames == 0){
+					p[0] = 255;	
+					// c.dir = this.pos.sub(Game.player.pos).scale(-1).scale(0.1);
+				}
 
-				if(c.frames == 0)
-					p[0] = 255;
+				p[0] -= 25;
 
-				p[0] -= 20;
-
-				if(c.frames > 13)
+				if(c.frames > 8)
 					c.finished();
 
 				return p;
-			});
+			}.bind(this));
 
-			var self = this;
+			this.vel = this.vel.add(this.pos.sub(Game.player.pos).normalize().scale(13.0));
+
 			anim.done(function(){
 				var i = self.animations.find(function(a){
 					return (this.id == a.id)
