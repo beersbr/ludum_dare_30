@@ -134,7 +134,7 @@ function uncollide(r1, r2){
 	var c1 = r1.center;
 	var c2 = r2.center;
 	var cd = c1.sub(c2);
-	var vMin = cd.abs().minP();
+	var vMin = cd.abs().smallP();
 	var sign = new Vector(Math.sign(cd.x), Math.sign(cd.y));
 
 	vMin = vMin.mul(sign);

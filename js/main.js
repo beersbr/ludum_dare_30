@@ -76,6 +76,8 @@ function Player(args){
 	this.shootTime = 0;
 	this.canShoot = true;
 
+	this.collidable = true;
+
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
@@ -143,6 +145,13 @@ function Player(args){
 			speed: this.bulletSpeed
 		}));
 	};
+
+	this.onCollide = function(o){
+		if(o instanceof Tile){
+			var v = uncollide(this.getRect(), o.getRect());
+			this.pos = this.pos.add(v);
+		}
+	}
 
 }
 
