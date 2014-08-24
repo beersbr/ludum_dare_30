@@ -301,8 +301,9 @@ function GameLevel(level){
 	this.generateLevelImage = function(){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json",success:function(mapJson){
-			for(var r in mapJson) {
-				for(var c in mapJson[r]) {
+			var mapTiles = mapJson['tiles'];
+			for(var r in mapTiles) {
+				for(var c in mapTiles[r]) {
 					w = c.replace("col-","") - 1;
 					h = r.replace("row-","") - 1;
 
@@ -314,16 +315,16 @@ function GameLevel(level){
 						y: y,
 						w: 40,
 						h: 40,
-						state: mapJson[r][c].state,
-						isDoor: (mapJson[r][c].door == 1)
+						state: mapTiles[r][c].state,
+						isDoor: (mapTiles[r][c].door == 1)
 					});
 
-					if(mapJson[r][c].door == 1){
+					if(mapTiles[r][c].door == 1){
 						Game.door1 = t;
 					}
 					Game.pushGameObject(t);
 
-					self.context.drawImage(Game.assets[mapJson[r][c]['image']],
+					self.context.drawImage(Game.assets[mapTiles[r][c]['image']],
 						0, 0, 40, 40,
 						w*tileSize, h*tileSize+40, tileSize, tileSize);
 				}
