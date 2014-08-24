@@ -40,6 +40,9 @@ function Bullet(args){
 		if(go instanceof Bullet)
 			return;
 
+		if(go instanceof Player)
+			return;
+
 		this.collidable = false;
 		this.die();
 
@@ -149,7 +152,7 @@ function Player(args){
 	this.onCollide = function(o){
 		if(o instanceof Tile){
 			var v = uncollide(this.getRect(), o.getRect());
-			this.pos = this.pos.add(v);
+			this.vel = this.vel.add(v);
 		}
 	}
 
