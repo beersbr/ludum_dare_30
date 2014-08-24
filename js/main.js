@@ -200,7 +200,7 @@ function Bear(args){
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
-		this.vel = Game.player.pos.sub(this.pos).normalize().scale(4);
+		this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.4));
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
