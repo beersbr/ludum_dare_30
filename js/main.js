@@ -250,9 +250,9 @@ function Bear(args){
 				if(c.frames == 0)
 					p[0] = 255;
 
-				p[0] -= 10;
+				p[0] -= 20;
 
-				if(c.frames > 20)
+				if(c.frames > 13)
 					c.finished();
 
 				return p;
