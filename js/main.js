@@ -1,5 +1,62 @@
 
 /******************************
+ *	Bullet
+ ******************************/
+function Bullet(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+	// this.pos = new Vector(args.x, args.y);
+	this.size = new Vector(20, 20);
+	this.pos = new Vector(this.pos.x - this.size.w/2, this.pos.y - this.size.h/2);
+	// this.vel = new Vector(this.)
+
+	this.image = Game.assets["particle-ball"];
+	this.damage = args.damage || 0;
+	this.speed = args.speed || 120;
+	this.liveTime = 6.0;
+	this.startLife = Time.timestamp;
+	this.timeLived = 0.0;
+
+	this.update = function(t){
+		var power = this.speed*t;
+		var vel = new Vector(this.vel.x * power, this.vel.y * power);
+		this.pos = this.pos.add(vel);
+
+		if((Time.timestamp - this.startLife)/1000 > this.liveTime)
+			this.die();
+	}
+
+	this.render = function(){
+		this.context.save();
+		this.context.drawImage(this.image, 
+			0, 0, this.size.w, this.size.h,
+			this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.context.restore();
+	}
+
+	this.onCollide = function(go){
+		if(go instanceof Bullet)
+			return;
+
+		if(go instanceof Player)
+			return;
+
+		this.collidable = false;
+		this.die();
+
+	}
+
+	this.collidable = true;
+}
+
+Bullet.prototype = new GameObject;
+Bullet.constructor = Bullet;
+
+
+
+/******************************
  *	Player 
  ******************************/
 function Player(args){
@@ -186,67 +243,6 @@ function Door(args){
 Door.prototype = new GameObject;
 Door.constructor = Door;
 
-
-/******************************
- *	Item
- ******************************/
-// function Item(args){
-// 	if(!args) args = {};	
-
-// 	GameObject.call(this, args);
-
-// 	this.image = args.image;
-// 	this.collidable = true;
-
-// 	this.sizeMod = 10;
-// 	this.scale = 0.0;
-// 	this.sizeFactor = 1.0;
-
-// 	this.update = function(t){
-// 		this.scale += t;
-// 		this.sizeFactor = Math.cos(this.scale) * this.sizeMod;
-// 	}
-
-// 	this._render = function(){
-// 		this.context.drawImage(this.image, 0, 0, 40, 40, 
-// 			this.pos.x, this.pos.y, this.sizeFactor + this.size.x, this.sizeFactor + this.size.y);
-// 	}
-
-// 	this.onCollide = function(o){
-// 		if(!(o instanceof Player))
-// 			return;		
-// 	}
-
-// }
-// Item.prototype = new GameObject;
-// Item.constructor = Item;
-
-
-// function ItemHeart(args){
-// 	GameObject.call(this, args);
-// 	Item.call(this, args);
-
-// 	this.image = Game.assets['item-heart'];
-
-// 	this.onCollide = function(o){
-// 		if(!(o instanceof Player))
-// 			return;
-
-// 		o.health += 1;
-
-// 		for(var i = 0; i < Math.randomInt(20); i++){
-// 			var p = GenerateParticle(this.pos.x, this.pos.y, 0, Game.assets['particle-plus']);
-// 			Game.pushGameObject(p)
-// 		}
-
-// 	}
-
-// }
-
-// Item.prototype = new GameObject;
-// Item.constructor = Item;
-
-
 /******************************
  *	GAME Level
  ******************************/
@@ -318,14 +314,6 @@ function GameLevel(level){
 		});
 
 		Game.gameObjects.push(bear);
-
-		// var item = new ItemHeart({
-		// 	x: 400, y: 300,
-		// 	w: 40, h: 40
-		// });
-
-		// Game.gameObjects.push(item);
-
 	}
 
 	this.update = function(t){
@@ -466,7 +454,6 @@ var Game = (function(){
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
 		game.assetHandler.prepare("enemy-bear", "img/enemy-bear.png", "image");
-		game.assetHandler.prepare("item-heart", "img/item-heart.png", "image");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
