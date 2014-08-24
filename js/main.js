@@ -162,6 +162,77 @@ Player.prototype = new GameObject;
 Player.constructor = Player;
 
 
+
+/******************************
+ *	Bear 
+ ******************************/
+function Bear(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+	this.moveSpeed = 66; // pixels per second
+	this.shootSpeed = 0; // per second
+	this.bulletSpeed = 0; // pixels per second
+	this.bulletDamage = 0;
+
+	this.health = 3;
+	this.armor = 0;
+	this.trinkets = [];
+	this.items = [];
+
+	this.drag = 0.85;
+
+	this.shootTime = 0;
+	this.canShoot = false;
+
+	this.collidable = true;
+
+	this.update = function(elapsedTime){
+		var speed = this.moveSpeed * elapsedTime;
+
+		this.vel = this.vel.scale(this.drag);
+		this.pos = this.pos.add(this.vel);
+
+	};
+
+	this.render = function(){
+		this.context.save();
+		this.context.fillStyle = "rgb(255, 0, 255)";
+			this.context.strokeStyle = "rgb(100, 0, 100)";
+			this.context.fillRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+			this.context.strokeRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+
+		this.context.restore();
+	};
+
+	this.shoot = function(vdir){
+		if(!this.canShoot) return;
+
+		this.canShoot = false;
+
+		Game.pushGameObject(new Bullet({
+			x: this.center.x,
+			y: this.center.y,
+			vx: vdir.x,
+			vy: vdir.y,
+			speed: this.bulletSpeed
+		}));
+	};
+
+	this.onCollide = function(o){
+		if(o instanceof Tile){
+			var v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);
+		}
+	}
+
+}
+
+Player.prototype = new GameObject;
+Player.constructor = Player;
+
+
 /******************************
  *	Tile
  ******************************/
