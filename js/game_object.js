@@ -19,8 +19,8 @@ function GameObject(args) {
 	);
 
 	this.size = new Vector(
-		(args.w || 0), 
-		(args.h || 0)
+		(args.w || 40), 
+		(args.h || 40)
 	)
 
 	this.getRect = function(){
@@ -58,12 +58,14 @@ Object.defineProperty(GameObject.prototype, "collidable", {
 		return _collidable;
 	},
 	set: function(v){
+		// console.log("SETTING COLLIDABLE: ", this, v);
+
 		if(v === true){
 			this._collidable = true;
 			GameObject.collisionList.push(this);
 		}else{
-			var idx = GameObject.collisionList.find(this);
-			if(dx >= 0)
+			var idx = GameObject.collisionList.find(function(o){ return o.id == this.id }.bind(this));
+			if(idx >= 0)
 				GameObject.collisionList.splice(idx, 1);
 			
 			this._collidable = false;

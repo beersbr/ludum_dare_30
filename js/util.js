@@ -124,7 +124,7 @@ function rectPointCollide(r, v){
 function rectCollide(r1, r2){
 	if(r1.x > r2.x+r2.w) return false;
 	if(r1.x+r1.w < r2.x) return false;
-	if(r1.y > r2.x+r2.h) return false;
+	if(r1.y > r2.y+r2.h) return false;
 	if(r1.y+r1.h < r2.y) return false;
 	return true;
 }

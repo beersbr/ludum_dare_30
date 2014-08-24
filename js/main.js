@@ -42,6 +42,7 @@ function Bullet(args){
 
 		this.collidable = false;
 		this.die();
+
 	}
 
 	this.collidable = true;
@@ -60,7 +61,7 @@ function Player(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 65; // pixels per second
+	this.moveSpeed = 66; // pixels per second
 	this.shootSpeed = 2.5; // per second
 	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
@@ -158,7 +159,16 @@ function Tile(args){
 	GameObject.call(this, args);
 
 	this.update = function(t){
+
 	};
+
+	this.onCollide = function(go){
+		// console.log(this, "Collided with: ", go);
+	}
+
+	if(args.state != "passable"){
+		this.collidable = true;
+	}
 }
 
 Tile.prototype = new GameObject;
@@ -182,23 +192,32 @@ function GameLevel(){
 
 	this.tiles = [];
 
-
 	this.generateLevelImage = function(){
 		var self = this;
 		$.ajax({url:"json/map-1-1.json",dataType:"json",success:function(mapJson){
 			for(var r in mapJson) {
 				for(var c in mapJson[r]) {
 					w = c.replace("col-","") - 1;
-					h = r.replace("row-","") - 1; 
-		
+					h = r.replace("row-","") - 1;
+
+					var x = w*tileSize;
+					var y = h*tileSize+40;
+
+					var t = new Tile({
+						x: x,
+						y: y,
+						w: 40,
+						h: 40,
+						state: mapJson[r][c].state
+					});
+					Game.pushGameObject(t);
+
 					self.context.drawImage(Game.assets[mapJson[r][c]['image']],
 						0, 0, 40, 40,
 						w*tileSize, h*tileSize+40, tileSize, tileSize);
-						
 				}
 			}
 		}});
-				
 	}
 }
 
@@ -325,11 +344,12 @@ var Game = (function(){
 				continue;
 			}
 
-			for(var j in GameObject.collisionList){
+			for(var j = parseInt(i)+1; j < GameObject.collisionList.length; j++){
 				var p = GameObject.collisionList[j];
 
 				// lol: get rect!
 				if(rectCollide(o.getRect(), p.getRect())){
+					p.onCollide(o);
 					o.onCollide(p);
 				}
 			}
