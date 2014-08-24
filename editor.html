@@ -13,7 +13,7 @@
 			<dl><dt><label><input type="radio" name="state" id="tile-state" value="liquid"> liquid</label></dt></dl>
 			<dl><dt><label><input type="radio" name="state" id="tile-state" value="slick"> slick</label></dt></dl>
 			<dl><dt><label><input type="radio" name="state" id="tile-state" value="solid"> solid</label></dt></dl>	
-			<dl class="blank"><dt></dt></dl>				
+			<dl><dt><label>door: <input type="checkbox" name="door" id="tile-door" value="true"></label></dt></dl>
 			<dl><dt><label>damage: <input type="input" name="damage" id="tile-damage" value="0"></label></dt></dl>			
 		</ul>
 		<ul id="tiles">
@@ -32,7 +32,7 @@ for($r = 1; $r <= $rows; $r++) {
 	$map["row-".$r] = array();
 	echo "<tr class='row' id='row-".$r."'>\n";
 	for($c = 1; $c <= $cols; $c++) {
-		$map["row-".$r]["col-".$c] = array("image" => "", "state" => "", "damage" => 0);
+		$map["row-".$r]["col-".$c] = array("image" => "", "state" => "", "damage" => 0, "door" => 0);
 		
 		echo "<td class='col-".$c."' data-col='col-".$c."' data-row='row-".$r."'></td>\n";
 	}
@@ -69,7 +69,8 @@ function setup(){
 		map[$(this).data("row")][$(this).data("col")] = {
 			"image": selected_key,
 			"state": $("#tile-state:checked").val(),
-			"damage": $("#tile-damage").val()
+			"damage": $("#tile-damage").val(),
+			"door": $("#tile-door").is(':checked')
 		};
 		console.log(map[$(this).data("row")][$(this).data("col")]);
 	});
