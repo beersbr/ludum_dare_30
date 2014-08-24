@@ -112,7 +112,7 @@ function Crow(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 66; // pixels per second
+	this.moveSpeed = 45; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -122,7 +122,7 @@ function Crow(args){
 	this.trinkets = [];
 	this.items = [];
 
-	this.drag = 0.85;
+	this.drag = 0.95;
 
 	this.shootTime = 0;
 	this.canShoot = false;
@@ -131,10 +131,23 @@ function Crow(args){
 
 	this.animations = [];
 
+	this.attacking = false;
+	this.atackSpeed = 88;
+
+	this.attackRate = 1.0;
+
 	// add to current level enemies
 	Game.level.enemies.push(this);
 
 	this._update = function(elapsedTime){
+
+		if(this.attacking){
+
+		}
+		else{
+
+		}
+
 		var speed = this.moveSpeed * elapsedTime;
 
 		if(!this.dying)
@@ -161,7 +174,7 @@ function Crow(args){
 		if(o instanceof Bullet){
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
-			var d = this.pos.sub(Game.player.pos).normalize().scale(11.0);
+			var d = this.center.sub(o.center).normalize().scale(11.0);
 			this.vel = this.vel.add(d);
 			this.health -= 1;
 		}
@@ -170,11 +183,6 @@ function Crow(args){
 			var d = this.pos.sub(Game.player.pos).normalize().scale(5.0);
 			this.vel = this.vel.add(d);
 		}
-
-		// if(o instanceof Crow){
-		// 	var d = this.pos.sub(Game.player.pos).normalize().scale(1.0);
-		// 	this.vel = this.vel.add(d);
-		// }
 
 	}
 
