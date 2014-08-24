@@ -202,16 +202,13 @@ function Bear(args){
 	this._update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
-		this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.4));
+		if(!this.dying)
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.4));
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
 
-		for(var i in this.animations)
-			this.animations[i].update(elapsedTime);
-
-
-		if(this.health == 0)
+		if(this.health <= 0 && !this.dying)
 			this.die();
 
 	};
@@ -228,7 +225,7 @@ function Bear(args){
 
 		if(o instanceof Bullet){
 
-			this.addAnimation(new TurnRed(this, 0.3));
+			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
 			this.vel = this.vel.add(d);
@@ -262,8 +259,10 @@ function Bear(args){
 
 	this.die = function(){
 
-		this.addAnimation(new Shrink(this, 1.8), true);
+		this.addAnimation(new Shrink(this, 2.0), true);
+		// this._update = function(){};
 		this.collidable = false;
+		this.dying = true;
 	}
 
 }

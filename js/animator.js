@@ -38,7 +38,7 @@ function Animation(scope, totalTime, construct){
 		totalTime -= t;
 		if(totalTime <= 0){
 			this.done = true;
-			_done(this.id);
+			_done.bind(this)(this.id);
 		}
 	}
 
@@ -67,7 +67,7 @@ function TurnRed(scope, totalTime){
 		s.total -= s.rate*t;
 
 		for(var i = 0; i < s.pixelData.data.length; i+=4){
-			s.pixelData.data[i]   = s.total;
+			s.pixelData.data[i] = s.total;
 
 		}
 	}
@@ -85,6 +85,7 @@ function Shrink(scope, totalTime){
 
 	Animation.call(this, scope, totalTime, function(s){
 		s.shrinkRate = (this.size.w/totalTime);
+		console.log(s.shrinkRate);
 	});
 
 	this._update = function(t, timeLeft, s){

@@ -6,18 +6,23 @@ function GameObject(args) {
 	this.id = IDS += 1;
 	this.image = args.image || null;
 	this.dead = false;
+	this.dying = false;
 
 	this.animations = [];
 
 	this.addAnimation = function(anim, last){
 		this.animations.push(anim);
+		var self = this;
+		anim.last = last;
 		anim.done(function(id){
-			var i = this.animations.find(function(){ return id == anim.id });
-			this.animations.splice(i, 1);
-
-			if(last)
-				this.dead = true;
-		}.bind(this));
+			var i = self.animations.find(function(e){ return e.id == id });
+			
+			console.log(id, i, this);
+			if(this.last){
+				self.dead = true;
+			}
+			self.animations.splice(i, 1);
+		});
 	}
 
 	this.pos = new Vector(
