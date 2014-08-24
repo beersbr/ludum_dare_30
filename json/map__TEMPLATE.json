@@ -37,8 +37,8 @@
 			"name":"health",					/* Name of the item */
 			"image":"item-heart",			/* Image for the item */
 			"location":[							/* Location the item could appear */
-					5,										/* Row position of spawn point */
 					8											/* Column position of spawn point */
+					5,										/* Row position of spawn point */
 					40,										/* Width of item */
 					40										/* Height of item */
 			],																	
@@ -50,8 +50,8 @@
 			"name":"bear",						/* Name of the emeny */
 			"image":"enemy-bear",			/* Image for the enemy */
 			"location":[							/* Location the enemy could appear */
-					10,										/* Row position of spawn point */
 					2,										/* Column position of spawn point */
+					10,										/* Row position of spawn point */
 					40,										/* Width of enemy */
 					40										/* Height of enemy */
 			],																	
