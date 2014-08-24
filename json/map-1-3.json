@@ -1736,8 +1736,8 @@
             "name": "Bear",
             "image": "enemy-bear",
             "location": [
-                12,
                 18,
+                12,
                 40,
                 40
             ],
@@ -1758,7 +1758,7 @@
             "name": "Crow",
             "image": "enemy-crow",
             "location": [
-                10,
+                8,
                 4,
                 40,
                 40
@@ -1769,7 +1769,7 @@
             "name": "Crow",
             "image": "enemy-crow",
             "location": [
-                10,
+                8,
                 5,
                 40,
                 40
@@ -1780,7 +1780,7 @@
             "name": "Crow",
             "image": "enemy-crow",
             "location": [
-                10,
+                8,
                 6,
                 40,
                 40
