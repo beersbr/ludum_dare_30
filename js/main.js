@@ -122,8 +122,8 @@ function Player(args){
 			this.shoot((new Vector(1, 0)).add(bulletVel));
 		}
 
-		this.pos = this.pos.add(this.hv);
-		this.hv = new Vector();
+		// this.pos = this.pos.add(this.hv);
+		// this.hv = new Vector();
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
 
@@ -156,7 +156,12 @@ function Player(args){
 	this.onCollide = function(o){
 		if(o instanceof Tile){
 			var v = uncollide(this.getRect(), o.getRect());
-			this.hv = v; //this.vel.add(v.scale(0.1));
+			// this.hv = v; //this.vel.add(v.scale(0.1));
+			this.pos = this.pos.add(v);
+		}
+		if(o instanceof Bear){
+			v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);	
 		}
 	}
 
