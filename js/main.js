@@ -198,10 +198,7 @@ function Bear(args){
 
 	this.render = function(){
 		this.context.save();
-		this.context.fillStyle = "rgb(255, 0, 255)";
-			this.context.strokeStyle = "rgb(100, 0, 100)";
-			this.context.fillRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
-			this.context.strokeRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.image = Game.assets['enemy-bear'];
 
 		this.context.restore();
 	};
@@ -229,8 +226,8 @@ function Bear(args){
 
 }
 
-Player.prototype = new GameObject;
-Player.constructor = Player;
+Bear.prototype = new GameObject;
+Bear.constructor = Bear;
 
 
 /******************************
@@ -380,6 +377,7 @@ var Game = (function(){
 		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
+		game.assetHandler.prepare("enemy-bear", "img/enemy-bear.png", "image");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
@@ -401,6 +399,13 @@ var Game = (function(){
 		});
 
 		gameObjects.push(player)
+
+		var bear = new Bear({
+			x: 400, y: 500,
+			w: 40,  h: 40
+		});
+
+		gameObjects.push(bear)
 
 		currentFrameTime = Time.timestamp;
 		game.run();
