@@ -221,8 +221,8 @@ function Item(args){
 		this.context.translate(this.center.x, this.center.y);
 		this.context.rotate(this.rotate);
 
-		var nw = this.sizeFactor + this.size.w;
-		var nh = this.sizeFactor + this.size.h;
+		var nw = Math.max(this.sizeFactor + this.size.w, 1);
+		var nh = Math.max(this.sizeFactor + this.size.h, 1);
 
 		this.context.drawImage(this.image,
 			0, 0, 40, 40,
