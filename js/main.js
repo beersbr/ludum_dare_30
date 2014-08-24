@@ -562,6 +562,7 @@ var Game = (function(){
 				_gameObjects.splice(i, 1);
 		}
 
+		// move the enemies away from each other
 		for(var i = 0; i < game.level.enemies.length; i++){
 			var o = game.level.enemies[i];
 			var dir = new Vector();
@@ -570,7 +571,7 @@ var Game = (function(){
 				if (i == j) continue;
 
 				var p = game.level.enemies[j];
-				var diff = o.center.sub(p.center).normalize().scale(0.05);
+				var diff = o.center.sub(p.center).normalize().scale(0.02);
 				dir = dir.add(diff);
 			}
 
