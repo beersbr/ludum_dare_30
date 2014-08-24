@@ -202,8 +202,7 @@ function Bear(args){
 
 	this.render = function(){
 		this.context.save();
-		this.image = Game.assets['enemy-bear'];
-
+		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
 		this.context.restore();
 	};
 
@@ -406,7 +405,8 @@ var Game = (function(){
 
 		var bear = new Bear({
 			x: 400, y: 500,
-			w: 40,  h: 40
+			w: 40,  h: 40,
+			image: Game.assets["enemy-bear"]
 		});
 
 		gameObjects.push(bear)
