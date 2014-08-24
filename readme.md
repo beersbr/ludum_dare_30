@@ -2,7 +2,7 @@
 
 #### Theme: Connected Worlds
 
-##### TODO/Recap: (saturda)
+##### TODO/Recap: (saturday)
 * Can walk between levels. 
 * Need to make the level json hold more stuff.
 * Need items and some pictures for the items (Should be pretty easy)
