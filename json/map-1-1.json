@@ -1712,6 +1712,29 @@
 	    }
 	  }
 	},
-	"items":[],
+	"items":[
+		{
+			"name":"ItemHeart",						
+			"image":"item-heart",			
+			"location":[							
+					6,										
+					6,										
+					40,										
+					40										
+			],												
+			"probability":1
+		},
+		{
+			"name":"ItemHeart",						
+			"image":"item-heart",			
+			"location":[							
+					12,										
+					7,										
+					40,										
+					40										
+			],												
+			"probability":0.33
+		}
+	],
 	"enemies":[	]
 }
