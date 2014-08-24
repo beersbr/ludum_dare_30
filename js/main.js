@@ -200,6 +200,8 @@ function Bear(args){
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
+		this.vel = Game.player.pos.sub(this.pos).scale(0.025);
+
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
 
@@ -332,6 +334,7 @@ var Game = (function(){
 	game.assets = {};
 
 	game.level = undefined;
+	game.player = undefined;
 
 
 	game.pushGameObject = function(ob){
@@ -407,6 +410,9 @@ var Game = (function(){
 		});
 
 		gameObjects.push(player)
+
+		game.player = player;
+
 
 		var bear = new Bear({
 			x: 400, y: 500,
