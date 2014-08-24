@@ -281,7 +281,7 @@ function Bear(args){
 	}
 
 	this.animationDieRender = function(){
-
+		
 	}
 
 	this.die = function(){

@@ -18,6 +18,31 @@ function Animator(args){
 	}
 }
 
+
+AID = 0;
+function Animation(scope, totalTime){
+
+	this.id = AID++;
+
+	this.done = false;
+	this.scope = scope;
+
+	this.update = function(t){
+		this._update.bind(scope)(t, totalTime);
+		totalTime -= t;
+		if(totalTime <= 0)
+			this.done = true;
+	}
+
+	this.render = function(){
+		this._render.bind(scope);
+	}
+
+	this.done = function(){
+
+	}
+}
+
 AID = 0;
 function Animation(image, callback){
 	this.id = AID++;
