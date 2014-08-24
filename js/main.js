@@ -339,15 +339,16 @@ function GameLevel(level){
 			
 			// Add enemies
 			for(var e in enemies) {
-/*
-				var enemy = new enemies[e]({
-			x: 400, y: 500,
-			w: 40,  h: 40,
-			image: Game.assets["enemy-bear"]
-		});
+				// Check likelyhood of spawn
+				if(!0) break;
 
-		Game.gameObjects.push(bear);				
-	*/
+				var enemy = new enemies[e]['name']({
+					x: 40 * enemies[e]['location'][0], y: 40 * enemies[e]['location'][1],
+					w: enemies[e]['location'][2],  h: enemies[e]['location'][3],
+					image: Game.assets[enemies[e]['image']]
+				});
+
+				Game.gameObjects.push(enemy);				
 			}
 			
 		}});
@@ -362,7 +363,7 @@ function GameLevel(level){
 
 		Game.gameObjects.push(player)
 		Game.player = player;
-
+/*
 		var bear = new Bear({
 			x: 400, y: 500,
 			w: 40,  h: 40,
@@ -370,7 +371,7 @@ function GameLevel(level){
 		});
 
 		Game.gameObjects.push(bear);
-		
+*/		
 		var crow = new Crow({
 			x: 700, y: 200,
 			w: 40,  h: 40,
