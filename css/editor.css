@@ -30,7 +30,7 @@ img {
 
 #tiles dl, #states dl { 
 	display: inline-block;
-	width: 200px;
+	width: 130px;
 	position: relative;
 	background: #48f;
 	margin: 10px; 
@@ -46,7 +46,7 @@ img {
 	width: 40px;
 	height: 40px;
 }
-
+#tiles { width:350px; }
 #states { margin-top:-35px; }
 #states dl { width: 116px; }
 #tile-damage { width:10px; }
