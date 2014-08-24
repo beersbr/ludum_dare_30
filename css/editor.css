@@ -2,12 +2,10 @@ body {
 	background: #133 url("../img/background.png") repeat;
 }
 
-.content { 
-	position: relative;
-	width: 1000px;
-	left: 50%;
-	margin-left: -500px;
-	min-height: 100px;
+.content {
+    float: left;
+    margin-left: 50px;
+    min-height: 100px;
 }
 
 img { 
@@ -20,7 +18,8 @@ img {
 	-webkit-transition: opacity 0.15s ease-in-out;
 	background-color: #599;
 	opacity: 0.6;
-	padding: 20px;
+	padding: 5px;
+	width:350px;
 }
 
 #tiles:hover, #states:hover {
@@ -46,8 +45,7 @@ img {
 	width: 40px;
 	height: 40px;
 }
-#tiles { width:350px; }
-#states { margin-top:-35px; }
+#states { margin-top:-21px; }
 #states dl { width: 116px; }
 #tile-damage { width:10px; }
 dl.blank { background:inherit !important; }
@@ -56,6 +54,7 @@ table {
     /*border-collapse: separate;*/
     border-width: 0px;
     border-style: none;
+    margin-top:50px;
 }
 
 table tr td{
@@ -70,3 +69,7 @@ table tr td:hover{
 	-webkit-transition: background-color 0.1s ease-in-out;
 }
 
+.file { float:left; margin:50px; }
+	
+#save, #load { float:right; clear:left; }
+#output  { float:left; width: 828px; height: 195px;}
