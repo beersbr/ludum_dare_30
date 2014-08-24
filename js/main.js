@@ -335,6 +335,16 @@ function GameLevel(level){
 			// Add items
 			mapItems = mapJson.items;
 			for(var i in mapItems) {
+				// Check likelyhood of spawn
+				var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
+				if(mapItems[i].probability < rnd) break;
+				var item = new window[mapItems[i].name]({
+					x: 40 * mapItems[i].location[0], y: 40 * mapItems[i].location[1],
+					w: mapItems[i].location[2],  h: mapItems[i].location[3],
+					image: Game.assets[mapItems[i].image]
+				});
+
+				Game.gameObjects.push(item);				
 				
 			}
 			
@@ -366,29 +376,6 @@ function GameLevel(level){
 
 		Game.gameObjects.push(player)
 		Game.player = player;
-/*
-		var bear = new Bear({
-			x: 400, y: 500,
-			w: 40,  h: 40,
-			image: Game.assets["enemy-bear"]
-		});
-
-		Game.gameObjects.push(bear);
-*/		
-		var crow = new Crow({
-			x: 700, y: 200,
-			w: 40,  h: 40,
-			image: Game.assets["enemy-crow"]
-		});
-
-		Game.gameObjects.push(crow);
-
-		var item = new ItemHeart({
-			x: 400, y: 300,
-			w: 40, h: 40
-		});
-
-		Game.gameObjects.push(item);
 
 	}
 
