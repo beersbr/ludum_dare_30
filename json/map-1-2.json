@@ -8,8 +8,8 @@
 	"items":[],
 	"enemies":[
 			{
-			"name":"Bear",						
-			"image":"enemy-bear",			
+			"name":"Crow",						
+			"image":"enemy-crow",			
 			"location":[							
 					2,										
 					10,										
@@ -17,35 +17,21 @@
 					40										
 			],												
 			"probability":1
-		},
-		
-			{
-			"name":"Bear",						
-			"image":"enemy-bear",			
-			"location":[							
-					10,										
-					2,										
-					40,										
-					40										
-			],												
-			"probability":1
-		},
-		
-			{
-			"name":"Bear",						
-			"image":"enemy-bear",			
+		},		
+		{
+			"name":"Crow",						
+			"image":"enemy-crow",			
 			"location":[							
 					2,										
 					2,										
 					40,										
 					40										
 			],												
-			"probability":0.75				
+			"probability":0.75
 		},
-		
-			{
-			"name":"Bear",						
-			"image":"enemy-bear",			
+		{
+			"name":"Crow",						
+			"image":"enemy-crow",			
 			"location":[							
 					10,										
 					10,										
@@ -53,6 +39,17 @@
 					40										
 			],												
 			"probability":0.75
+		},
+		{
+			"name":"Crow",						
+			"image":"enemy-crow",			
+			"location":[							
+					10,										
+					2,										
+					40,										
+					40										
+			],												
+			"probability":0.25
 		}
 	]
 }

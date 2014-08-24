@@ -1713,17 +1713,5 @@
 	  }
 	},
 	"items":[],
-	"enemies":[
-			{
-			"name":"Bear",						
-			"image":"enemy-bear",			
-			"location":[							
-					2,										
-					10,										
-					40,										
-					40										
-			],												
-			"probability":1
-		}
-	]
+	"enemies":[	]
 }
