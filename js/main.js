@@ -14,8 +14,8 @@ function Player(args){
 	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
 
-	this.health = 3;
-	this.armor = 0;
+	this.health = args.health || 3;
+	this.armor = args.armor || 0;
 	this.trinkets = [];
 	this.items = [];
 
@@ -115,6 +115,11 @@ function Player(args){
 		if(o instanceof Crow){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
+		}
+
+		if(o instanceof ItemHeart){
+			this.health += 1;
+			StatusBar.addHealth();
 		}
 	}
 }
@@ -306,14 +311,22 @@ function GameLevel(level){
 		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
 			
+			var health = 0;
+			if(Game.player)
+				health = Game.player.health
+
 			// TODO: this will all be based on the level json
 			var player = new Player({
 				x: mapJson.playerStart[0], y: mapJson.playerStart[1],
-				w: 40,  h: 40
+				w: 40,  h: 40,
+				health: health
 			});
 
-		Game.gameObjects.push(player)
-		Game.player = player;
+			Game.gameObjects.push(player)
+			Game.player = player;
+
+			StatusBar.setHealth(player.health);
+			StatusBar.setArmor(player.armor);
 			
 			// Place tiles
 			var mapTiles = mapJson.tiles;
@@ -417,6 +430,101 @@ function GameLevel(level){
 
 
 }
+
+/******************************
+ *	Status bar
+ ******************************/
+var StatusBar = (function(){
+	var status = {};
+
+	var WIDTH = 800;
+	var HEIGHT = 40;
+	var tileWidth = 40;
+
+	var healthBarWidth = 20;
+	var armorBarWidth = 20;
+
+	var healthOffset = tileWidth+5;
+
+	var healthBars = 0;
+	var armorBars = 0;
+
+	var CANVAS = $("<canvas width='"+WIDTH+"px' height='"+HEIGHT+"px' >")[0];
+	var CONTEXT = CANVAS.getContext('2d');
+
+
+
+	status.init = function(args){
+		status.healthImage = args.healthImage;
+		status.armorImage = args.armorImage;
+		status.barImage = args.barImage;
+
+		CONTEXT.drawImage(status.barImage, 0, 0, WIDTH, HEIGHT);
+	}
+
+	status.setHealth = function(hp){
+		renderBar();
+		healthBars = hp;
+		renderHealth();
+	}
+
+	status.setArmor = function(ar){
+		renderBar();
+		armorBars = ar;
+		renderHealth();	
+	}
+
+	status.addHealth = function(){
+		renderBar();
+		healthBars += 1;
+
+		renderHealth();
+	}
+
+	status.removeHealth = function(){
+		renderbar();
+		healthBars -= 1;
+		renderHealth();
+	}
+
+	status.addArmor = function(){
+		renderBar();
+		armorBars += 1;
+		renderHealth();
+	}
+
+	status.removeArmor = function(){
+		renderBar();
+		armorBars -= 1;
+		renderHealth();
+	}
+
+	function renderHealth(){
+		for(var i = 0; i < healthBars; i++){
+			CONTEXT.drawImage(status.healthImage, healthOffset+(20*i)+5, 0, 20, 40);
+		}
+		renderArmor();
+	}
+
+	function renderArmor(){
+
+		var armorOffset = healthOffset+(5*healthBars) + 5;
+		for(var i = 0; i < armorBars; i++){
+			CONTEXT.drawImage(status.armorImage, armorOffset+(20*i)+5, 0, 20, 40);
+		}
+	}
+
+	function renderBar(){
+		CONTEXT.drawImage(status.barImage, 0, 0, WIDTH, HEIGHT);
+	}
+
+	status.render = function(context){
+		// CONTEXT.drawImage(status.barImage, 0, 0, 800, 40);
+		context.drawImage(CANVAS, 0, 0, WIDTH, HEIGHT);
+	}
+
+	return status;
+}());
 
 /******************************
  *	GAME 
@@ -529,11 +637,20 @@ var Game = (function(){
 		game.assetHandler.prepare("enemy-bear", "img/enemy-bear.png", "image");
 		game.assetHandler.prepare("enemy-crow", "img/enemy-crow.png", "image");
 		game.assetHandler.prepare("item-heart", "img/item-heart.png", "image");
+		game.assetHandler.prepare("status-health-bar", "img/health-bar.png", "image");
+		game.assetHandler.prepare("status-armor-bar", "img/armor-bar.png", "image");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
+
+			StatusBar.init({
+				healthImage: game.assets['status-health-bar'],
+				armoreImage: game.assets['status-armore-bar'],
+				barImage: game.assets['status-bar']
+			})
+
 			game.nextLevel();
-		});		
+		});	
 	}
 
 	/**
@@ -612,7 +729,9 @@ var Game = (function(){
 
 		game.player.render();
 
-		CONTEXT.drawImage(game.assets['status-bar'], 0, 0, 800, 40);
+		StatusBar.render(CONTEXT);
+
+		
 	}
 
 	game.run = function(){

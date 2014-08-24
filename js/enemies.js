@@ -6,7 +6,7 @@ function Bear(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 66; // pixels per second
+	this.moveSpeed = 15; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -32,7 +32,7 @@ function Bear(args){
 		var speed = this.moveSpeed * elapsedTime;
 
 		if(!this.dying)
-			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.4));
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.2));
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
@@ -112,7 +112,7 @@ function Crow(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 45; // pixels per second
+	this.moveSpeed = 10; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -174,7 +174,7 @@ function Crow(args){
 		if(o instanceof Bullet){
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
-			var d = this.center.sub(o.center).normalize().scale(11.0);
+			var d = this.center.sub(o.center).normalize().scale(5.0);
 			this.vel = this.vel.add(d);
 			this.health -= 1;
 		}
