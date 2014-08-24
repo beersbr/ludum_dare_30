@@ -5,7 +5,10 @@
         20,
         14
     ],
-		"playerStart":[80,280],
+    "playerStart": [
+        80,
+        280
+    ],
     "tiles": {
         "row-1": {
             "col-1": {
@@ -540,37 +543,37 @@
             },
             "col-8": {
                 "image": "tile-ggsg",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
                 "image": "tile-grass-sand-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
                 "image": "tile-grass-sand-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
                 "image": "tile-grass-sand-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
                 "image": "tile-grass-sand-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
                 "image": "tile-gggs",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -662,37 +665,37 @@
             },
             "col-8": {
                 "image": "tile-grass-sand-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
                 "image": "tile-sand-grass-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -784,13 +787,13 @@
             },
             "col-8": {
                 "image": "tile-grass-sand-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -808,13 +811,13 @@
             },
             "col-12": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
                 "image": "tile-sand-grass-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -906,13 +909,13 @@
             },
             "col-8": {
                 "image": "tile-grass-sand-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -930,13 +933,13 @@
             },
             "col-12": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
                 "image": "tile-sand-grass-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -1028,37 +1031,37 @@
             },
             "col-8": {
                 "image": "tile-grass-sand-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
                 "image": "tile-sand",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
                 "image": "tile-sand-grass-1",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -1150,37 +1153,37 @@
             },
             "col-8": {
                 "image": "tile-gsgg",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
                 "image": "tile-sand-grass-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
                 "image": "tile-sand-grass-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
                 "image": "tile-sand-grass-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
                 "image": "tile-sand-grass-2",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
                 "image": "tile-sggg",
-                "state": "solid",
+                "state": "passable",
                 "damage": "0",
                 "door": false
             },
@@ -1717,5 +1720,72 @@
         }
     },
     "items": [],
-    "enemies": []
+    "enemies": [
+        {
+            "name": "Bear",
+            "image": "enemy-bear",
+            "location": [
+                8,
+                2,
+                40,
+                40
+            ],
+            "probability": 1
+        },
+        {
+            "name": "Bear",
+            "image": "enemy-bear",
+            "location": [
+                12,
+                18,
+                40,
+                40
+            ],
+            "probability": 1
+        },
+        {
+            "name": "Crow",
+            "image": "enemy-crow",
+            "location": [
+                10,
+                4,
+                40,
+                40
+            ],
+            "probability": 0.25
+        },
+        {
+            "name": "Crow",
+            "image": "enemy-crow",
+            "location": [
+                10,
+                4,
+                40,
+                40
+            ],
+            "probability": 0.25
+        },
+        {
+            "name": "Crow",
+            "image": "enemy-crow",
+            "location": [
+                10,
+                5,
+                40,
+                40
+            ],
+            "probability": 0.25
+        },
+        {
+            "name": "Crow",
+            "image": "enemy-crow",
+            "location": [
+                10,
+                6,
+                40,
+                40
+            ],
+            "probability": 0.25
+        }
+    ]
 }
