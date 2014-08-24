@@ -1748,7 +1748,7 @@
             "image": "enemy-bear",
             "location": [
                 10,
-                4,
+                6,
                 40,
                 40
             ],
@@ -1759,7 +1759,7 @@
             "image": "enemy-bear",
             "location": [
                 10,
-                5,
+                8,
                 40,
                 40
             ],
