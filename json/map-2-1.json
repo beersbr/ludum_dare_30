@@ -2,6 +2,7 @@
 	"name":"World 2 Level 1",
 	"description":"Welcome to the Desert",
 	"dimensions":[20,14],
+	"playerStart":[80,480],
 	"tiles":{
 	  "row-1": {
 	    "col-1": {
