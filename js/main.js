@@ -325,7 +325,7 @@ function GameLevel(){
 
 	this.generateLevelImage = function(){
 		var self = this;
-		$.ajax({url:"json/map-1-1.json",dataType:"json",success:function(mapJson){
+		$.ajax({url:"json/map-4-1.json",dataType:"json",success:function(mapJson){
 			for(var r in mapJson) {
 				for(var c in mapJson[r]) {
 					w = c.replace("col-","") - 1;

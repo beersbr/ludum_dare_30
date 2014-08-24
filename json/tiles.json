@@ -11,5 +11,7 @@
   "tile-sggg": "img/tile-merge-sand-grass-grass-grass.png",
   "tile-gsgg": "img/tile-merge-grass-sand-grass-grass.png",
   "tile-ggsg": "img/tile-merge-grass-grass-sand-grass.png",
-  "tile-gggs": "img/tile-merge-grass-grass-grass-sand.png"
+  "tile-gggs": "img/tile-merge-grass-grass-grass-sand.png",
+  "tile-fire": "img/tile-fire.png",
+  "tile-red-rock": "img/tile-red-rock.png"
 }

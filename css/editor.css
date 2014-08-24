@@ -53,7 +53,7 @@ img {
 }
 #states {  }
 #states dl { width: 116px; }
-#tile-damage { width:10px; }
+#tile-damage { width:20px; }
 dl.blank { background:inherit !important; }
 table { 
     border-spacing: 0px;
