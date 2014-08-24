@@ -106,10 +106,12 @@ function Player(args){
 			// this.hv = v; //this.vel.add(v.scale(0.1));
 			this.pos = this.pos.add(v);
 		}
+
 		if(o instanceof Bear){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 		}
+
 		if(o instanceof Crow){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
@@ -300,7 +302,7 @@ function GameLevel(level){
 
 	this.generateLevelImage = function(){
 		var self = this;
-		$.ajax({url:"json/"+this.level,dataType:"json",success:function(mapJson){
+		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
 			// Place tiles
 			var mapTiles = mapJson.tiles;
@@ -318,10 +320,11 @@ function GameLevel(level){
 						w: 40,
 						h: 40,
 						state: mapTiles[r][c].state,
-						isDoor: (mapTiles[r][c].door == 1)
+						isDoor: (mapTiles[r][c].door == true)
 					});
 
-					if(mapTiles[r][c].door == 1){
+					if(mapTiles[r][c].door == true){
+						console.log("DOOR");
 						Game.door1 = t;
 					}
 					Game.pushGameObject(t);
@@ -462,6 +465,7 @@ var Game = (function(){
 
 		game.currentLevel += 1;
 		game.level = new GameLevel(game.levels[game.currentLevel]);
+		game.level.generateLevelImage();
 		game.load();
 	}
 
@@ -533,7 +537,7 @@ var Game = (function(){
 
 
 		// game.level = new GameLevel(game.levels[game.currentLevel]);
-		game.level.generateLevelImage();
+		
 
 		game.level.load();
 
