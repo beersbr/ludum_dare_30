@@ -5,20 +5,7 @@ function Animator(args){
 	this.currentFrame = 0;
 
 	this.imageSrc = args.src;
-	this.image = new Image();
-
-	this.isLoaded = false;
-	this.loadedPromise = new Promise();
-
-	this.image.onload = (function(){
-		this.isLoaded = true;
-		this.loadedPromise.resolve();
-	}).bind(this);
-
-	this.doneLoading = function(fn){
-		this.loadedPromise.done(fn);
-		return this.loadedPromise;
-	}
+	this.image = args.image;
 
 	this.update = function(){
 		this.currentFrame = (this.currentFrame + 1) % this.totalFrames;
