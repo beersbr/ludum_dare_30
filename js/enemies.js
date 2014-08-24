@@ -138,7 +138,7 @@ function Crow(args){
 		var speed = this.moveSpeed * elapsedTime;
 
 		if(!this.dying)
-			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.1));
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.2));
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);

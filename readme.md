@@ -13,7 +13,7 @@
 * Need sound manager
 * Need to update the ui for hp. (Maybe we put HP blocks above each enemy)
 * Man the code is getting big. I'm starting to get scared I will spend a bit of time and move thinigs around so main isnt so scary
-* 8==D
+* 8==D~
 
 ##### TODO/Recap (friday):
 * Start adding enemies and non walkable tiles
