@@ -271,12 +271,27 @@ function Bear(args){
 		if(this.timeLeft < 0)
 			this.dead = true;
 
-		this.size.w -= 3;
+		var d = (40/1.5)*t
+
+		this.size.w -= d;
+		this.size.h -= d;
+
+		this.pos.x += d/2;
+		this.pos.y += d/2;
+	}
+
+	this.animationDieRender = function(){
+
 	}
 
 	this.die = function(){
 		this.timeLeft = 1.5;
-		this.update = this.animationDie;
+		this.rotate = 90; // /s
+
+		this.update = this.animationDieUpdate;
+		this.draw = this.animationDieRender;
+
+		this.animations = [];
 	}
 
 }
