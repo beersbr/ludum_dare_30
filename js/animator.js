@@ -7,11 +7,53 @@ function Animator(args){
 	this.imageSrc = args.src;
 	this.image = args.image;
 
+	this.updateFn
+
 	this.update = function(){
 		this.currentFrame = (this.currentFrame + 1) % this.totalFrames;
-	}
+	};
 
 	this.render = function(){
 
+	}
+}
+
+function Animation(image, callback){
+	this.image = image;
+	this.canvas = $("<canvas width='"+image.w+"px' height'"+image.h+"px'>")[0];
+	this.context = this.canvas.getContext('2d');
+	this.context.drawImage(this.image, 0, 0, this.image.width, this.image.height);
+
+	this.pixelData = this.context.getImageData(0, 0, this.image.width, this.image.height);
+
+	this.up = callback;
+
+	var _done = function(){};
+	this.frames = 0;
+
+	this.update = function(t){
+		for(var i = 0; i < this.pixelData.data.length; i+=4){
+			var a = this.up([this.pixelData.data[i], 
+							 this.pixelData.data[i+1], 
+							 this.pixelData.data[i+2], 
+							 this.pixelData.data[i+3]], 
+							 t, this);
+			this.pixelData.data[i] = a[0];
+			this.pixelData.data[i+1] = a[1];
+			this.pixelData.data[i+2] = a[2];
+			this.pixelData.data[i+3] = a[3];
+
+		}
+		this.frames++;
+	}
+
+
+
+	this.finished = function(b){
+		_done().call(b);
+	}
+
+	this.done = function(cb){
+		_done = cb;
 	}
 }

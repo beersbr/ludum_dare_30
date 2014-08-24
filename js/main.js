@@ -197,6 +197,8 @@ function Bear(args){
 
 	this.collidable = true;
 
+	this.animations = [];
+
 	this.update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
@@ -205,11 +207,18 @@ function Bear(args){
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
 
+		for(var i in this.animations)
+			this.animations[i].update(elapsedTime);
+
 	};
 
 	this.render = function(){
 		this.context.save();
 		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
+
+		for(var i in this.animations)
+			this.context.putImageData(this.animations[i].pixelData, this.pos.x, this.pos.y);
+
 		this.context.restore();
 	};
 
@@ -231,6 +240,19 @@ function Bear(args){
 		if(o instanceof Tile){
 			var v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);
+		}
+
+		if(o instanceof Bullet){
+			this.animations.push(new Animation(this.image, function(p, t, c){
+				if(p[3] == 0) return p;
+
+				if(c.frames == 0)
+					p[0] = 255;
+
+				p[0] -= 10;
+
+				return p;
+			}))
 		}
 	}
 
