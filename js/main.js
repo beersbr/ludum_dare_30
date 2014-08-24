@@ -305,6 +305,16 @@ function GameLevel(level){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
+			
+			// TODO: this will all be based on the level json
+			var player = new Player({
+				x: mapJson.playerStart[0], y: mapJson.playerStart[1],
+				w: 40,  h: 40
+			});
+
+		Game.gameObjects.push(player)
+		Game.player = player;
+			
 			// Place tiles
 			var mapTiles = mapJson.tiles;
 			for(var r in mapTiles) {
@@ -372,14 +382,7 @@ function GameLevel(level){
 	}
 
 	this.load = function(){
-		// TODO: this will all be based on the level json
-		var player = new Player({
-			x: 400, y: 300,
-			w: 40,  h: 40
-		});
-
-		Game.gameObjects.push(player)
-		Game.player = player;
+		
 
 	}
 

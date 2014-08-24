@@ -1,8 +1,11 @@
 {
-	"name":"World 1 Level 3",
-	"description":"Whoa Bears!",
-	"dimensions":[20,14],
-	"playerStart":[80,480],
+    "name": "World 1 Level 3",
+    "description": "Whoa Bears!",
+    "dimensions": [
+        20,
+        14
+    ],
+		"playerStart":[80,280],
     "tiles": {
         "row-1": {
             "col-1": {
@@ -536,38 +539,38 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-ggsg",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-gggs",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
@@ -658,38 +661,38 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
@@ -780,38 +783,38 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-stump-dirt",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-stump-dirt",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
@@ -902,38 +905,38 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-stump-dirt",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-stump-dirt",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
@@ -1024,38 +1027,38 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-grass-sand-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-1",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
@@ -1146,38 +1149,38 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-gsgg",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-9": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-10": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-11": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-12": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sand-grass-2",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
             "col-13": {
-                "image": "tile-grass",
-                "state": "passable",
+                "image": "tile-sggg",
+                "state": "solid",
                 "damage": "0",
                 "door": false
             },
