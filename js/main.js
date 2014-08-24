@@ -110,6 +110,10 @@ function Player(args){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 		}
+		if(o instanceof Crow){
+			v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);	
+		}
 	}
 }
 
@@ -344,6 +348,14 @@ function GameLevel(level){
 		});
 
 		Game.gameObjects.push(bear);
+		
+		var crow = new Crow({
+			x: 700, y: 200,
+			w: 40,  h: 40,
+			image: Game.assets["enemy-crow"]
+		});
+
+		Game.gameObjects.push(crow);
 
 		var item = new ItemHeart({
 			x: 400, y: 300,
@@ -492,6 +504,7 @@ var Game = (function(){
 		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
 		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
 		game.assetHandler.prepare("enemy-bear", "img/enemy-bear.png", "image");
+		game.assetHandler.prepare("enemy-crow", "img/enemy-crow.png", "image");
 		game.assetHandler.prepare("item-heart", "img/item-heart.png", "image");
 
 		game.assetHandler.load().done(function(h){
