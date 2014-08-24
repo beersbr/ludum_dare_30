@@ -243,16 +243,30 @@ function Bear(args){
 		}
 
 		if(o instanceof Bullet){
-			this.animations.push(new Animation(this.image, function(p, t, c){
-				if(p[3] == 0) return p;
+			var anim = new Animation(this.image, function(p, t, c){
+				// p[3] = 100;				
+				// if(p[3] == 0) return p;
 
 				if(c.frames == 0)
 					p[0] = 255;
 
 				p[0] -= 10;
 
+				if(c.frames > 20)
+					c.finished();
+
 				return p;
-			}))
+			});
+
+			var self = this;
+			anim.done(function(){
+				var i = self.animations.find(function(a){
+					return (this.id == a.id)
+				})
+				self.animations.splice(i, 1);
+			});
+
+			this.animations.push(anim);
 		}
 	}
 
