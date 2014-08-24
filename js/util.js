@@ -131,11 +131,15 @@ function rectCollide(r1, r2){
 
 // returns a vector that will move r1 out of r2 :: untested
 function uncollide(r1, r2){
+	var closest = new Vector((r1.w+r2.w)/2, (r1.h+r2.h)/2);
+
 	var c1 = r1.center;
 	var c2 = r2.center;
 	var cd = c1.sub(c2);
-	var vMin = cd.abs().smallP();
 	var sign = new Vector(Math.sign(cd.x), Math.sign(cd.y));
+	var cdAbs = cd.abs();
+	var diff = closest.sub(cdAbs);
+	var vMin = diff.smallP();
 
 	vMin = vMin.mul(sign);
 	return vMin;
