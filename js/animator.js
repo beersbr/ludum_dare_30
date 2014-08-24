@@ -99,6 +99,9 @@ function Shrink(scope, totalTime){
 		this.size.w -= d;
 		this.size.h -= d;
 
+		this.size.w = Math.max(this.size.w, 1);
+		this.size.h = Math.max(this.size.h, 1);
+
 		this.pos.x += d/2;
 		this.pos.y += d/2;
 	}
