@@ -340,8 +340,8 @@ function GameLevel(level){
 			// Add enemies
 			for(var e in mapJson['enemies']) {
 				// Check likelyhood of spawn
-				if(!0) break;
-
+				if(!1) break;
+/*
 				var enemy = new enemies[e]['name']({
 					x: 40 * enemies[e]['location'][0], y: 40 * enemies[e]['location'][1],
 					w: enemies[e]['location'][2],  h: enemies[e]['location'][3],
@@ -349,8 +349,9 @@ function GameLevel(level){
 				});
 
 				Game.gameObjects.push(enemy);				
+*/
 			}
-			
+		
 		}});
 	}
 

@@ -42,7 +42,7 @@
 					40,										/* Width of item */
 					40										/* Height of item */
 			],																	
-			"probability":0.15,				/* Likelyhood of the item spawning */	
+			"probability":0.15				/* Likelyhood of the item spawning */	
 		}
 	],
 	"enemies": [
@@ -55,7 +55,7 @@
 					40,										/* Width of enemy */
 					40										/* Height of enemy */
 			],																	
-			"probability":0.86,				/* Likelyhood of the enemy spawning */	
+			"probability":0.86				/* Likelyhood of the enemy spawning */	
 		}
 	]
 }
