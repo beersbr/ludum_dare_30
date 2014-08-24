@@ -303,7 +303,7 @@ function GameLevel(level){
 		$.ajax({url:"json/"+this.level,dataType:"json",success:function(mapJson){
 			
 			// Place tiles
-			var mapTiles = mapJson['tiles'];
+			var mapTiles = mapJson.tiles;
 			for(var r in mapTiles) {
 				for(var c in mapTiles[r]) {
 					w = c.replace("col-","") - 1;
@@ -333,23 +333,24 @@ function GameLevel(level){
 			}
 			
 			// Add items
-			for(var i in mapJson['items']) {
+			mapItems = mapJson.items;
+			for(var i in mapItems) {
 				
 			}
 			
 			// Add enemies
-			for(var e in mapJson['enemies']) {
+			var mapEnemies = mapJson.enemies;
+			for(var e in mapEnemies) {
 				// Check likelyhood of spawn
 				if(!1) break;
-/*
-				var enemy = new enemies[e]['name']({
-					x: 40 * enemies[e]['location'][0], y: 40 * enemies[e]['location'][1],
-					w: enemies[e]['location'][2],  h: enemies[e]['location'][3],
-					image: Game.assets[enemies[e]['image']]
+				var enemy = new window[mapEnemies[e].name]({
+					x: 40 * mapEnemies[e].location[0], y: 40 * mapEnemies[e].location[1],
+					w: mapEnemies[e].location[2],  h: mapEnemies[e].location[3],
+					image: Game.assets[mapEnemies[e].image]
 				});
 
 				Game.gameObjects.push(enemy);				
-*/
+
 			}
 		
 		}});

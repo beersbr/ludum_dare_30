@@ -1715,7 +1715,7 @@
 	"items":[],
 	"enemies":[
 			{
-			"name":"bear",						
+			"name":"Bear",						
 			"image":"enemy-bear",			
 			"location":[							
 					2,										
