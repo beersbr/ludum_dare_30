@@ -43,6 +43,9 @@ function Bullet(args){
 		if(go instanceof Player)
 			return;
 
+		if(go instanceof Item)
+			return;
+
 		this.collidable = false;
 		this.die();
 

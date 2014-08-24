@@ -40,8 +40,9 @@ function Animation(scope, totalTime, construct){
 			this.done = true;
 		}
 
-		if(this.done)
+		if(this.done == true)
 			_done.bind(this)(this.id);
+			
 	}
 
 	this.render = function(){

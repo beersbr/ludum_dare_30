@@ -53,7 +53,7 @@ function Bear(args){
 		}
 
 		if(o instanceof Bullet){
-			this.addAnimation(new TurnRed(this, 3.3), false);
+			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
 			this.vel = this.vel.add(d);
