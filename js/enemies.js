@@ -25,6 +25,9 @@ function Bear(args){
 
 	this.animations = [];
 
+	// add to current level enemies
+	Game.level.enemies.push(this);
+
 	this._update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
@@ -89,6 +92,12 @@ function Bear(args){
 		// this._update = function(){};
 		this.collidable = false;
 		this.dying = true;
+
+
+		// TODO: move into game
+		var selfId = this.id;
+		var idx = Game.level.enemies.find(function(id){ return (selfId == id.id);})
+		Game.level.enemies.splice(idx, 1);
 	}
 
 }

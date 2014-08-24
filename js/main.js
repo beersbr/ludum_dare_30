@@ -153,6 +153,10 @@ function Player(args){
 		}));
 	};
 
+	this.getRect = function(){
+		return (new Rect(this.pos.x + 5, this.pos.y + 5, this.size.w-10, this.size.h-10));
+	}
+
 	this.onCollide = function(o){
 		if(o instanceof Tile){
 			var v = uncollide(this.getRect(), o.getRect());
@@ -183,6 +187,14 @@ function Tile(args){
 
 	};
 
+	// this.render = function(){
+	// 	this.context.save();
+	// 	this.context.fillStyle = "rgb(255, 0, 255)";
+	// 	this.context.fillRect(this.pos.x + 10, this.pos.y + 10, this.size.w - 20, this.size.h - 20);
+	// 	this.context.restore();
+
+	// }
+
 	this.onCollide = function(go){
 		// console.log(this, "Collided with: ", go);
 	}
@@ -194,6 +206,42 @@ function Tile(args){
 
 Tile.prototype = new GameObject;
 Tile.constructor = Tile;
+
+
+/******************************
+ *	Door
+ ******************************/
+
+function Door(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+	this.image = Game.assets['tile-wood'];
+	this.collidable = true;
+
+	this.update = function(go){
+
+	}
+
+	this.render = function(){
+		this.context.drawImage(this.image, this.pos.x, this.pos.y, this.size.w, this.size.h);
+	}
+
+	this.getRect = function(){
+		var scale = 5;
+		return (new Rect(this.pos.x+scale, this.pos.y+scale, this.size.w-(scale*2), this.size.h-(scale*2)));
+	}
+
+	this.onCollide = function(o){
+		if(! (o instanceof Player))
+			return;
+
+		Game.nextLevel();
+	}
+}
+
+Door.prototype = new GameObject;
+Door.constructor = Door;
 
 /******************************
  *	GAME Level
@@ -207,6 +255,8 @@ function GameLevel(level){
 	var horizCount = width/tileSize;
 	var vertCount = height/tileSize;
 
+	this.level = level;
+
 	this.canvas = $("<canvas width='"+width+"' height='"+height+"' />")[0];
 	this.image = this.canvas;
 	this.context = this.canvas.getContext('2d');
@@ -216,7 +266,7 @@ function GameLevel(level){
 
 	this.generateLevelImage = function(){
 		var self = this;
-		$.ajax({url:"json/map-2-1.json",dataType:"json",success:function(mapJson){
+		$.ajax({url:"json/"+this.level,dataType:"json",success:function(mapJson){
 			for(var r in mapJson) {
 				for(var c in mapJson[r]) {
 					w = c.replace("col-","") - 1;
@@ -230,8 +280,13 @@ function GameLevel(level){
 						y: y,
 						w: 40,
 						h: 40,
-						state: mapJson[r][c].state
+						state: mapJson[r][c].state,
+						isDoor: (mapJson[r][c].door == 1)
 					});
+
+					if(mapJson[r][c].door == 1){
+						Game.door1 = t;
+					}
 					Game.pushGameObject(t);
 
 					self.context.drawImage(Game.assets[mapJson[r][c]['image']],
@@ -241,6 +296,56 @@ function GameLevel(level){
 			}
 		}});
 	}
+
+	this.load = function(){
+		// TODO: this will all be based on the level json
+		var player = new Player({
+			x: 100, y: 100,
+			w: 40,  h: 40
+		});
+
+		Game.gameObjects.push(player)
+		Game.player = player;
+
+		var bear = new Bear({
+			x: 400, y: 500,
+			w: 40,  h: 40,
+			image: Game.assets["enemy-bear"]
+		});
+
+		Game.gameObjects.push(bear);
+	}
+
+	this.update = function(t){
+
+		if(this.enemies.length == 0){
+			this.enemiesDead();
+			
+		}
+	}
+
+	this.render = function(){
+
+	}
+
+	this.enemiesDead = function(){
+
+
+		var door = new Door({x: Game.door1.pos.x, y: Game.door1.pos.y, w: 40, h: 40});
+
+
+		var idx = Game.gameObjects.find(function(o){
+			return (o.id == Game.door1.id);
+		});
+		Game.door1.collidable = false;
+		Game.gameObjects.splice(idx, 1);
+
+		Game.pushGameObject(door);
+
+		this.update = function(){};
+	}
+
+
 }
 
 /******************************
@@ -260,7 +365,18 @@ var Game = (function(){
 	var startTime = Time.timestamp;
 	var currentFrameTime = 0.0;
 
-	var gameObjects = [];
+	var _gameObjects = [];
+
+	Object.defineProperty(game, "gameObjects", {
+		get: function(){
+			return _gameObjects;
+		},
+		set: function(){
+			_gameObjects = [];
+		}
+	})
+
+	// game.gameObjects = gameObjects;
 
 	game.assetHandler = new AssetHandler();
 	game.assets = {};
@@ -275,9 +391,19 @@ var Game = (function(){
 	"map-4-1.json"
 	]
 
+	game.currentLevel = -1;
+
+	game.nextLevel = function(){
+		_gameObjects = [];
+		GameObject.collisionList = [];
+
+		game.currentLevel += 1;
+		game.level = new GameLevel(game.levels[game.currentLevel]);
+		game.load();
+	}
 
 	game.pushGameObject = function(ob){
-		gameObjects.push(ob);
+		_gameObjects.push(ob);
 	}
 
 	/**
@@ -331,7 +457,7 @@ var Game = (function(){
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
-			game.load();
+			game.nextLevel();
 		});		
 	}
 
@@ -340,26 +466,11 @@ var Game = (function(){
 	*/
 	game.load = function(){
 
-		game.level = new GameLevel();
+
+		// game.level = new GameLevel(game.levels[game.currentLevel]);
 		game.level.generateLevelImage();
 
-		var player = new Player({
-			x: 100, y: 100,
-			w: 40,  h: 40
-		});
-
-		gameObjects.push(player)
-
-		game.player = player;
-
-
-		var bear = new Bear({
-			x: 400, y: 500,
-			w: 40,  h: 40,
-			image: Game.assets["enemy-bear"]
-		});
-
-		gameObjects.push(bear)
+		game.level.load();
 
 		currentFrameTime = Time.timestamp;
 		game.run();
@@ -368,13 +479,13 @@ var Game = (function(){
 	game.update = function(t){
 		var elapsedTime = (t/1000);
 
-		for(var i in gameObjects){
-			gameObjects[i].update(elapsedTime);
+		for(var i in _gameObjects){
+			_gameObjects[i].update(elapsedTime);
 		}
 
-		for(var i in gameObjects){
-			if(gameObjects[i].dead)
-				gameObjects.splice(i, 1);
+		for(var i in _gameObjects){
+			if(_gameObjects[i].dead)
+				_gameObjects.splice(i, 1);
 		}
 
 		// the heavy collision detection step :(
@@ -395,19 +506,20 @@ var Game = (function(){
 					o.onCollide(p);
 				}
 			}
-
 		}
+
+		game.level.update();
 	}
 
 	game.render = function(){
 
 		CONTEXT.drawImage(game.level.image, 0, 0, WIDTH, HEIGHT);
 
-		for(var i = 1; i < gameObjects.length; i++){
-			gameObjects[i].render();
+		for(var i = 1; i < _gameObjects.length; i++){
+			_gameObjects[i].render();
 		}
 
-		gameObjects[0].render();
+		game.player.render();
 
 		CONTEXT.drawImage(game.assets['status-bar'], 0, 0, 800, 40);
 	}

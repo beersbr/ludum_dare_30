@@ -17,7 +17,6 @@ function GameObject(args) {
 		anim.done(function(id){
 			var i = self.animations.find(function(e){ return e.id == id });
 			
-			console.log(id, i, this);
 			if(this.last){
 				self.dead = true;
 			}
