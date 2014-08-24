@@ -36,6 +36,9 @@ function Animation(scope, totalTime, construct){
 		this._update.bind(scope)(t, totalTime, this.state);
 
 		totalTime -= t;
+		if(!isFinite(totalTime))
+			this.done = true;
+		
 		if(totalTime <= 0){
 			this.done = true;
 		}

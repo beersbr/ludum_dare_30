@@ -186,6 +186,7 @@ function Door(args){
 			return;
 
 		Game.nextLevel();
+		return false;
 	}
 }
 
@@ -558,7 +559,7 @@ var Game = (function(){
 		}
 
 		// the heavy collision detection step :(
-		for(var i in GameObject.collisionList){
+		for(var i = 0; i < GameObject.collisionList.length; i++){
 			var o = GameObject.collisionList[i];
 			if(o.dead){
 				GameObject.collisionList.splice(i, 1);
@@ -571,8 +572,8 @@ var Game = (function(){
 
 				// lol: get rect!
 				if(rectCollide(o.getRect(), p.getRect())){
-					p.onCollide(o);
-					o.onCollide(p);
+					if(p.onCollide(o) === false) break;
+					if(o.onCollide(p) === false) break;
 				}
 			}
 		}
