@@ -140,148 +140,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -298,148 +262,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -456,148 +384,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -614,148 +506,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -772,148 +628,119 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Walrus",
+                        "image": "enemy-walrus",
+                        "probability": "1"
+                    }
+                ]
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -930,148 +757,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -1088,152 +879,116 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
-                "door": false,
+                "door": true,
                 "image": "tile-ice-rock",
                 "state": "solid"
             }
@@ -1246,148 +1001,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -1404,148 +1123,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -1562,148 +1245,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -1720,148 +1367,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
@@ -1878,148 +1489,112 @@
                 "state": "solid"
             },
             "col-2": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-3": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-4": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-5": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-6": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-7": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-8": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-9": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
             },
             "col-10": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-11": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-12": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-13": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-14": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-15": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-16": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-17": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-18": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-19": {
-                "image": "",
-                "state": "",
                 "damage": 0,
-                "door": 0,
-                "items": [],
-                "enemies": []
+                "door": false,
+                "image": "tile-ice-1",
+                "state": "passable"
             },
             "col-20": {
                 "damage": 0,
