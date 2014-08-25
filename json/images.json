@@ -40,5 +40,6 @@
   "item-attack-power": "img/attack_up_item.png",
 	"status-health-bar": "img/health-bar.png", 
   "status-armor-bar": "img/armor-bar.png",
-  "door-basic": "img/door_basic.png"
+  "door-basic": "img/door_basic.png",
+  "tile-black": "img/tile-black.png"
 }
