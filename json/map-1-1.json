@@ -859,10 +859,10 @@
                 "damage": 0
             },
             "col-20": {
-                "image": "tile-tree",
-                "state": "solid",
                 "damage": 0,
-                "door": true
+                "door": true,
+                "image": "tile-tree",
+                "state": "solid"
             }
         },
         "row-8": {
@@ -945,10 +945,17 @@
                 "damage": 0
             },
             "col-14": {
-                "door": 0,
+                "damage": 0,
+                "door": false,
                 "image": "tile-sand-grass-1",
                 "state": "passable",
-                "damage": 0
+                "enemies": [
+                    {
+                        "name": "Crow",
+                        "image": "enemy-crow",
+                        "probability": "1"
+                    }
+                ]
             },
             "col-15": {
                 "door": 0,
@@ -981,10 +988,10 @@
                 "damage": 0
             },
             "col-20": {
-                "image": "tile-tree",
-                "state": "solid",
                 "damage": 0,
-                "door": true
+                "door": false,
+                "image": "tile-tree",
+                "state": "solid"
             }
         },
         "row-9": {
