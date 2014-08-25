@@ -15,8 +15,8 @@
 		"name": "Snake",
 		"image": "enemy-snake"
 	},
-	"SnakePit": {
-		"name": "SnakePit",
+	"SnakePitBoss": {
+		"name": "SnakePitBoss",
 		"image": "boss-snake-pit"
 	},
 	"Walrus": {

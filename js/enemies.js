@@ -652,6 +652,7 @@ function SnakePitBoss(args){
 		}
 
 		if(Math.random() < this.snakeChance){
+			console.log("spawning snake");
 			var s = new Snake({
 				x: this.center.x,
 				y: this.center.y,
@@ -705,19 +706,6 @@ function SnakePitBoss(args){
 		Game.gameObjects.push(item);				
 		
 
-		if(Math.random() < this.crowChance){
-			var c = new Crow({
-				x: this.center.x,
-				y: this.center.y,
-				ax: Math.random() * 10,
-				ay: Math.random() * 10,
-				updateState: "spawning"
-			});
-			Game.pushGameObject(c);
-		}
-
-
-
 		// TODO: move into game
 		var selfId = this.id;
 		var idx = Game.level.enemies.find(function(id){ return (selfId == id.id);})
@@ -726,8 +714,8 @@ function SnakePitBoss(args){
 
 }
 
-BearBoss.prototype = new GameObject;
-BearBoss.constructor = BearBoss;
+SnakePitBoss.prototype = new GameObject;
+SnakePitBoss.constructor = SnakePitBoss;
 
 
 /******************************

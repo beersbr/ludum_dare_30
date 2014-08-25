@@ -847,12 +847,12 @@
             },
             "col-18": {
                 "damage": 0,
-                "door": false,
+                "door": true,
                 "image": "tile-sand",
                 "state": "passable",
                 "enemies": [
                     {
-                        "name": "SnakePit",
+                        "name": "SnakePitBoss",
                         "image": "boss-snake-pit",
                         "probability": "1"
                     }
