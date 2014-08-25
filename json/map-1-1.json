@@ -777,6 +777,7 @@
                 "damage": "0",
                 "door": false,
                 "image": "tile-grass",
+                "state": "passable",
                 "enemies": [
                     {
                         "name": "Crow",

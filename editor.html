@@ -181,8 +181,9 @@ function setup(){
 			"damage":$("#tile-damage").val(),
 			"door":$("#tile-door").is(':checked'),
 			"image": $("#tiles li.selected").data("tile"),
-			"state": $("#tile-state:checked").val()
+			"state": $("input[name='state']:checked").val()
 		}
+		
 		if($("#enemies .selected").data("enemy")) {
 			map.tiles[selected_tile[1]][selected_tile[0]].enemies = [enemies[$("#enemies .selected").data("enemy")]];
 			map.tiles[selected_tile[1]][selected_tile[0]].enemies[0].probability = $("#enemy-probability").val()			
