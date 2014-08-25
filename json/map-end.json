@@ -11,9 +11,9 @@
     ],
     "text":[
     	{
-    		"x":0,
-    		"y":0,
-    		"value":"Display some text here."
+    		"x":250,
+    		"y":200,
+    		"value":"Thanks for playing our LD 30 game!"
     	}
     ],
     "tiles": {
