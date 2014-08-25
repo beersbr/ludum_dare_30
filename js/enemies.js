@@ -134,7 +134,7 @@ function Crow(args){
 
 			if(this.updateState == "attacking"){
 				this.moveSpeed = 18;
-				this.vel = this.vel.add(this.dir).scale(speed);
+				this.vel = this.vel.add(this.dir.scale(speed));
 
 				this.stateTime -= elapsedTime;
 				if(this.stateTime <= 0){
@@ -142,10 +142,10 @@ function Crow(args){
 					this.stateTime = this.findTime;
 				}
 			}
-			
 			else if(this.updateState == "finding"){
-				this.moveSpeed = 10;
+				this.moveSpeed = 1;
 				this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+
 				this.dir = Game.player.pos.sub(this.pos).normalize();
 				this.stateTime -= elapsedTime;
 				if(this.stateTime <= 0){
