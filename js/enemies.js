@@ -624,7 +624,7 @@ function SnakePitBoss(args){
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
 
-	this.health = 25;
+	this.health = 7;
 	this.armor = 0;
 	this.trinkets = [];
 	this.items = [];
@@ -638,7 +638,7 @@ function SnakePitBoss(args){
 
 	this.animations = [];
 
-	this.snakeChance = 0.05;
+	this.snakeChance = 0.02;
 
 
 	// add to current level enemies
