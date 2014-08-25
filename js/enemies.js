@@ -479,6 +479,7 @@ function BearBoss(args){
 
 	this.crowChance = 0.01;
 
+
 	// add to current level enemies
 	Game.level.enemies.push(this);
 
@@ -541,6 +542,29 @@ function BearBoss(args){
 		// this._update = function(){};
 		this.collidable = false;
 		this.dying = true;
+
+
+		// Spawns heart
+		var item = new ItemHeart({
+			x: this.pos.x, y: this.pos.y,
+			w: 40,  h: 40,
+			image: Game.assets['ItemHeart']
+		});
+console.log(item);
+		Game.gameObjects.push(item);				
+		
+
+		if(Math.random() < this.crowChance){
+			var c = new Crow({
+				x: this.center.x,
+				y: this.center.y,
+				ax: Math.random() * 10,
+				ay: Math.random() * 10,
+				updateState: "spawning"
+			});
+			Game.pushGameObject(c);
+		}
+
 
 
 		// TODO: move into game
