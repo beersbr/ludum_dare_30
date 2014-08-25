@@ -20,7 +20,6 @@ function Animation(scope, totalTime, construct){
 			this.done = true;
 		
 		if(totalTime <= 0){
-			console.log("FINISHED ANIM: ", this.id);
 			this.done = true;
 		}
 
@@ -73,7 +72,6 @@ function Shrink(scope, totalTime){
 
 	Animation.call(this, scope, totalTime, function(s){
 		s.shrinkRate = (this.size.w/totalTime);
-		console.log(s.shrinkRate);
 	});
 
 	this._update = function(t, timeLeft, s){

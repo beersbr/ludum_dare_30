@@ -15,6 +15,10 @@ function Player(args){
 	this.bulletDamage = 1;
 
 	this.health = args.health || 3;
+	// this.health = args.health || 3;
+
+
+
 	this.armor = args.armor || 0;
 	this.trinkets = [];
 	this.items = [];
@@ -265,8 +269,6 @@ function ItemHeart(args){
 		if(!(o instanceof Player))
 			return;
 
-		o.health += 1;
-
 		for(var i = 0; i < Math.randomInt(10, 20); i++){
 			var p = GenerateParticle(this.pos.x, this.pos.y, 0, Game.assets['particle-plus']);
 			Game.pushGameObject(p)
@@ -280,9 +282,6 @@ function ItemHeart(args){
 		this.addAnimation(new Shrink(this, 0.5), true);
 		this.collidable = false;
 		this.dying = true;
-
-
-		var selfId = this.id;
 	}
 
 }
@@ -321,6 +320,8 @@ function GameLevel(level){
 			var health = 0;
 			if(Game.player)
 				health = Game.player.health
+
+			console.log("Player health: ", health);
 
 			// TODO: this will all be based on the level json
 			var player = new Player({
