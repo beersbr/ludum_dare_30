@@ -755,10 +755,7 @@ var Game = (function(){
 		}
 
 		game.player.render();
-
 		StatusBar.render(CONTEXT);
-
-		
 	}
 
 	game.run = function(){

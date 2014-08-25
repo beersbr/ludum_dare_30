@@ -6,7 +6,7 @@ function Bear(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 15; // pixels per second
+	this.moveSpeed = 25; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -40,8 +40,10 @@ function Bear(args){
 		if(this.health <= 0 && !this.dying)
 			this.die();
 
-		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600)
+		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600){
 			console.error("BEAR POS: ", this.pos);
+			this.dead = true;
+		}
 
 	};
 
@@ -62,30 +64,6 @@ function Bear(args){
 			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
 			this.vel = this.vel.add(d);
 			this.health -= 1;
-		}
-	}
-
-	this.animationDieUpdate = function(t){
-		this.timeLeft -= t;
-		if(this.timeLeft < 0)
-			this.dead = true;
-
-		var d = (40/1.5)*t
-
-		this.size.w -= d;
-		this.size.h -= d;
-
-		this.pos.x += d/2;
-		this.pos.y += d/2;
-
-		for(var i in this.animations){
-			this.animations[i].update(t);
-		}
-	}
-
-	this.animationDieRender = function(){
-		for(var i in this.animations){
-			this.animations[i].render();
 		}
 	}
 

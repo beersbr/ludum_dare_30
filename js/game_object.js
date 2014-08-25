@@ -17,9 +17,12 @@ function GameObject(args) {
 		anim.done(function(id){
 			var i = self.animations.find(function(e){ return e.id == id });
 			
+			console.log(self.animations, i, this.last, id);
+
 			if(this.last){
 				self.dead = true;
 			}
+
 			self.animations.splice(i, 1);
 		});
 	}
