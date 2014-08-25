@@ -21,6 +21,7 @@ function Player(args){
 	this.items = [];
 
 	this.drag = 0.85;
+	this.dragMod = 0.0;
 
 	this.shootTime = 0;
 	this.canShoot = true;
@@ -44,7 +45,7 @@ function Player(args){
 				this.wasHit = false;
 		}
 
-		var speed = this.moveSpeed * elapsedTime;
+		var speed = (this.moveSpeed+this.speedMod) * elapsedTime;
 
 		if(KEYBOARD.isKeyDown('a')){
 			this.vel.x -= speed;
@@ -84,8 +85,14 @@ function Player(args){
 
 		// this.pos = this.pos.add(this.hv);
 		// this.hv = new Vector();
-		this.vel = this.vel.scale(this.drag);
+
+		var dragFinal = this.drag + this.dragMod;
+
+		this.vel = this.vel.scale(dragFinal);
 		this.pos = this.pos.add(this.vel);
+
+		this.dragMod = 0.0;
+		this.speedMod = 0.0;
 
 	};
 
@@ -124,10 +131,15 @@ function Player(args){
 	this.onCollide = function(o){
 		if(o instanceof Tile){
 
-			//if(o.tileState == "slick") apply drag mod
+			if(o.tileState == "slick"){
+				this.dragMod = 0.1;
+				this.speedMod = -30;
+			}
 
 			if(o.tileState != "solid")
 				return;
+
+			this.dragMod = 0.0;
 				
 			var v = uncollide(this.getRect(), o.getRect());
 
@@ -228,20 +240,6 @@ function Player(args){
 			this.hitTime = this.safeTime;
 		}
 
-		if(o instanceof SnakePit){
-			v = uncollide(this.getRect(), o.getRect());
-			this.vel = this.vel.add(v);	
-
-			if(this.wasHit) return;
-
-			this.health -= 1;
-			StatusBar.removeHealth();
-			this.addAnimation(new TurnRed(this, 0.8), false);
-
-			this.wasHit = true;
-			this.hitTime = this.safeTime;
-		}
-
 		if(o instanceof Walrus){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
@@ -310,8 +308,9 @@ function Tile(args){
 	this.tileState = args.state;
 	this.tileDamage = args.damage;
 
-	if(this.tileState == "solid")
+	if(this.tileState == "solid" || this.tileState == "slick")
 		this.collidable = true;
+
 }
 
 Tile.prototype = new GameObject;
@@ -678,11 +677,10 @@ var Game = (function(){
 	// "map-1-3.json",
 	// "map-1-4.json",
 	// "map-1-5.json",
-	//"map-2-1.json",
-	//"map-2-2.json",
-	//"map-2-3.json",
-	//"map-2-4.json",
-	"map-2-5.json",
+	// "map-2-1.json",
+	// "map-2-2.json",
+	// "map-2-3.json",
+	// "map-2-4.json",
 	"map-3-1.json",
 	"map-3-2.json",
 	"map-4-1.json",
