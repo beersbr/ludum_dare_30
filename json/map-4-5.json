@@ -1,6 +1,6 @@
 {
-    "name": "World 4 Level 1",
-    "description": "Introductions into fire tiles",
+    "name": "World 4 Level 5",
+    "description": "This is the end",
     "dimensions": [
         20,
         14
@@ -692,7 +692,13 @@
                 "door": false,
                 "image": "tile-red-rock",
                 "state": "passable",
-                "enemies": []
+                "enemies": [
+                    {
+                        "name": "DragonBoss",
+                        "image": "boss-dragon",
+                        "probability": "1"
+                    }
+                ]
             },
             "col-13": {
                 "door": 0,
@@ -975,16 +981,16 @@
                 "damage": 0
             },
             "col-19": {
-                "damage": 0,
-                "door": true,
+                "door": 0,
                 "image": "tile-red-rock",
-                "state": "passable"
+                "state": "passable",
+                "damage": 0
             },
             "col-20": {
-                "damage": 3,
-                "door": false,
                 "image": "tile-fire",
-                "state": "solid"
+                "state": "solid",
+                "damage": 3,
+                "door": true
             }
         },
         "row-9": {

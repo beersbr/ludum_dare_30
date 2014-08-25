@@ -82,5 +82,9 @@
   {
     "name":"slick ice",
     "image":"tile-ice-2"
+  },
+  {
+    "name":"door basic",
+    "image":"door-basic"
   }
 ]

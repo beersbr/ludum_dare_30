@@ -35,5 +35,6 @@
   "enemy-walrus": "img/enemy-walrus.png", 
 	"item-heart": "img/item-heart.png", 
 	"status-health-bar": "img/health-bar.png", 
-	"status-armor-bar": "img/armor-bar.png"
+  "status-armor-bar": "img/armor-bar.png",
+  "door-basic": "img/door_basic.png"
 }

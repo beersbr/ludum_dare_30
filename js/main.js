@@ -312,7 +312,7 @@ function Door(args){
 	if(!args) args = {};
 
 	GameObject.call(this, args);
-	this.image = Game.assets['tile-wood'];
+	this.image = Game.assets['door-basic'];
 	this.collidable = true;
 
 	this.update = function(go){
@@ -661,7 +661,9 @@ var Game = (function(){
 	"map-2-2.json",
 	"map-2-3.json",*/
 	"map-3-1.json",
-	"map-4-1.json"
+	"map-4-1.json",
+	"map-4-2.json",
+	"map-4-5.json"
 	]
 
 	game.currentLevel = -1;
