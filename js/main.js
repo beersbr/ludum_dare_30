@@ -123,6 +123,9 @@ function Player(args){
 
 	this.onCollide = function(o){
 		if(o instanceof Tile){
+
+			//if(o.tileState == "slick") apply drag mod
+
 			if(o.tileState != "solid")
 				return;
 				
