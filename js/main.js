@@ -37,12 +37,6 @@ function Player(args){
 	this.minVel = new Vector();
 	this.maxVel = new Vector();
 
-	setInterval(function(){
-		console.log("---- maxima/minima ----")
-		console.log(this.maxVel.x, this.maxVel.y);
-		console.log(this.minVel.x, this.minVel.y);
-	}.bind(this), 1000);
-
 	this._update = function(elapsedTime){
 		if(this.health <= 0)
 			this.die();
