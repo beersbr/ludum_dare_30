@@ -27,6 +27,8 @@ function Player(args){
 
 	this.collidable = true;
 
+	this.image = Game.assets['player-guy'];
+
 	this.update = function(elapsedTime){
 
 		var speed = this.moveSpeed * elapsedTime;
@@ -77,10 +79,8 @@ function Player(args){
 
 	this.render = function(){
 		this.context.save();
-			this.context.fillStyle = "rgb(255, 0, 255)";
-			this.context.strokeStyle = "rgb(100, 0, 100)";
-			this.context.fillRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
-			this.context.strokeRect(this.pos.x, this.pos.y, this.size.w, this.size.h);
+
+			this.context.drawImage(this.image, this.pos.x, this.pos.y, this.size.w, this.size.h);
 
 		this.context.restore();
 	};
@@ -115,11 +115,17 @@ function Player(args){
 		if(o instanceof Bear){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
+
+			this.health -= 1;
+			this.addAnimation(new TurnRed(this, 0.3), false);
 		}
 
 		if(o instanceof Crow){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
+
+			this.health -= 1;
+			this.addAnimation(new TurnRed(this, 0.3), false);
 		}
 
 		if(o instanceof ItemHeart){
