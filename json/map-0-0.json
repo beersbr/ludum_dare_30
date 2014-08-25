@@ -544,7 +544,7 @@
             "col-8": {
                 "door": 0,
                 "image": "tile-grass",
-                "state": "solid",
+                "state": "passable",
                 "damage": 0
             },
             "col-9": {
@@ -941,7 +941,7 @@
             "col-13": {
                 "door": 0,
                 "image": "tile-grass",
-                "state": "solid",
+                "state": "passable",
                 "damage": 0
             },
             "col-14": {
