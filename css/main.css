@@ -7,17 +7,25 @@ body {
 	background: #133 url("../img/background.png") repeat;
 }
 
-.header{
+.header, .instructions{
 	font-family: "PressStart2P";
-	width: 800px;
-	margin: 0 auto;
+	width: 485px;
+	left: 50%;
+	top: 20px;
+
+	margin-left: -175px;
+	position: relative;
+	color: white;
 }
 
 canvas#game {
-	/*
-	width: 1024px;
-	height: 768px;
-	*/
+	
+	/*width: 800px;*/
+	/*height: 600px;*/
+
+	/*width: 1024px;
+	height: 768px;*/
+	
 
 	width: 1200px;
 	height: 900px;
@@ -25,5 +33,5 @@ canvas#game {
 	position: relative;
 	left: 50%;
 	margin-left: -512px;
-	top: 50px;
+	top: 35px;
 }
