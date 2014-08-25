@@ -778,13 +778,7 @@
                 "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "enemies": [
-                    {
-                        "name": "Crow",
-                        "image": "enemy-crow",
-                        "probability": "1"
-                    }
-                ]
+                "enemies": []
             },
             "col-7": {
                 "door": 0,
