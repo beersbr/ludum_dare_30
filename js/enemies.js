@@ -475,7 +475,7 @@ function DragonBoss(args){
 
 
 	// look here
-	this.size = new Vector(80, 80);
+	this.size = new Vector(160, 160);
 
 	this.moveSpeed = 15; // pixels per second
 	this.shootSpeed = 0; // per second
@@ -532,7 +532,7 @@ function DragonBoss(args){
 	};
 
 	this._render = function(){
-		this.context.drawImage(this.image, 0, 0, 80, 80, this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.context.drawImage(this.image, 0, 0, 160, 160, this.pos.x, this.pos.y, this.size.w, this.size.h);
 	}
 
 	this.onCollide = function(o){

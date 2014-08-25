@@ -635,14 +635,14 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	"map-1-1.json",
+	/*"map-1-1.json",
 	"map-1-2.json",
 	"map-1-3.json",
 	"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
 	"map-2-2.json",
-	"map-2-3.json",
+	"map-2-3.json",*/
 	"map-4-1.json"
 	]
 
