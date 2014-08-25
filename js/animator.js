@@ -64,7 +64,7 @@ function TurnRed(scope, totalTime){
 		var context = canvas.getContext('2d');
 		context.putImageData(s.pixelData, 0, 0);
 
-		this.context.drawImage(canvas, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.context.drawImage(canvas, 0, 0, this.image.width, this.image.height, this.pos.x, this.pos.y, this.size.w, this.size.h);
 	}
 }
 
