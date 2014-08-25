@@ -123,7 +123,7 @@ function Player(args){
 			this.pos = this.pos.add(v);
 		}
 
-		if(o instanceof BossBear){
+		if(o instanceof BearBoss){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 
