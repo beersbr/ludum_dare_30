@@ -886,9 +886,9 @@
                 "damage": 0
             },
             "col-20": {
-                "damage": 1,
+                "damage": 0,
                 "door": false,
-                "image": "tile-cactus",
+                "image": "tile-brush",
                 "state": "solid"
             }
         },
@@ -1137,10 +1137,10 @@
                 "damage": 0
             },
             "col-20": {
-                "door": 0,
-                "image": "tile-cactus",
-                "state": "solid",
-                "damage": 1
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
             }
         },
         "row-10": {
