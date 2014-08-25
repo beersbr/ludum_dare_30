@@ -99,7 +99,7 @@ function Player(args){
 	};
 
 	this.die = function(){
-
+		AUDIO.playHit("hit-die");
 		// DIED
 		Game.currentLevel = -1;
 		Game.nextLevel();
@@ -229,10 +229,12 @@ function Player(args){
 		}
 
 		if(o instanceof Snake){
+			
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 
 			if(this.wasHit) return;
+			AUDIO.playHit("hit-ouch");
 
 			this.health -= 1;
 			StatusBar.removeHealth();
@@ -243,10 +245,12 @@ function Player(args){
 		}
 
 		if(o instanceof Walrus){
+			
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 
 			if(this.wasHit) return;
+			AUDIO.playHit("hit-ouch");
 
 			this.health -= 2;
 			StatusBar.removeHealth({amount:2});
@@ -678,7 +682,7 @@ var Game = (function(){
 	// "map-1-2.json",
 	// "map-1-3.json",
 	// "map-1-4.json",
-	"map-1-5.json",
+	// "map-1-5.json",
 	"map-2-1.json",
 	"map-2-2.json",
 	"map-2-3.json",
@@ -764,6 +768,7 @@ var Game = (function(){
 		game.assetHandler.prepare("hit-shoot", "sounds/hit-shoot.wav", "audio");
 		game.assetHandler.prepare("hit-ouch", "sounds/hit-ouch.wav", "audio");
 		game.assetHandler.prepare("hit-item", "sounds/hit-item.wav", "audio");
+		game.assetHandler.prepare("hit-die", "sounds/hit-die.wav", "audio");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
