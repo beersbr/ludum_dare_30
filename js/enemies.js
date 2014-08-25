@@ -120,9 +120,16 @@ function Crow(args){
 
 	this.attackTime = 1.4;
 	this.findTime = 2.0
+	this.spawiningTIme = 0.5;
 
-	this.updateState = "finding"; // ["attacking", "finding"]
-	this.stateTime = this.findTime;
+	this.updateState = args.updateState || "finding"; // ["attacking", "finding"]
+
+	switch(this.updateState){
+		case "finding": this.stateTime = this.findTime; break;
+		case "spawning": this.stateTime = this.spawiningTIme; break;
+		case "attacking": this.stateTime = this.attackingTime; break;	
+	}
+	
 
 	this.dir = new Vector;
 
@@ -156,6 +163,21 @@ function Crow(args){
 						Game.pushGameObject(GenerateParticle(this.center.x, this.center.y, 0, Game.assets['particle-red']));
 
 					this.updateState = "attacking";
+					this.stateTime = this.attackTime;
+				}
+			}
+			else if(this.updateState == "spawning"){
+				this.moveSpeed = 4;
+				this.vel = this.vel.add(this.vel.normalize().scale(speed));
+
+
+				this.stateTime -= elapsedTime;
+				if(this.stateTime <= 0){
+
+					for(var i = 0; i < 30; i++)
+						Game.pushGameObject(GenerateParticle(this.center.x, this.center.y, 0, Game.assets['particle-green']));
+
+					this.updateState = "finding";
 					this.stateTime = this.attackTime;
 				}
 			}
@@ -390,7 +412,8 @@ function BearBoss(args){
 				x: this.center.x,
 				y: this.center.y,
 				ax: Math.random() * 10,
-				ay: Math.random() * 10
+				ay: Math.random() * 10,
+				updateState: "spawning"
 			});
 			Game.pushGameObject(c);
 		}
