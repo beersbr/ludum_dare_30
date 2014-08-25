@@ -53,6 +53,7 @@ function Bear(args){
 		}
 
 		if(o instanceof Bullet){
+			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
@@ -112,7 +113,7 @@ function Crow(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 10; // pixels per second
+	this.moveSpeed = 5; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -172,6 +173,7 @@ function Crow(args){
 		}
 
 		if(o instanceof Bullet){
+			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.center.sub(o.center).normalize().scale(5.0);
