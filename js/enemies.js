@@ -326,7 +326,7 @@ function Snake(args){
 		}
 
 		if(o instanceof Bullet){
-			//AUDIO.playHit("hit-bear");
+			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
@@ -417,7 +417,7 @@ function Walrus(args){
 		}
 
 		if(o instanceof Bullet){
-			//AUDIO.playHit("hit-walrus");
+			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
@@ -623,7 +623,7 @@ function DragonBoss(args){
 		}
 
 		if(o instanceof Bullet){
-			//AUDIO.playHit("hit-dragon");
+			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
