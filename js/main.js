@@ -650,6 +650,7 @@ var Game = (function(){
 	//"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
+	"map-2-2.json",
 	"map-4-1.json"
 	]
 
