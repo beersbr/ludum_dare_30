@@ -33,8 +33,10 @@ function Player(args){
 	this.safeTime = 0.8;
 	this.hitTime = this.safeTime;
 
-
 	this._update = function(elapsedTime){
+
+		if(this.health <= 0)
+			this.die();
 
 		if(this.wasHit){
 			this.hitTime -= elapsedTime;
@@ -87,10 +89,16 @@ function Player(args){
 
 	};
 
+	this.die = function(){
+
+		// DIED
+		Game.currentLevel = -1;
+		Game.nextLevel();
+		// start over
+	}
+
 	this._render = function(){
-
-			this.context.drawImage(this.image, this.pos.x, this.pos.y, this.size.w, this.size.h);
-
+		this.context.drawImage(this.image, this.pos.x, this.pos.y, this.size.w, this.size.h);
 	};
 
 	this.shoot = function(vdir){
@@ -130,7 +138,7 @@ function Player(args){
 					this.wasHit = true;
 					this.hitTime = this.safeTime;
 
-					var ret = this.center.sub(o.center).normalize().scale(20.0);
+					var ret = this.center.sub(o.center).normalize().scale(10.0);
 					this.vel = this.vel.add(ret);
 				}
 			}
@@ -213,6 +221,10 @@ Player.prototype = new GameObject;
 Player.constructor = Player;
 
 
+/******************************
+ *	GameState Player Died
+ ******************************/
+
 
 /******************************
  *	Tile
@@ -277,87 +289,6 @@ function Door(args){
 
 Door.prototype = new GameObject;
 Door.constructor = Door;
-
-
-/******************************
- *	Item
- ******************************/
-function Item(args){
-	if(!args) args = {};	
-
-	GameObject.call(this, args);
-
-	this.image = args.image;
-	this.collidable = true;
-
-	this.sizeMod = 10;
-	this.scale = 0.0;
-	this.sizeFactor = 1.0;
-	this.rotate = 0
-
-	this._update = function(t){
-		this.scale += t*2.5;
-		this.sizeFactor = Math.cos(this.scale) * this.sizeMod;
-
-		this.rotate += 2*t;
-	}
-
-	this._render = function(){
-		this.context.translate(this.center.x, this.center.y);
-		this.context.rotate(this.rotate);
-
-		var nw = Math.max(this.sizeFactor + this.size.w, 1);
-		var nh = Math.max(this.sizeFactor + this.size.h, 1);
-
-		this.context.drawImage(this.image,
-			0, 0, 40, 40,
-			0-nw/2, 0-nh/2,
-			nw, nh);
-
-		// this.context.drawImage(this.image, 0, 0, 40, 40, 
-		// 	this.pos.x, this.pos.y, this.sizeFactor + this.size.w, this.sizeFactor + this.size.h);
-	}
-
-	this.onCollide = function(o){
-		if(!(o instanceof Player))
-			return;		
-	}
-
-}
-ItemHeart.prototype = new GameObject;
-ItemHeart.constructor = ItemHeart;
-
-
-function ItemHeart(args){
-	GameObject.call(this, args);
-	Item.call(this, args);
-
-	this.image = Game.assets['item-heart'];
-	this.size = new Vector(25, 25);
-
-	this.onCollide = function(o){
-		if(!(o instanceof Player))
-			return;
-
-		for(var i = 0; i < Math.randomInt(10, 20); i++){
-			var p = GenerateParticle(this.pos.x, this.pos.y, 0, Game.assets['particle-plus']);
-			Game.pushGameObject(p)
-		}
-
-		this.die();
-	}
-
-
-	this.die = function(){
-		this.addAnimation(new Shrink(this, 0.5), true);
-		this.collidable = false;
-		this.dying = true;
-	}
-
-}
-
-Item.prototype = new GameObject;
-Item.constructor = Item;
 
 
 /******************************
@@ -670,11 +601,11 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	//"map-1-1.json",
-	//"map-1-2.json",
-	//"map-1-3.json",
-	//"map-1-4.json",
-	//"map-1-5.json",
+	"map-1-1.json",
+	"map-1-2.json",
+	"map-1-3.json",
+	"map-1-4.json",
+	"map-1-5.json",
 	"map-2-1.json",
 	"map-2-2.json",
 	"map-2-3.json",
