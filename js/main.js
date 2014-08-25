@@ -129,6 +129,8 @@ function Player(args){
 
 			if(this.wasHit) return;
 
+			AUDIO.playHit("hit-ouch");
+
 			this.health -= 1;
 			StatusBar.removeHealth();
 			this.addAnimation(new TurnRed(this, 0.8), false);
@@ -143,6 +145,8 @@ function Player(args){
 
 			if(this.wasHit) return;
 
+			AUDIO.playHit("hit-ouch");
+
 			this.health -= 1;
 			StatusBar.removeHealth();
 			this.addAnimation(new TurnRed(this, 0.8), false);
@@ -156,6 +160,8 @@ function Player(args){
 			this.vel = this.vel.add(v);	
 
 			if(this.wasHit) return;
+
+			AUDIO.playHit("hit-ouch");
 
 			this.health -= 1;
 			StatusBar.removeHealth();
@@ -717,6 +723,7 @@ var Game = (function(){
 		game.assetHandler.prepare("hit-bear", "sounds/hit-bear.wav", "audio");
 		game.assetHandler.prepare("hit-open", "sounds/hit-open.wav", "audio");
 		game.assetHandler.prepare("hit-shoot", "sounds/hit-shoot.wav", "audio");
+		game.assetHandler.prepare("hit-ouch", "sounds/hit-ouch.wav", "audio");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
