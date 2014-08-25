@@ -123,6 +123,20 @@ function Player(args){
 			this.pos = this.pos.add(v);
 		}
 
+		if(o instanceof BossBear){
+			v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);	
+
+			if(this.wasHit) return;
+
+			this.health -= 1;
+			StatusBar.removeHealth();
+			this.addAnimation(new TurnRed(this, 0.8), false);
+
+			this.wasHit = true;
+			this.hitTime = this.safeTime;
+		}
+
 		if(o instanceof Bear){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
