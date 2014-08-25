@@ -1,19 +1,39 @@
 var AUDIO = (function(){
 	var audio = {};
 	
+	audio.sounds = {};
+
 	audio.voices = 16;
+	audio.voiceTags = [];
+	audio.voiceIndex = 0;
 
-	audio.index = 0;
-	audio.tags = [];
-	for(var i = 0; i < audio.voices; i++){
-		var a = new Audio();
-		a.preload = true;
-		audio.tags.push(a);
+	audio.songs = {};
+
+	audio.song = null;
+
+	audio.setHit = function(key, src){
+		audio.sounds[key] = src;
 	}
-		
 
-	audio.play = function(audioSrc){
+	audio.setSong = function(key, src){
+		audio.songs[key] = src;
+	}
 
+	audio.playHit = function(key){
+		audio.voiceTags[audio.voiceIndex] = new Audio(audio.sounds[key].src);
+		audio.voiceTags[audio.voiceIndex].volume = 0.2;
+		audio.voiceTags[audio.voiceIndex].play();
+
+		audio.voiceIndex = (audio.voiceIndex+1)%audio.voices;
+
+
+	}
+
+	audio.playSong = function(key){
+		audio.song = audio.songs[key]
+		audio.song.volume = 0.6;
+		audio.song.loop = true;
+		audio.song.play();
 	}
 
 

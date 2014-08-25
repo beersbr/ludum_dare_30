@@ -85,6 +85,8 @@ function Player(args){
 	this.shoot = function(vdir){
 		if(!this.canShoot) return;
 
+		AUDIO.playHit("hit-shoot");
+
 		this.canShoot = false;
 
 		Game.pushGameObject(new Bullet({
@@ -109,7 +111,7 @@ function Player(args){
 
 		if(o instanceof Bear){
 			v = uncollide(this.getRect(), o.getRect());
-			this.vel = this.vel.add(v);	
+			this.vel = this.vel.add(v).scale(0.3);	
 		}
 
 		if(o instanceof Crow){
@@ -118,6 +120,7 @@ function Player(args){
 		}
 
 		if(o instanceof ItemHeart){
+			AUDIO.playHit("hit-shoot");
 			this.health += 1;
 			StatusBar.addHealth();
 		}
@@ -190,6 +193,7 @@ function Door(args){
 		if(! (o instanceof Player))
 			return;
 
+		// debugger;
 		Game.nextLevel();
 		return false;
 	}
@@ -324,6 +328,7 @@ function GameLevel(level){
 
 			Game.gameObjects.push(player)
 			Game.player = player;
+			AUDIO.playSong("song-sand");
 
 			StatusBar.setHealth(player.health);
 			StatusBar.setArmor(player.armor);
@@ -416,9 +421,17 @@ function GameLevel(level){
 
 	this.enemiesDead = function(){
 
+		AUDIO.playHit('hit-open');
 
 		var door = new Door({x: Game.door1.pos.x, y: Game.door1.pos.y, w: 40, h: 40});
 
+		var x = door.center.x;
+		var y = door.center.y;
+
+		var c = Math.randomInt(20, 50);
+
+		for(var i = 0; i < 50; i++)
+			Game.pushGameObject(GenerateParticle(x, y, 0, Game.assets['particle-green']));
 
 		var idx = Game.gameObjects.find(function(o){
 			return (o.id == Game.door1.id);
@@ -634,9 +647,28 @@ var Game = (function(){
 				this.assetHandler.prepare(k, e[k], "image");
 		}.bind(game));
 
+		// game.assetHandler.prepare("bear-growl", "sounds/bear-growl.mp3", "audio");
+		// game.assetHandler.prepare("bear-roar", "sounds/bear-growl.mp3", "audio");
+
+		game.assetHandler.prepare("song-jungle", "sounds/jungle-tune.mp3", "audio");
+		// game.assetHandler.prepare("song-jungle2", "sounds/jungle-tune2.aif", "audio");
+		game.assetHandler.prepare("song-sand", "sounds/sand-tune.mp3", "audio");
+
+		game.assetHandler.prepare("hit-bear", "sounds/hit-bear.wav", "audio");
+		game.assetHandler.prepare("hit-open", "sounds/hit-open.wav", "audio");
+		game.assetHandler.prepare("hit-shoot", "sounds/hit-shoot.wav", "audio");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
+
+			for(var k in game.assets){
+				if(k.slice(0, 4) == "hit-")
+					AUDIO.setHit(k, game.assets[k]);
+
+				if(k.slice(0, 5) == "song-")
+					AUDIO.setSong(k, game.assets[k]);
+			}
+			
 
 			StatusBar.init({
 				healthImage: game.assets['status-health-bar'],
