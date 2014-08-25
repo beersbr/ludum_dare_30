@@ -251,6 +251,10 @@ function BearBoss(args){
 
 	GameObject.call(this, args);
 
+
+	// look here
+	this.size = new Vector(80, 80);
+
 	this.moveSpeed = 15; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
