@@ -2,5 +2,17 @@
 	"ItemHeart":{
 		"name":"ItemHeart",
 		"image":"item-heart"
+	},
+	"ItemShootDamage":{
+		"name":"ItemShootDamage",
+		"image":"item-attack-power"
+	},
+	"ItemAttackSpeed":{
+		"name":"ItemShootSpeed",
+		"image":"item-attack-speed"
+	},
+	"ItemMoveSpeed":{
+		"name":"ItemMoveSpeed",
+		"image":"item-speed-up"
 	}
 }

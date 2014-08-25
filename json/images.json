@@ -36,6 +36,7 @@
   "enemy-snake": "img/enemy-snake.png", 
   "enemy-walrus": "img/enemy-walrus.png", 
 	"item-heart": "img/item-heart.png", 
+  "item-speed-up": "img/speed_up_item.png",
   "item-attack-speed": "img/attack_speed_up.png", 
   "item-attack-power": "img/attack_up_item.png",
 	"status-health-bar": "img/health-bar.png", 

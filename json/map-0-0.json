@@ -670,10 +670,17 @@
                 "damage": 0
             },
             "col-9": {
-                "door": 0,
+                "damage": 0,
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": 0
+                "items": [
+                    {
+                        "name": "ItemShootDamage",
+                        "image": "item-attack-power",
+                        "probability": ".33"
+                    }
+                ]
             },
             "col-10": {
                 "door": 0,
