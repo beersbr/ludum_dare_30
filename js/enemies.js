@@ -241,6 +241,93 @@ Crow.prototype = new GameObject;
 Crow.constructor = Crow;
 
 
+/******************************
+ *	Snake 
+ ******************************/
+function Snake(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+	this.moveSpeed = 50; // pixels per second
+	this.shootSpeed = 0; // per second
+	this.bulletSpeed = 0; // pixels per second
+	this.bulletDamage = 0;
+
+	this.health = 2;
+	this.armor = 0;
+	this.trinkets = [];
+	this.items = [];
+
+	this.drag = 0.85;
+
+	this.shootTime = 0;
+	this.canShoot = false;
+
+	this.collidable = true;
+
+	this.animations = [];
+
+	// add to current level enemies
+	Game.level.enemies.push(this);
+
+	this._update = function(elapsedTime){
+		var speed = this.moveSpeed * elapsedTime;
+
+		if(!this.dying)
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+
+		this.vel = this.vel.scale(this.drag);
+		this.pos = this.pos.add(this.vel);
+
+		if(this.health <= 0 && !this.dying)
+			this.die();
+
+		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600){
+			this.dead = true;
+		}
+
+	};
+
+	this._render = function(){
+		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
+	}
+
+	this.onCollide = function(o){
+		if(o instanceof Tile){
+			var v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);
+		}
+
+		if(o instanceof Bullet){
+			//AUDIO.playHit("hit-bear");
+			this.addAnimation(new TurnRed(this, 0.3), false);
+
+			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
+			this.vel = this.vel.add(d);
+			this.health -= 1;
+		}
+	}
+
+	this.die = function(){
+
+		this.addAnimation(new Shrink(this, 0.5), true);
+		// this._update = function(){};
+		this.collidable = false;
+		this.dying = true;
+
+
+		// TODO: move into game
+		var selfId = this.id;
+		var idx = Game.level.enemies.find(function(id){ return (selfId == id.id);})
+		Game.level.enemies.splice(idx, 1);
+	}
+
+}
+
+Snake.prototype = new GameObject;
+Snake.constructor = Snake;
+
 
 
 /******************************
@@ -260,7 +347,7 @@ function BearBoss(args){
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
 
-	this.health = 100;
+	this.health = 25;
 	this.armor = 0;
 	this.trinkets = [];
 	this.items = [];

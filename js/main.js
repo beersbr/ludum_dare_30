@@ -165,6 +165,20 @@ function Player(args){
 			this.hitTime = this.safeTime;
 		}
 
+		if(o instanceof Snake){
+			v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);	
+
+			if(this.wasHit) return;
+
+			this.health -= 1;
+			StatusBar.removeHealth();
+			this.addAnimation(new TurnRed(this, 0.8), false);
+
+			this.wasHit = true;
+			this.hitTime = this.safeTime;
+		}
+
 		if(o instanceof ItemHeart){
 			AUDIO.playHit("hit-shoot");
 			this.health += 1;
@@ -624,10 +638,10 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	"map-1-1.json",
-	"map-1-2.json",
-	"map-1-3.json",
-	"map-1-4.json",
+	//"map-1-1.json",
+	//"map-1-2.json",
+	//"map-1-3.json",
+	//"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
 	"map-4-1.json"
