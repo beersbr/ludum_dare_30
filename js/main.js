@@ -211,7 +211,7 @@ function Tile(args){
 	};
 
 	this.onCollide = function(go){
-		// console.log(this, "Collided with: ", go);
+		 console.log(this, "Collided with: ", go);
 	}
 
 	this.tileState = args.state;
