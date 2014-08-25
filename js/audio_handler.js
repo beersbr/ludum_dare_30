@@ -23,15 +23,12 @@ var AUDIO = (function(){
 		audio.voiceTags[audio.voiceIndex] = new Audio(audio.sounds[key].src);
 		audio.voiceTags[audio.voiceIndex].volume = 0.2;
 		audio.voiceTags[audio.voiceIndex].play();
-
 		audio.voiceIndex = (audio.voiceIndex+1)%audio.voices;
-
-
 	}
 
 	audio.playSong = function(key){
 		audio.song = audio.songs[key]
-		audio.song.volume = 0.3;
+		audio.song.volume = 0.1;
 		audio.song.loop = true;
 		audio.song.play();
 	}

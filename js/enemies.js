@@ -141,11 +141,12 @@ function Crow(args){
 
 		if(!this.dying){
 
+			this.stateTime -= elapsedTime;
+
 			if(this.updateState == "attacking"){
 				this.moveSpeed = 18;
 				this.vel = this.vel.add(this.dir.scale(speed));
 
-				this.stateTime -= elapsedTime;
 				if(this.stateTime <= 0){
 					this.updateState = "finding";
 					this.stateTime = this.findTime;
@@ -154,11 +155,9 @@ function Crow(args){
 			else if(this.updateState == "finding"){
 				this.moveSpeed = 1;
 				this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
-
 				this.dir = Game.player.pos.sub(this.pos).normalize();
-				this.stateTime -= elapsedTime;
-				if(this.stateTime <= 0){
 
+				if(this.stateTime <= 0){
 					for(var i = 0; i < 30; i++)
 						Game.pushGameObject(GenerateParticle(this.center.x, this.center.y, 0, Game.assets['particle-red']));
 
@@ -170,11 +169,8 @@ function Crow(args){
 				this.moveSpeed = 4;
 				this.vel = this.vel.add(this.vel.normalize().scale(speed));
 
-
-				this.stateTime -= elapsedTime;
 				if(this.stateTime <= 0){
-
-					for(var i = 0; i < 30; i++)
+					for(var i = 0; i < 10; i++)
 						Game.pushGameObject(GenerateParticle(this.center.x, this.center.y, 0, Game.assets['particle-green']));
 
 					this.updateState = "finding";
