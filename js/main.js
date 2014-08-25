@@ -481,7 +481,17 @@ function GameLevel(level){
 					}									
 				}
 			}
-		
+
+			for(var to in mapJson.text){
+				var t = mapJson.text[to];
+				var size = t.size || 10;
+				self.context.save();
+				self.context.font = size+"px PressStart2P";
+				self.context.fillStyle = "rgba(255, 255, 255, 0.8)";
+				self.context.fillText(t.value, t.x, t.y);
+				self.context.restore();
+			}
+
 		}});
 	}
 
@@ -678,22 +688,22 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	 "map-0-0.json",
+	 // "map-0-0.json",
 	// "map-1-1.json",
 	// "map-1-2.json",
 	// "map-1-3.json",
 	// "map-1-4.json",
 	// "map-1-5.json",
-	"map-2-1.json",
-	"map-2-2.json",
-	"map-2-3.json",
-	"map-2-4.json",
-	"map-2-5.json",
-	"map-3-1.json",
-	"map-3-2.json",
-	"map-4-1.json",
-	"map-4-2.json",
-	"map-4-5.json",
+	// "map-2-1.json",
+	// "map-2-2.json",
+	// "map-2-3.json",
+	// "map-2-4.json",
+	// "map-2-5.json",
+	// "map-3-1.json",
+	// "map-3-2.json",
+	// "map-4-1.json",
+	// "map-4-2.json",
+	// "map-4-5.json",
 	"map-end.json"
 	]
 
