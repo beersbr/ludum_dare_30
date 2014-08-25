@@ -29,7 +29,20 @@ function Player(args){
 
 	this.image = Game.assets['player-guy'];
 
-	this.update = function(elapsedTime){
+	this.wasHit = false;
+	this.safeTime = 0.8;
+	this.hitTime = this.safeTime;
+
+
+	this._update = function(elapsedTime){
+
+		if(this.wasHit){
+			this.hitTime -= elapsedTime;
+			if(this.hitTime <= 0)
+				this.wasHit = false;
+		}
+
+
 
 		var speed = this.moveSpeed * elapsedTime;
 
@@ -77,12 +90,10 @@ function Player(args){
 
 	};
 
-	this.render = function(){
-		this.context.save();
+	this._render = function(){
 
 			this.context.drawImage(this.image, this.pos.x, this.pos.y, this.size.w, this.size.h);
 
-		this.context.restore();
 	};
 
 	this.shoot = function(vdir){
@@ -116,16 +127,28 @@ function Player(args){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 
+			if(this.wasHit) return;
+
 			this.health -= 1;
-			this.addAnimation(new TurnRed(this, 0.3), false);
+			StatusBar.removeHealth();
+			this.addAnimation(new TurnRed(this, 0.8), false);
+
+			this.wasHit = true;
+			this.hitTime = this.safeTime;
 		}
 
 		if(o instanceof Crow){
 			v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);	
 
+			if(this.wasHit) return;
+
 			this.health -= 1;
-			this.addAnimation(new TurnRed(this, 0.3), false);
+			StatusBar.removeHealth();
+			this.addAnimation(new TurnRed(this, 0.8), false);
+
+			this.wasHit = true;
+			this.hitTime = this.safeTime;
 		}
 
 		if(o instanceof ItemHeart){
@@ -504,7 +527,7 @@ var StatusBar = (function(){
 	}
 
 	status.removeHealth = function(){
-		renderbar();
+		renderBar();
 		healthBars -= 1;
 		renderHealth();
 	}
