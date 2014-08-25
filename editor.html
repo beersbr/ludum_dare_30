@@ -97,7 +97,7 @@ for($r = 1; $r <= $rows; $r++) {
 			"enemies" => array()
 		);
 		
-		echo "<td class='col-".$c."' data-col='col-".$c."' data-row='row-".$r."'></td>\n";
+		echo "<td id='row-".$r."-col-".$c."' data-col='col-".$c."' data-row='row-".$r."'></td>\n";
 	}
 }
 ?>
@@ -205,17 +205,17 @@ function setup(){
 function updateMap() {
 	for(var r in map.tiles) {
 		for(var c in map.tiles[r]) {
-			$("#"+r+" ."+c).addClass(map.tiles[r][c]['image']).html("");
+			$("#"+r+"-"+c).removeClass().addClass(map.tiles[r][c]['image']).html("");
 			if(map.tiles[r][c].door) {					
-				$("#"+r+" ."+c).addClass("door");
+				$("#"+r+"-"+c).addClass("door");
 			}
 			var tileEnemies = map.tiles[r][c].enemies;
 			for(var e in tileEnemies) {
-				$("#"+r+" ."+c).append("<img src='"+images[tileEnemies[e].image]+"'/>");
+				$("#"+r+"-"+c).append("<img src='"+images[tileEnemies[e].image]+"'/>");
 			}
 			var tileItems = map.tiles[r][c].items;
 			for(var i in tileItems) {
-				$("#"+r+" ."+c).append("<img src='"+images[tileItems[i].image]+"'/>");
+				$("#"+r+"-"+c).append("<img src='"+images[tileItems[i].image]+"'/>");
 			}
 		}
 	}

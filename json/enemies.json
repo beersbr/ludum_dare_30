@@ -3,6 +3,10 @@
 		"name": "Bear",
 		"image": "enemy-bear"
 	},
+	"BearBoss":{
+		"name": "BearBoss",
+		"image": "boss-bear"
+	},
 	"Crow": {
 		"name": "Crow",
 		"image": "enemy-crow"
