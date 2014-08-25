@@ -10,7 +10,7 @@ function Player(args){
 	this.hv = new Vector(0, 0);
 
 	this.moveSpeed = 50; // pixels per second
-	this.shootSpeed = 5.8; // per second
+	this.shootSpeed = 2.8; // per second
 	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
 
@@ -132,8 +132,8 @@ function Player(args){
 		if(o instanceof Tile){
 
 			if(o.tileState == "slick"){
-				this.dragMod = 0.1;
-				this.speedMod = -30;
+				this.dragMod = 0.12;
+				this.speedMod = -40;
 			}
 
 			if(o.tileState != "solid")
@@ -676,12 +676,11 @@ var Game = (function(){
 	// "map-1-2.json",
 	// "map-1-3.json",
 	// "map-1-4.json",
-	// "map-1-5.json",
-	// "map-2-1.json",
-	// "map-2-2.json",
-	// "map-2-3.json",
-	// "map-2-4.json",
-	"map-2-5.json",
+	"map-1-5.json",
+	"map-2-1.json",
+	"map-2-2.json",
+	"map-2-3.json",
+	"map-2-4.json",
 	"map-3-1.json",
 	"map-3-2.json",
 	"map-4-1.json",

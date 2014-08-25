@@ -480,6 +480,7 @@ function BearBoss(args){
 	this.bulletDamage = 0;
 
 	this.health = 25;
+	this.totalHealth = this.health;
 	this.armor = 0;
 	this.trinkets = [];
 	this.items = [];
@@ -531,6 +532,12 @@ function BearBoss(args){
 
 	this._render = function(){
 		this.context.drawImage(this.image, 0, 0, 80, 80, this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.context.save();
+		this.context.fillStyle = "rgb(200, 50, 50)";
+		var w = (this.size.w*(this.health/this.totalHealth));
+		var tw = this.size.w - w;
+		this.context.fillRect(this.pos.x+(tw/2), this.pos.y-15, w, 5);
+		this.context.restore();
 	}
 
 	this.onCollide = function(o){
@@ -736,6 +743,7 @@ function DragonBoss(args){
 	this.bulletDamage = 0;
 
 	this.health = 100;
+	this.totalHealth = this.health;
 	this.armor = 0;
 	this.trinkets = [];
 	this.items = [];
@@ -772,6 +780,13 @@ function DragonBoss(args){
 
 	this._render = function(){
 		this.context.drawImage(this.image, 0, 0, 160, 160, this.pos.x, this.pos.y, this.size.w, this.size.h);
+
+		this.context.save();
+		this.context.fillStyle = "rgb(200, 50, 50)";
+		var w = (this.size.w*(this.health/this.totalHealth));
+		var tw = this.size.w - w;
+		this.context.fillRect(this.pos.x+(tw/2), this.pos.y-15, w, 5);
+		this.context.restore();
 	}
 
 	this.onCollide = function(o){
