@@ -47,6 +47,9 @@ ItemHeart.prototype = new GameObject;
 ItemHeart.constructor = ItemHeart;
 
 
+/******************************
+ *	Heart Item
+ ******************************/
 function ItemHeart(args){
 	GameObject.call(this, args);
 	Item.call(this, args);
@@ -75,6 +78,9 @@ function ItemHeart(args){
 }
 
 
+/******************************
+ *	Armor Item
+ ******************************/
 function ItemArmor(args){
 	GameObject.call(this, args);
 	Item.call(this, args);
@@ -102,6 +108,10 @@ function ItemArmor(args){
 	}
 }
 
+
+/******************************
+ *	MoveSpeed Item
+ ******************************/
 function ItemMoveSpeed(args){
 	GameObject.call(this, args);
 	Item.call(this, args);
@@ -129,6 +139,10 @@ function ItemMoveSpeed(args){
 	}
 }
 
+
+/******************************
+ *	Shoot Speed Item
+ ******************************/
 function ItemShootSpeed(args){
 	GameObject.call(this, args);
 	Item.call(this, args);
@@ -155,6 +169,38 @@ function ItemShootSpeed(args){
 		this.dying = true;
 	}
 }
+
+
+/******************************
+ *	Shoot Damage Item
+ ******************************/
+function ItemShootDamage(args){
+	GameObject.call(this, args);
+	Item.call(this, args);
+
+	this.image = Game.assets['item-heart'];
+	this.size = new Vector(25, 25);
+
+	this.onCollide = function(o){
+		if(!(o instanceof Player))
+			return;
+
+		for(var i = 0; i < Math.randomInt(10, 20); i++){
+			var p = GenerateParticle(this.pos.x, this.pos.y, 0, Game.assets['particle-purple']);
+			Game.pushGameObject(p)
+		}
+
+		this.die();
+	}
+
+
+	this.die = function(){
+		this.addAnimation(new Shrink(this, 0.5), true);
+		this.collidable = false;
+		this.dying = true;
+	}
+}
+
 
 Item.prototype = new GameObject;
 Item.constructor = Item;
