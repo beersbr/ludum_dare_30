@@ -116,24 +116,44 @@ function Crow(args){
 	this.attacking = false;
 	this.atackSpeed = 88;
 
-	this.attackRate = 1.0;
+	this.attackTime = 1.4;
+	this.findTime = 2.0
+
+	this.updateState = "finding"; // ["attacking", "finding"]
+	this.stateTime = this.findTime;
+
+	this.dir = new Vector;
 
 	// add to current level enemies
 	Game.level.enemies.push(this);
 
 	this._update = function(elapsedTime){
-
-		if(this.attacking){
-
-		}
-		else{
-
-		}
-
 		var speed = this.moveSpeed * elapsedTime;
 
-		if(!this.dying)
-			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+		if(!this.dying){
+
+			if(this.updateState == "attacking"){
+				this.moveSpeed = 18;
+				this.vel = this.vel.add(this.dir).scale(speed);
+
+				this.stateTime -= elapsedTime;
+				if(this.stateTime <= 0){
+					this.updateState = "finding";
+					this.stateTime = this.findTime;
+				}
+			}
+			
+			else if(this.updateState == "finding"){
+				this.moveSpeed = 10;
+				this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+				this.dir = Game.player.pos.sub(this.pos).normalize();
+				this.stateTime -= elapsedTime;
+				if(this.stateTime <= 0){
+					this.updateState = "attacking";
+					this.stateTime = this.attackTime;
+				}
+			}
+		}
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
@@ -142,6 +162,10 @@ function Crow(args){
 			this.die();
 
 	};
+
+	this.toRect = function(){
+		return (new Rect(this.pos.x + 5, this.pos.y + 5, this.size.w -10, this.size.h -10));
+	}
 
 	this._render = function(){
 		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
