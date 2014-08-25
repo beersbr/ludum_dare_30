@@ -9,8 +9,8 @@ function Player(args){
 
 	this.hv = new Vector(0, 0);
 
-	this.moveSpeed = 66; // pixels per second
-	this.shootSpeed = 2.5; // per second
+	this.moveSpeed = 55; // pixels per second
+	this.shootSpeed = 2.8; // per second
 	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
 
@@ -213,6 +213,24 @@ function Player(args){
 			AUDIO.playHit("hit-shoot");
 			this.health += 1;
 			StatusBar.addHealth();
+		}
+
+		if(o instanceof ItemArmor){
+			AUDIO.playHit("hit-shoot");
+			this.armor += 1;
+			StatusBar.addArmor();
+		}
+
+		if(o instanceof ItemMoveSpeed){
+			AUDIO.playHit("hit-shoot");
+			this.MoveSpeed += 3;
+			// StatusBar.addHealth();
+		}
+
+		if(o instanceof ItemShootSpeed){
+			AUDIO.playHit("hit-shoot");
+			this.shootSpeed += 0.2;
+			// StatusBar.addHealth();
 		}
 	}
 }
@@ -729,7 +747,7 @@ var Game = (function(){
 	game.update = function(t){
 		var elapsedTime = (t/1000);
 
-		for(var i in _gameObjects){
+		for(var i = 0; i < _gameObjects.length; i++){
 			_gameObjects[i].update(elapsedTime);
 		}
 
