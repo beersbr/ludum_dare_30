@@ -830,8 +830,8 @@
             "col-15": {
                 "damage": 1,
                 "door": false,
-                "image": "tile-cactus",
-                "state": "solid"
+                "image": "tile-sand",
+                "state": "passable"
             },
             "col-16": {
                 "door": 0,

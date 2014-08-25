@@ -866,7 +866,7 @@
             },
             "col-20": {
                 "damage": 0,
-                "door": true,
+                "door": 0,
                 "image": "tile-black",
                 "state": "solid"
             }
