@@ -15,9 +15,6 @@ function Player(args){
 	this.bulletDamage = 1;
 
 	this.health = args.health || 3;
-	// this.health = args.health || 3;
-
-
 
 	this.armor = args.armor || 0;
 	this.trinkets = [];
@@ -117,7 +114,7 @@ function Player(args){
 
 		if(o instanceof Bear){
 			v = uncollide(this.getRect(), o.getRect());
-			this.vel = this.vel.add(v).scale(0.3);	
+			this.vel = this.vel.add(v);	
 		}
 
 		if(o instanceof Crow){
@@ -315,13 +312,11 @@ function GameLevel(level){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
-			AUDIO.playSong("song-sand");
+			AUDIO.playSong("song-jungle");
 
 			var health = 0;
 			if(Game.player)
 				health = Game.player.health
-
-			console.log("Player health: ", health);
 
 			// TODO: this will all be based on the level json
 			var player = new Player({
