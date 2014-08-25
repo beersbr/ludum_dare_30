@@ -626,19 +626,11 @@ var Game = (function(){
 		});
 
 
-		$.ajax({ url: "./json/tiles.json" }).success(function(e){
+		$.ajax({ url: "./json/images.json" }).success(function(e){
 			for(var k in e)
 				this.assetHandler.prepare(k, e[k], "image");
 		}.bind(game));
 
-		game.assetHandler.prepare("particle-plus", "img/particle-plus.png", "image");
-		game.assetHandler.prepare("particle-ball", "img/particle-ball.png", "image");
-		game.assetHandler.prepare("status-bar", "img/status-bar.png", "image");
-		game.assetHandler.prepare("enemy-bear", "img/enemy-bear.png", "image");
-		game.assetHandler.prepare("enemy-crow", "img/enemy-crow.png", "image");
-		game.assetHandler.prepare("item-heart", "img/item-heart.png", "image");
-		game.assetHandler.prepare("status-health-bar", "img/health-bar.png", "image");
-		game.assetHandler.prepare("status-armor-bar", "img/armor-bar.png", "image");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
