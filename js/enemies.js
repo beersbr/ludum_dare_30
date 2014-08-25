@@ -53,6 +53,9 @@ function Bear(args){
 
 	this.onCollide = function(o){
 		if(o instanceof Tile){
+			if(o.tileState != "solid")
+				return;
+
 			var v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);
 		}
@@ -197,6 +200,9 @@ function Crow(args){
 
 	this.onCollide = function(o){
 		if(o instanceof Tile){
+			if(o.tileState != "solid")
+				return;
+
 			var v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);
 		}
@@ -422,6 +428,9 @@ function BearBoss(args){
 
 	this.onCollide = function(o){
 		if(o instanceof Tile){
+			if(o.tileState != "solid")
+				return;
+			
 			var v = uncollide(this.getRect(), o.getRect());
 			this.vel = this.vel.add(v);
 		}

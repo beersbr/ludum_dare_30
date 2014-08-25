@@ -46,6 +46,11 @@ function Bullet(args){
 		if(go instanceof Item)
 			return;
 
+		if(go instanceof Tile){
+			if(go.tileState != "solid")
+				return;
+		}
+
 		this.collidable = false;
 		this.die();
 	}

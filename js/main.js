@@ -115,6 +115,9 @@ function Player(args){
 
 	this.onCollide = function(o){
 		if(o instanceof Tile){
+			if(o.tileState != "solid")
+				return;
+
 			var v = uncollide(this.getRect(), o.getRect());
 			// this.hv = v; //this.vel.add(v.scale(0.1));
 			this.pos = this.pos.add(v);
@@ -207,21 +210,14 @@ function Tile(args){
 
 	};
 
-	// this.render = function(){
-	// 	this.context.save();
-	// 	this.context.fillStyle = "rgb(255, 0, 255)";
-	// 	this.context.fillRect(this.pos.x + 10, this.pos.y + 10, this.size.w - 20, this.size.h - 20);
-	// 	this.context.restore();
-
-	// }
-
 	this.onCollide = function(go){
 		// console.log(this, "Collided with: ", go);
 	}
 
-	if(args.state != "passable"){
+	this.tileState = args.state;
+
+	if(this.tileState != "passable")
 		this.collidable = true;
-	}
 }
 
 Tile.prototype = new GameObject;
@@ -654,10 +650,10 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	//"map-1-1.json",
-	//"map-1-2.json",
-	//"map-1-3.json",
-	//"map-1-4.json",
+	"map-1-1.json",
+	"map-1-2.json",
+	"map-1-3.json",
+	"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
 	"map-2-2.json",
