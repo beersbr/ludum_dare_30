@@ -60,7 +60,7 @@ function TurnRed(scope, totalTime){
 	}
 
 	this._render = function(s){
-		var canvas = $("<canvas width='"+s.image.width+"px' height'"+s.image.height+"px'>")[0];
+		var canvas = $("<canvas width='"+s.image.width+"px' height='"+s.image.height+"px'>")[0];
 		var context = canvas.getContext('2d');
 		context.putImageData(s.pixelData, 0, 0);
 
