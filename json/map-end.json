@@ -9,6 +9,13 @@
         80,
         480
     ],
+    "text":[
+    	{
+    		"x":0,
+    		"y":0,
+    		"value":"Display some text here."
+    	}
+    ]
     "tiles": {
         "row-1": {
             "col-1": {
@@ -277,8 +284,7 @@
                 "door": 0,
                 "image": "tile-black",
                 "state": "passable",
-                "damage": 0,
-                "text":"Display some text here."
+                "damage": 0
             },
             "col-5": {
                 "door": 0,
