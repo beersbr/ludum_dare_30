@@ -117,9 +117,21 @@ function Player(args){
 		if(o instanceof Tile){
 			if(o.tileState != "solid")
 				return;
-
+				
 			var v = uncollide(this.getRect(), o.getRect());
-			// this.hv = v; //this.vel.add(v.scale(0.1));
+			if(o.tileDamage) {				
+
+				if(this.wasHit) return;
+				
+				AUDIO.playHit("hit-ouch");
+				
+				this.health -= o.tileDamage;
+				StatusBar.removeHealth({amount:o.tileDamage});
+				this.addAnimation(new TurnRed(this, 0.8), false);
+
+				this.wasHit = true;
+				this.hitTime = this.safeTime;
+			}
 			this.pos = this.pos.add(v);
 		}
 
@@ -215,8 +227,9 @@ function Tile(args){
 	}
 
 	this.tileState = args.state;
+	this.tileDamage = args.damage;
 
-	if(this.tileState != "passable")
+	if(this.tileState == "solid")
 		this.collidable = true;
 }
 
@@ -406,7 +419,8 @@ function GameLevel(level){
 						w: 40,
 						h: 40,
 						state: mapTiles[r][c].state,
-						isDoor: (mapTiles[r][c].door == true)
+						isDoor: (mapTiles[r][c].door == true),
+						damage: mapTiles[r][c].damage
 					});
 
 					if(mapTiles[r][c].door == true){
@@ -554,9 +568,11 @@ var StatusBar = (function(){
 		renderHealth();
 	}
 
-	status.removeHealth = function(){
+	status.removeHealth = function(args){
+		if(!args) args = {};
+		args.amount = args.amount || 1;
 		renderBar();
-		healthBars -= 1;
+		healthBars -= args.amount;
 		renderHealth();
 	}
 
@@ -650,11 +666,11 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	"map-1-1.json",
-	"map-1-2.json",
-	"map-1-3.json",
-	"map-1-4.json",
-	"map-1-5.json",
+	//"map-1-1.json",
+	//"map-1-2.json",
+	//"map-1-3.json",
+	//"map-1-4.json",
+	//"map-1-5.json",
 	"map-2-1.json",
 	"map-2-2.json",
 	"map-2-3.json",
