@@ -243,25 +243,25 @@ function Player(args){
 		}
 
 		if(o instanceof ItemHeart){
-			AUDIO.playHit("hit-shoot");
+			AUDIO.playHit("hit-item");
 			this.health += 1;
 			StatusBar.addHealth();
 		}
 
 		if(o instanceof ItemArmor){
-			AUDIO.playHit("hit-shoot");
+			AUDIO.playHit("hit-item");
 			this.armor += 1;
 			StatusBar.addArmor();
 		}
 
 		if(o instanceof ItemMoveSpeed){
-			AUDIO.playHit("hit-shoot");
+			AUDIO.playHit("hit-item");
 			this.MoveSpeed += 3;
 			// StatusBar.addHealth();
 		}
 
 		if(o instanceof ItemShootSpeed){
-			AUDIO.playHit("hit-shoot");
+			AUDIO.playHit("hit-item");
 			this.shootSpeed += 0.2;
 			// StatusBar.addHealth();
 		}
@@ -746,6 +746,7 @@ var Game = (function(){
 		game.assetHandler.prepare("hit-open", "sounds/hit-open.wav", "audio");
 		game.assetHandler.prepare("hit-shoot", "sounds/hit-shoot.wav", "audio");
 		game.assetHandler.prepare("hit-ouch", "sounds/hit-ouch.wav", "audio");
+		game.assetHandler.prepare("hit-item", "sounds/hit-item.wav", "audio");
 
 		game.assetHandler.load().done(function(h){
 			game.assets = h;
