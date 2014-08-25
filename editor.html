@@ -184,12 +184,15 @@ function setup(){
 			"state": $("input[name='state']:checked").val()
 		}
 		
+		if($("#enemy-probability").val() == "0") $("#enemies .enemy").removeClass("selected");
+		
 		if($("#enemies .selected").data("enemy")) {
 			map.tiles[selected_tile[1]][selected_tile[0]].enemies = [enemies[$("#enemies .selected").data("enemy")]];
 			map.tiles[selected_tile[1]][selected_tile[0]].enemies[0].probability = $("#enemy-probability").val()			
 		}
 		
 		
+		if($("#item-probability").val() == "0") $("#items .item").removeClass("selected");
 		if($("#items .selected").data("item")) {
 			map.tiles[selected_tile[1]][selected_tile[0]].items = [items[$("#items .selected").data("item")]];
 			map.tiles[selected_tile[1]][selected_tile[0]].items[0].probability = $("#item-probability").val()			
