@@ -9,10 +9,12 @@ $map = array(
 	"description" => "",
 	"dimensions" => array(20,14),
 	"playerStart" => array(80,480),
-	"tiles" => array(), 
-	"items" => array(), 
-	"enemies" => array()
+	"tiles" => array()
 );
+$imageList = json_decode(file_get_contents("json/images.json"));
+$tileList = json_decode(file_get_contents("json/tiles.json"));
+$enemyList = json_decode(file_get_contents("json/enemies.json"));
+$itemList = json_decode(file_get_contents("json/items.json"));
 
 ?>
 <!doctype html>
@@ -21,20 +23,62 @@ $map = array(
 	<title>Editor</title>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/editor.css">
+	<style>
+	<?php
+	// Add a class for each tile
+	foreach($tileList as $tile) {
+		echo ".".$tile->image." { background-image:url(".$imageList->{$tile->image}.") }\n";
+	}	
+	?>
+		
+	</style>
 </head>
 <body>
-
-	<div class="content" >
-		<ul id="states">
-			<dl><dt><label><input type="radio" name="state" id="tile-state" value="passable"> passable</label></dt></dl>
-			<dl><dt><label><input type="radio" name="state" id="tile-state" value="liquid"> liquid</label></dt></dl>
-			<dl><dt><label><input type="radio" name="state" id="tile-state" value="slick"> slick</label></dt></dl>
-			<dl><dt><label><input type="radio" name="state" id="tile-state" value="solid"> solid</label></dt></dl>	
-			<dl><dt><label>door: <input type="checkbox" name="door" id="tile-door" value="true"></label></dt></dl>
-			<dl><dt><label>damage: <input type="input" name="damage" id="tile-damage" value="0"></label></dt></dl>			
+ 
+	<div class="content" >				
+		<h2 class="title">States</h2>
+		<ul class="list" id="states">
+			<li><label><input type="radio" name="state" id="tile-state-passable" value="passable"> passable</label></li>
+			<li><input type="radio" name="state" id="tile-state-liquid" value="liquid"> liquid</label></li>
+			<li><input type="radio" name="state" id="tile-state-slick" value="slick"> slick</label></li>
+			<li><input type="radio" name="state" id="tile-state-solid" value="solid"> solid</label></li>	
+			<li>door: <input type="checkbox" name="door" id="tile-door" value="true"></label></li>
+			<li>damage: <input type="input" name="damage" id="tile-damage" value="0"></label></li>			
 		</ul>
-		<ul id="tiles">
+			
+		<h2 class="title">Tiles</h2>
+		<ul class="list" id="tiles">		
+			<?php 
+			
+			foreach($tileList as $tile) {
+				echo "<li class='tile selectableItem ".$tile->image."' data-tile='".$tile->image."'></li>";				
+			}
+			
+			?>
 		</ul>
+			
+		<h2 class="title">Enemies</h2>
+		<ul class="list" id="enemies">	
+			<li class="probability"><label>Probability: <input type="text" id="enemy-probability" value="0" /></label></li>	
+			<?php 
+			
+			foreach($enemyList as $enemy) {
+				echo "<li class='enemy selectableItem ".$enemy->image."' data-enemy='".$enemy->name."'><img src='".$imageList->{$enemy->image}."' /></li>";
+			}
+			?>
+		</ul>
+			
+		<h2 class="title">Items</h2>
+		<ul class="list" id="items">		
+			<li class="probability"><label>Probability: <input type="text" id="item-probability" value="0" /></label></li>
+			<?php 
+			
+			foreach($itemList as $item) {
+				echo "<li class='item selectableItem ".$item->image."' data-item='".$item->name."'><img src='".$imageList->{$item->image}."' /></li>";
+			}
+			?>
+		</ul>		
+		<button id="apply">apply</button>
 	</div>
 
 	<div class="content">
@@ -44,7 +88,14 @@ for($r = 1; $r <= $rows; $r++) {
 	$map['tiles']["row-".$r] = array();
 	echo "<tr class='row' id='row-".$r."'>\n";
 	for($c = 1; $c <= $cols; $c++) {
-		$map['tiles']["row-".$r]["col-".$c] = array("image" => "", "state" => "", "damage" => 0, "door" => 0);
+		$map['tiles']["row-".$r]["col-".$c] = array(
+			"image" => "", 
+			"state" => "", 
+			"damage" => 0, 
+			"door" => 0,
+			"items" => array(), 
+			"enemies" => array()
+		);
 		
 		echo "<td class='col-".$c."' data-col='col-".$c."' data-row='row-".$r."'></td>\n";
 	}
@@ -58,10 +109,10 @@ for($r = 1; $r <= $rows; $r++) {
 		<button id="load">Load</button>
 	</div>
 
-</body>
 <script type="text/javascript">
 
 var map = <?php echo(json_encode($map)); ?>;
+var selected_tile = [];
 
 function desc(name, image){
 	var t = "<dl class='item' id='"+name+"'><dt>"+name+"</dt><dd>"+image[0].outerHTML+"</dd></dl>";
@@ -70,20 +121,43 @@ function desc(name, image){
 }
 
 function setup(){
-	var selected_key = Object.keys(images)[0];
 
-	$("dl").on("click", function(){
-		selected_key = $(this).find("dt").html();
-	})
 
 	$("td").on("click", function(){
-		$(this).html(images[selected_key].outerHTML);
-		map['tiles'][$(this).data("row")][$(this).data("col")] = {
-			"image": selected_key,
-			"state": $("#tile-state:checked").val(),
-			"damage": $("#tile-damage").val(),
-			"door": $("#tile-door").is(':checked')
-		};
+		
+		var c = $(this).data("col");
+		var r = $(this).data("row");
+		var tile = map['tiles'][r][c];
+		selected_tile = [c,r];
+		
+		// Unselect all items		
+		$("table tr td").removeClass("selected");
+		$("#tiles .tile").removeClass("selected");
+		$("#enemies .enemy").removeClass("selected");
+		$("#items .item").removeClass("selected");
+		$("#item-probability").val(0);
+		$("#enemy-probability").val(0);
+		
+		$("#tile-state-"+tile.state).prop("checked",true)
+		$("#tile-door").prop("checked",tile.door)
+		$("#tile-damage").val(tile.damage);
+		
+		$(this).addClass("selected");
+		$("#tiles ."+tile.image).addClass("selected");
+		
+		if(tile.items) {
+			for(var i in tile.items) {
+				$("#items ."+tile.items[i].image).addClass("selected");	
+				$("#item-probability").val(tile.items[i].probability);			
+			}
+		}
+		
+		if(tile.enemies) {
+			for(var e in tile.enemies) {
+				$("#enemies ."+tile.enemies[e].image).addClass("selected");			
+				$("#enemy-probability").val(tile.enemies[e].probability);	
+			}
+		}
 	});
 
 	$("#save").on("click", function(){		
@@ -93,41 +167,66 @@ function setup(){
 	$("#load").on("click", function(){	
 		map = JSON.parse($("#output").val());
 		
-		for(var r in map['tiles']) {
-			for(var c in map['tiles'][r]) {
-				$("#"+r+" ."+c).html("<img src='"+tiles[map['tiles'][r][c]['image']]+"' />");
-			}
+		updateMap();
+	});
+	
+	
+	$(".list .selectableItem").on("click", function(){	
+		$(this).parent().children().removeClass("selected");
+		$(this).addClass("selected");
+	});
+
+	$("#apply").on("click", function(){		
+		map.tiles[selected_tile[1]][selected_tile[0]] = {
+			"damage":$("#tile-damage").val(),
+			"door":$("#tile-door").is(':checked'),
+			"image": $("#tiles li.selected").data("tile"),
+			"state": $("#tile-state:checked").val()
 		}
+		if($("#enemies .selected").data("enemy")) {
+			map.tiles[selected_tile[1]][selected_tile[0]].enemies = [enemies[$("#enemies .selected").data("enemy")]];
+			map.tiles[selected_tile[1]][selected_tile[0]].enemies[0].probability = $("#enemy-probability").val()			
+		}
+		
+		
+		if($("#items .selected").data("item")) {
+			map.tiles[selected_tile[1]][selected_tile[0]].items = [items[$("#items .selected").data("item")]];
+			map.tiles[selected_tile[1]][selected_tile[0]].items[0].probability = $("#item-probability").val()			
+		}
+		
+		updateMap();
 	});
 }
 
-$(document).ready(function(){
-
-	images = {};
-	tiles = {};
-	$.ajax({url: "json/tiles.json"}).success(function(e){
-		console.log(e);
-		tiles = e;
-
-		var len = Object.keys(e).length;
-		var loaded = 0;
-
-		for(var k in e){
-			images[k] = new Image;
-			images[k].src = e[k];
-			images[k].onload = (function(evt){
-				$(images[this]).attr("data-name", this);
-				$("#tiles").append($(desc(this, $(images[this]) ) ));
-				loaded += 1;
-				if(loaded == len)
-					setup();
-			}).bind(k)
+function updateMap() {
+	for(var r in map.tiles) {
+		for(var c in map.tiles[r]) {
+			$("#"+r+" ."+c).addClass(map.tiles[r][c]['image']).html("");
+			if(map.tiles[r][c].door) {					
+				$("#"+r+" ."+c).addClass("door");
+			}
+			var tileEnemies = map.tiles[r][c].enemies;
+			for(var e in tileEnemies) {
+				$("#"+r+" ."+c).append("<img src='"+images[tileEnemies[e].image]+"'/>");
+			}
+			var tileItems = map.tiles[r][c].items;
+			for(var i in tileItems) {
+				$("#"+r+" ."+c).append("<img src='"+images[tileItems[i].image]+"'/>");
+			}
 		}
-	});
+	}
+}
 
-
-
+$(document).ready(function(){
+	images = <?php echo json_encode($imageList) ?>;
+	tiles = <?php echo json_encode($tileList) ?>;
+	enemies = <?php echo json_encode($enemyList) ?>;
+	items = <?php echo json_encode($itemList) ?>;
+	
+	setup();
 });
 
 </script>
+
+</body>
 </html>

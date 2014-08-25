@@ -1,6 +1,6 @@
-[
-	{
+{
+	"ItemHeart":{
 		"name":"ItemHeart",
 		"image":"item-heart"
 	}
-]
+}

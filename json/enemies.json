@@ -1,14 +1,14 @@
-[
-	{
+{
+	"Bear":{
 		"name": "Bear",
 		"image": "enemy-bear"
 	},
-	{
+	"Crow": {
 		"name": "Crow",
 		"image": "enemy-crow"
 	},
-	{
+	"Snake": {
 		"name": "Snake",
 		"image": "enemy-snake"
 	}
-]
+}

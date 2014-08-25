@@ -14,47 +14,50 @@ img {
 	height: 100%;
 }
 
-#tiles, #states { 
-	-webkit-transition: opacity 0.15s ease-in-out;
-	background-color: #599;
-	opacity: 0.6;
+.content .list { 
+	background-color: #555;
+	margin-top:0;
 	padding: 5px;
 	width:375px;
 }
 
-#tiles:hover, #states:hover {
-	-webkit-transition: opacity 0.15s ease-in-out;
-	opacity: 1.0;
-}
 
-#tiles dl, #states dl { 
+.content .list li { 
 	display: inline-block;
-	width: 130px;
+	width: 40px;
+	height: 40px;
 	position: relative;
-	background: #48f;
 	margin: 10px; 
-	padding: 10px; 
 }
 
-#tiles dl:hover, #states dl:hover, #tiles dl.selected , #states dl.selected {
-	background: #26c;
+li.selectableItem:hover, .list li.selected {
+	border:1px solid #f00;
+	margin:9px;
 }
 
-#tiles dl dd, #states dl dd{
+#tiles li dd, #states dl dd{
 	padding: 5px;
 	width: 40px;
 	height: 40px;
 }
 
 #tiles {
-    margin-top: -16px;
-    height: 350px;
+    height: 200px;
     overflow: auto;
 }
 #states {  }
-#states dl { width: 116px; }
+#states li { width: 116px; }
+
+.content h2.title {
+    background-color: #282828;
+    border-bottom: 1px solid #000;
+    color: #aaa;
+    margin: 0;
+    text-align: center;
+}
 #tile-damage { width:20px; }
 dl.blank { background:inherit !important; }
+td.door { border-color:#fff; }
 table { 
     border-spacing: 0px;
     /*border-collapse: separate;*/
@@ -63,19 +66,24 @@ table {
     margin-top:50px;
 }
 
-table tr td{
-	-webkit-transition: background-color 0.1s ease-in-out;
-	background: black;
-	width: 40px;
-	height: 40px;
+table tr td {
+    background: none repeat scroll 0 0 black;
+    border: 1px solid #000;
+    height: 40px;
+    padding: 0;
+    width: 40px;
 }
-
-table tr td:hover{
-	background-color: #333;
-	-webkit-transition: background-color 0.1s ease-in-out;
-}
+table tr td.selected { border:1px solid #f00; }
 
 .file { float:left; margin:50px; }
 	
 #save, #load { float:right; clear:left; }
 #output  { float:left; width: 828px; height: 195px;}
+
+.content .list li.probability {
+    border-bottom: 1px solid #000;
+    margin-right: 20px;
+    text-align: right;
+    width: 90%;
+}
+.content .list li.probability input { width:40px; }
