@@ -15,9 +15,6 @@ function Player(args){
 	this.bulletDamage = 1;
 
 	this.health = args.health || 3;
-	// this.health = args.health || 3;
-
-
 
 	this.armor = args.armor || 0;
 	this.trinkets = [];
