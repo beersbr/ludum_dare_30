@@ -143,7 +143,7 @@ function setup(){
 		$("#tile-damage").val(tile.damage);
 		
 		$(this).addClass("selected");
-		$("#tiles ."+tile.image).addClass("selected");
+		if(tile.image) $("#tiles ."+tile.image).addClass("selected");
 		
 		if(tile.items) {
 			for(var i in tile.items) {
