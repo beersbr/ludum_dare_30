@@ -9,6 +9,18 @@
         80,
         480
     ],
+    "text": [
+        {
+            "x": 320,
+            "y": 220,
+            "value": "Move With:   A W D S"
+        },
+        {
+            "x": 320,
+            "y": 250,
+            "value": "Attack with: ← ↑ → ↓"
+        }
+    ],
     "tiles": {
         "row-1": {
             "col-1": {
