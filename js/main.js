@@ -219,10 +219,10 @@ function Tile(args){
 	// }
 
 	this.onCollide = function(go){
-		// console.log(this, "Collided with: ", go);
+		 console.log(this, "Collided with: ", go);
 	}
 
-	if(args.state != "passable"){
+	if(args.state == "solid"){
 		this.collidable = true;
 	}
 }
