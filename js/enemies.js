@@ -411,7 +411,7 @@ function BearBoss(args){
 			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
-			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
+			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
 			this.vel = this.vel.add(d);
 			this.health -= 1;
 		}
