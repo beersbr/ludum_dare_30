@@ -111,7 +111,7 @@ function Player(args){
 
 		if(o instanceof Bear){
 			v = uncollide(this.getRect(), o.getRect());
-			this.vel = this.vel.add(v);	
+			this.vel = this.vel.add(v).scale(0.3);	
 		}
 
 		if(o instanceof Crow){
@@ -193,6 +193,7 @@ function Door(args){
 		if(! (o instanceof Player))
 			return;
 
+		// debugger;
 		Game.nextLevel();
 		return false;
 	}
@@ -418,8 +419,6 @@ function GameLevel(level){
 	this.enemiesDead = function(){
 
 		AUDIO.playHit('hit-open');
-
-
 
 		var door = new Door({x: Game.door1.pos.x, y: Game.door1.pos.y, w: 40, h: 40});
 

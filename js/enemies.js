@@ -32,13 +32,16 @@ function Bear(args){
 		var speed = this.moveSpeed * elapsedTime;
 
 		if(!this.dying)
-			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.2));
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
 
 		if(this.health <= 0 && !this.dying)
 			this.die();
+
+		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600)
+			console.error("BEAR POS: ", this.pos);
 
 	};
 
@@ -56,7 +59,7 @@ function Bear(args){
 			AUDIO.playHit("hit-bear");
 			this.addAnimation(new TurnRed(this, 0.3), false);
 
-			var d = this.pos.sub(Game.player.pos).normalize().scale(13.0);
+			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
 			this.vel = this.vel.add(d);
 			this.health -= 1;
 		}
@@ -113,7 +116,7 @@ function Crow(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 5; // pixels per second
+	this.moveSpeed = 11; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -123,7 +126,7 @@ function Crow(args){
 	this.trinkets = [];
 	this.items = [];
 
-	this.drag = 0.95;
+	this.drag = 0.97;
 
 	this.shootTime = 0;
 	this.canShoot = false;
@@ -152,7 +155,7 @@ function Crow(args){
 		var speed = this.moveSpeed * elapsedTime;
 
 		if(!this.dying)
-			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(0.2));
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
