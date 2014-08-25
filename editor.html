@@ -140,7 +140,7 @@ function setup(){
 		
 		$("#tile-state-"+tile.state).prop("checked",true)
 		$("#tile-door").prop("checked",tile.door)
-		$("#tile-damage").val(tile.damage);
+		$("#tile-damage").val(parseInt(tile.damage));
 		
 		$(this).addClass("selected");
 		if(tile.image) $("#tiles ."+tile.image).addClass("selected");
@@ -178,7 +178,7 @@ function setup(){
 
 	$("#apply").on("click", function(){		
 		map.tiles[selected_tile[1]][selected_tile[0]] = {
-			"damage":$("#tile-damage").val(),
+			"damage":parseInt($("#tile-damage").val()),
 			"door":$("#tile-door").is(':checked'),
 			"image": $("#tiles li.selected").data("tile"),
 			"state": $("input[name='state']:checked").val()
