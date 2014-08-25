@@ -356,39 +356,42 @@ function GameLevel(level){
 					self.context.drawImage(Game.assets[mapTiles[r][c]['image']],
 						0, 0, 40, 40,
 						w*tileSize, h*tileSize+40, tileSize, tileSize);
+					
+					// Add items
+					mapItems = mapTiles[r][c].items;
+					
+					for(var i in mapItems) {
+						console.log(i,mapItems[i]);
+						// Check likelyhood of spawn
+						var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
+						if(mapItems[i].probability < rnd) break;
+						var item = new window[mapItems[i].name]({
+							x: x, y: y,
+							w: 40,  h: 40,
+							image: Game.assets[mapItems[i].image]
+						});
+		
+						Game.gameObjects.push(item);				
+						
+					}
+					
+					
+					// Add enemies
+					var mapEnemies = mapTiles[r][c].enemies;
+					for(var e in mapEnemies) {
+						// Check likelyhood of spawn
+						var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
+						if(mapEnemies[e].probability < rnd) break;
+						var enemy = new window[mapEnemies[e].name]({
+							x: x, y: y,
+							w: 40,  h: 40,
+							image: Game.assets[mapEnemies[e].image]
+						});
+		
+						Game.gameObjects.push(enemy);				
+		
+					}									
 				}
-			}
-			
-			// Add items
-			mapItems = mapJson.items;
-			for(var i in mapItems) {
-				// Check likelyhood of spawn
-				var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
-				if(mapItems[i].probability < rnd) break;
-				var item = new window[mapItems[i].name]({
-					x: 40 * mapItems[i].location[0], y: 40 * mapItems[i].location[1],
-					w: mapItems[i].location[2],  h: mapItems[i].location[3],
-					image: Game.assets[mapItems[i].image]
-				});
-
-				Game.gameObjects.push(item);				
-				
-			}
-			
-			// Add enemies
-			var mapEnemies = mapJson.enemies;
-			for(var e in mapEnemies) {
-				// Check likelyhood of spawn
-				var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
-				if(mapEnemies[e].probability < rnd) break;
-				var enemy = new window[mapEnemies[e].name]({
-					x: 40 * mapEnemies[e].location[0], y: 40 * mapEnemies[e].location[1],
-					w: mapEnemies[e].location[2],  h: mapEnemies[e].location[3],
-					image: Game.assets[mapEnemies[e].image]
-				});
-
-				Game.gameObjects.push(enemy);				
-
 			}
 		
 		}});

@@ -1,20 +1,74 @@
-{
-  "tile-grass": "img/tile-grass-1.png",
-  "tile-sand": "img/tile-sand-1.png",
-  "tile-stump-grass": "img/tile-stump-grass.png",
-  "tile-stump-dirt": "img/tile-stump-sand.png",
-  "tile-tree": "img/tile-tree.png",
-  "tile-sand-grass-1": "img/tile-merge-sand-grass-1.png",
-  "tile-sand-grass-2": "img/tile-merge-sand-grass-2.png",
-  "tile-grass-sand-1": "img/tile-merge-grass-sand-1.png",
-  "tile-grass-sand-2": "img/tile-merge-grass-sand-2.png",
-  "tile-sggg": "img/tile-merge-sand-grass-grass-grass.png",
-  "tile-gsgg": "img/tile-merge-grass-sand-grass-grass.png",
-  "tile-ggsg": "img/tile-merge-grass-grass-sand-grass.png",
-  "tile-gggs": "img/tile-merge-grass-grass-grass-sand.png",
-  "tile-brush": "img/tile-brush.png",
-  "tile-cactus": "img/tile-cactus.png",
-  "tile-fire": "img/tile-fire.png",
-  "tile-red-rock": "img/tile-red-rock.png",
-  "tile-wood": "img/tile-wood-1.png"
-}
+[	
+  {
+  	"name":"grass",
+  	"image":"tile-grass"
+  },
+  {
+  	"name":"sand",
+  	"image":"tile-sand"
+  },
+  {
+  	"name":"stump on grass",
+  	"image":"tile-stump-grass"
+  },
+  {
+  	"name":"stump on dirt",
+  	"image":"tile-stump-dirt"
+  },
+  {
+  	"name":"tree",
+  	"image":"tile-tree"
+  },
+  {
+  	"name":"half sand grass",
+  	"image":"tile-sand-grass-1"
+  },
+  {
+  	"name":"half sand grass",
+  	"image":"tile-sand-grass-2"
+  },
+  {
+  	"name":"half grass sand",
+  	"image":"tile-grass-sand-1"
+  },
+  {
+  	"name":"half grass sand",
+  	"image":"tile-grass-sand-2"
+  },
+  {
+  	"name":"sand top left on grass",
+  	"image":"tile-sggg"
+  },
+  {
+  	"name":"sand top right on grass",
+  	"image":"tile-gsgg"
+  },
+  {
+  	"name":"sand bottom right on grass",
+  	"image":"tile-ggsg"
+  },
+  {
+  	"name":"sand bottom left on grass",
+  	"image":"tile-gggs"
+  },
+  {
+  	"name":"bush",
+  	"image":"tile-brush"
+  },
+  {
+  	"name":"cactus",
+  	"image":"tile-cactus"
+  },
+  {
+  	"name":"fire",
+  	"image":"tile-fire"
+  },
+  {
+  	"name":"red rock",
+  	"image":"tile-red-rock"
+  },
+  {
+  	"name":"wood",
+  	"image":"tile-wood"
+  }
+]

@@ -771,7 +771,14 @@
 	      "door": 0,
 	      "image": "tile-grass",
 	      "state": "passable",
-	      "damage": "0"
+	      "damage": "0",
+	      "enemies":[
+					{
+						"name":"Bear",						
+						"image":"enemy-bear",			
+						"probability":1
+					}
+				]
 	    },
 	    "col-7": {
 	      "door": 0,
@@ -1453,7 +1460,14 @@
 	      "door": 0,
 	      "image": "tile-grass",
 	      "state": "passable",
-	      "damage": "0"
+	      "damage": "0",
+	      "items":[
+					{
+						"name":"ItemHeart",						
+						"image":"item-heart",			
+						"probability":1
+					}
+				]
 	    },
 	    "col-19": {
 	      "door": 0,
@@ -1712,30 +1726,5 @@
 	      "damage": "0"
 	    }
 	  }
-	},
-	"items":[
-		{
-			"name":"ItemHeart",						
-			"image":"item-heart",			
-			"location":[							
-					6,										
-					6,										
-					40,										
-					40										
-			],												
-			"probability":1
-		},
-		{
-			"name":"ItemHeart",						
-			"image":"item-heart",			
-			"location":[							
-					12,										
-					7,										
-					40,										
-					40										
-			],												
-			"probability":0.33
-		}
-	],
-	"enemies":[	]
+	}
 }

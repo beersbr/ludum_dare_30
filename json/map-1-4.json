@@ -1718,52 +1718,5 @@
                 "door": false
             }
         }
-    },
-    "items": [],
-    "enemies": [
-        {
-            "name": "Bear",
-            "image": "enemy-bear",
-            "location": [
-                8,
-                2,
-                40,
-                40
-            ],
-            "probability": 1
-        },
-        {
-            "name": "Bear",
-            "image": "enemy-bear",
-            "location": [
-                10,
-                4,
-                40,
-                40
-            ],
-            "probability": 1
-        },
-        {
-            "name": "Bear",
-            "image": "enemy-bear",
-            "location": [
-                10,
-                6,
-                40,
-                40
-            ],
-            "probability": 1
-        },
-        {
-            "name": "Bear",
-            "image": "enemy-bear",
-            "location": [
-                10,
-                8,
-                40,
-                40
-            ],
-            "probability": 1
-        }
-    ]
+    }
 }
