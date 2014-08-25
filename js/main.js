@@ -9,7 +9,7 @@ function Player(args){
 
 	this.hv = new Vector(0, 0);
 
-	this.moveSpeed = 55; // pixels per second
+	this.moveSpeed = 50; // pixels per second
 	this.shootSpeed = 2.8; // per second
 	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
@@ -371,8 +371,15 @@ function GameLevel(level){
 			AUDIO.playSong("song-jungle");
 
 			var health = 0;
-			if(Game.player)
+			if(Game.player){
 				health = Game.player.health
+				
+				if(Game.player.health <= 0)
+					health = 3;
+
+			}
+
+			
 
 			// TODO: this will all be based on the level json
 			var player = new Player({
@@ -652,14 +659,14 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	/*"map-1-1.json",
+	"map-1-1.json",
 	"map-1-2.json",
 	"map-1-3.json",
 	"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
 	"map-2-2.json",
-	"map-2-3.json",*/
+	"map-2-3.json",
 	"map-3-1.json",
 	"map-3-2.json",
 	"map-4-1.json",
