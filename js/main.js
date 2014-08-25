@@ -386,6 +386,8 @@ function GameLevel(level){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
+			Game.door1 = null;
+
 			StatusBar.name = mapJson.name;
 			AUDIO.playSong("song-jungle");
 
@@ -434,6 +436,7 @@ function GameLevel(level){
 						isDoor: (mapTiles[r][c].door == true),
 						damage: mapTiles[r][c].damage
 					});
+
 
 					if(mapTiles[r][c].door == true){
 						console.log("DOOR");
@@ -514,8 +517,13 @@ function GameLevel(level){
 
 	this.enemiesDead = function(){
 
-		AUDIO.playHit('hit-open');
+		
 
+		if(!Game.door1){
+			return; 
+		}
+
+		AUDIO.playHit('hit-open');
 		var door = new Door({x: Game.door1.pos.x, y: Game.door1.pos.y, w: 40, h: 40});
 
 		var x = door.center.x;
@@ -688,13 +696,13 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	 // "map-0-0.json",
-	// "map-1-1.json",
-	// "map-1-2.json",
-	// "map-1-3.json",
-	// "map-1-4.json",
-	// "map-1-5.json",
-	// "map-2-1.json",
+	"map-0-0.json",
+	"map-1-1.json",
+	"map-1-2.json",
+	"map-1-3.json",
+	"map-1-4.json",
+	"map-1-5.json",
+	"map-2-1.json",
 	// "map-2-2.json",
 	// "map-2-3.json",
 	// "map-2-4.json",
