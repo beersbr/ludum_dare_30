@@ -42,10 +42,7 @@ function Player(args){
 				this.wasHit = false;
 		}
 
-
-
 		var speed = this.moveSpeed * elapsedTime;
-
 
 		if(KEYBOARD.isKeyDown('a')){
 			this.vel.x -= speed;
@@ -375,6 +372,7 @@ function GameLevel(level){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
+			StatusBar.name = mapJson.name;
 			AUDIO.playSong("song-jungle");
 
 			var health = 0;
@@ -531,7 +529,7 @@ var StatusBar = (function(){
 	var CANVAS = $("<canvas width='"+WIDTH+"px' height='"+HEIGHT+"px' >")[0];
 	var CONTEXT = CANVAS.getContext('2d');
 
-
+	status.name = "";
 
 	status.init = function(args){
 		status.healthImage = args.healthImage;
@@ -598,8 +596,20 @@ var StatusBar = (function(){
 	}
 
 	status.render = function(context){
-		// CONTEXT.drawImage(status.barImage, 0, 0, 800, 40);
+		
+		// CONTEXT.fillRect(0, 0, WIDTH, HEIGHT);
+
+		CONTEXT.save();
+		CONTEXT.drawImage(status.barImage, 0, 0, 800, 40);
+		renderHealth();
+
+		CONTEXT.font = "10px PressStart2P";
+		CONTEXT.fillStyle = "rgb(0, 0, 0)";
+		var lenText = CONTEXT.measureText(status.name).width;
+		CONTEXT.fillText(status.name, WIDTH-lenText-18, 26);
 		context.drawImage(CANVAS, 0, 0, WIDTH, HEIGHT);
+
+		CONTEXT.restore();
 	}
 
 	return status;
