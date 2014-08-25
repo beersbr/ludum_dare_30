@@ -286,10 +286,10 @@
                 "door": false
             },
             "col-6": {
-                "image": "tile-tree",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-tree",
+                "state": "solid"
             },
             "col-7": {
                 "image": "tile-grass",
@@ -352,10 +352,17 @@
                 "door": false
             },
             "col-17": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Crow",
+                        "image": "enemy-crow",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-18": {
                 "image": "tile-grass",
@@ -420,10 +427,17 @@
                 "door": false
             },
             "col-8": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Bear",
+                        "image": "enemy-bear",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-9": {
                 "image": "tile-grass",
@@ -438,10 +452,10 @@
                 "door": false
             },
             "col-11": {
-                "image": "tile-stump-grass",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-stump-grass",
+                "state": "solid"
             },
             "col-12": {
                 "image": "tile-grass",
@@ -608,10 +622,17 @@
                 "door": false
             },
             "col-19": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Bear",
+                        "image": "enemy-bear",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-20": {
                 "image": "tile-tree",
@@ -718,10 +739,10 @@
                 "door": false
             },
             "col-17": {
-                "image": "tile-tree",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-tree",
+                "state": "solid"
             },
             "col-18": {
                 "image": "tile-grass",
@@ -786,10 +807,10 @@
                 "door": false
             },
             "col-8": {
-                "image": "tile-stump-grass",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-stump-grass",
+                "state": "solid"
             },
             "col-9": {
                 "image": "tile-grass",
@@ -840,10 +861,17 @@
                 "door": false
             },
             "col-17": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Crow",
+                        "image": "enemy-crow",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-18": {
                 "image": "tile-grass",
@@ -920,10 +948,17 @@
                 "door": false
             },
             "col-10": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Bear",
+                        "image": "enemy-bear",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-11": {
                 "image": "tile-grass",
@@ -1096,10 +1131,17 @@
                 "door": false
             },
             "col-19": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Bear",
+                        "image": "enemy-bear",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-20": {
                 "image": "tile-tree",
@@ -1122,10 +1164,10 @@
                 "door": false
             },
             "col-3": {
-                "image": "tile-tree",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-tree",
+                "state": "solid"
             },
             "col-4": {
                 "image": "tile-grass",
@@ -1206,10 +1248,17 @@
                 "door": false
             },
             "col-17": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Crow",
+                        "image": "enemy-crow",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-18": {
                 "image": "tile-grass",
@@ -1268,10 +1317,17 @@
                 "door": false
             },
             "col-7": {
+                "damage": "0",
+                "door": false,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": "0",
-                "door": false
+                "enemies": [
+                    {
+                        "name": "Bear",
+                        "image": "enemy-bear",
+                        "probability": ".5"
+                    }
+                ]
             },
             "col-8": {
                 "image": "tile-grass",
@@ -1292,10 +1348,10 @@
                 "door": false
             },
             "col-11": {
-                "image": "tile-tree",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-tree",
+                "state": "solid"
             },
             "col-12": {
                 "image": "tile-grass",
@@ -1444,10 +1500,10 @@
                 "door": false
             },
             "col-16": {
-                "image": "tile-stump-grass",
-                "state": "passable",
                 "damage": "0",
-                "door": false
+                "door": false,
+                "image": "tile-stump-grass",
+                "state": "solid"
             },
             "col-17": {
                 "image": "tile-grass",
