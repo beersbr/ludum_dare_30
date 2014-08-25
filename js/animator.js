@@ -23,8 +23,9 @@ function Animation(scope, totalTime, construct){
 			this.done = true;
 		}
 
+		var id = this.id;
 		if(this.done == true)
-			_done.bind(this)(this.id);
+			_done.bind(this)(id);
 			
 	}
 

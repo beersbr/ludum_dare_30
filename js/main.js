@@ -26,8 +26,11 @@ function Player(args){
 
 	this.collidable = true;
 
+
 	this.update = function(elapsedTime){
+
 		var speed = this.moveSpeed * elapsedTime;
+
 
 		if(KEYBOARD.isKeyDown('a')){
 			this.vel.x -= speed;
@@ -314,7 +317,8 @@ function GameLevel(level){
 		var self = this;
 		$.ajax({url:"json/"+this.level,dataType:"json", async:false,success:function(mapJson){
 			
-			
+			AUDIO.playSong("song-sand");
+
 			var health = 0;
 			if(Game.player)
 				health = Game.player.health
@@ -325,10 +329,11 @@ function GameLevel(level){
 				w: 40,  h: 40,
 				health: health
 			});
-
+			
 			Game.gameObjects.push(player)
+
 			Game.player = player;
-			AUDIO.playSong("song-sand");
+			
 
 			StatusBar.setHealth(player.health);
 			StatusBar.setArmor(player.armor);
@@ -565,10 +570,12 @@ var Game = (function(){
 		get: function(){
 			return _gameObjects;
 		},
-		set: function(){
-			_gameObjects = [];
+		set: function(v){
+			_gameObjects = v;
 		}
 	})
+
+	running = false;
 
 	// game.gameObjects = gameObjects;
 
@@ -692,7 +699,12 @@ var Game = (function(){
 		game.level.load();
 
 		currentFrameTime = Time.timestamp;
-		game.run();
+
+		if(!running){
+			running = true;
+			game.run();
+		}
+			
 	}
 
 	game.update = function(t){

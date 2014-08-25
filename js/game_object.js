@@ -15,7 +15,7 @@ function GameObject(args) {
 		var self = this;
 		anim.last = last;
 		anim.done(function(id){
-			var i = self.animations.find(function(e){ return e.id == id });
+			var i = self.animations.find(function(e){ console.log(e.id); return e.id == id });
 			
 			console.log(self.animations, i, this.last, id);
 
