@@ -608,7 +608,7 @@ BearBoss.constructor = BearBoss;
 
 
 /******************************
- *	Bear SNAKEPIT
+ *	Boss SNAKEPIT
  ******************************/
 function SnakePitBoss(args){
 	if(!args) args = {};
@@ -625,6 +625,7 @@ function SnakePitBoss(args){
 	this.bulletDamage = 0;
 
 	this.health = 25;
+	this.totalHealth = this.health;
 	this.armor = 0;
 	this.trinkets = [];
 	this.items = [];
@@ -662,7 +663,6 @@ function SnakePitBoss(args){
 		}
 
 		if(Math.random() < this.snakeChance){
-			console.log("spawning snake");
 			var s = new Snake({
 				x: this.center.x,
 				y: this.center.y,
@@ -677,6 +677,13 @@ function SnakePitBoss(args){
 
 	this._render = function(){
 		this.context.drawImage(this.image, 0, 0, 40, 40, this.pos.x, this.pos.y, this.size.w, this.size.h);
+
+		this.context.save();
+		this.context.fillStyle = "rgb(200, 50, 50)";
+		var w = (this.size.w*(this.health/this.totalHealth));
+		var tw = this.size.w - w;
+		this.context.fillRect(this.pos.x+(tw/2), this.pos.y-15, w, 5);
+		this.context.restore();
 	}
 
 	this.onCollide = function(o){
