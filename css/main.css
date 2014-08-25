@@ -1,5 +1,16 @@
+@font-face {
+    font-family: "PressStart2P";
+    src: url("../fonts/PressStart2P.ttf");
+}
+
 body { 
 	background: #133 url("../img/background.png") repeat;
+}
+
+.header{
+	font-family: "PressStart2P";
+	width: 800px;
+	margin: 0 auto;
 }
 
 canvas#game {
