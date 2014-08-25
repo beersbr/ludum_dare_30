@@ -260,7 +260,7 @@ function BearBoss(args){
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
 
-	this.health = 10;
+	this.health = 100;
 	this.armor = 0;
 	this.trinkets = [];
 	this.items = [];
