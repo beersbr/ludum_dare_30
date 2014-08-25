@@ -149,6 +149,10 @@ function Crow(args){
 				this.dir = Game.player.pos.sub(this.pos).normalize();
 				this.stateTime -= elapsedTime;
 				if(this.stateTime <= 0){
+
+					for(var i = 0; i < 30; i++)
+						Game.pushGameObject(GenerateParticle(this.center.x, this.center.y, 0, Game.assets['particle-red']));
+
 					this.updateState = "attacking";
 					this.stateTime = this.attackTime;
 				}
