@@ -371,8 +371,15 @@ function GameLevel(level){
 			AUDIO.playSong("song-jungle");
 
 			var health = 0;
-			if(Game.player)
+			if(Game.player){
 				health = Game.player.health
+				
+				if(Game.player.health <= 0)
+					health = 3;
+
+			}
+
+			
 
 			// TODO: this will all be based on the level json
 			var player = new Player({
