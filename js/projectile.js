@@ -36,6 +36,10 @@ function Bullet(args){
 		this.context.restore();
 	}
 
+	this.toRect = function(){
+		return (new Rect(this.pos.x + 5, this.pos.y + 5, this.size.w - 10, this.size.h -10));
+	}
+
 	this.onCollide = function(go){
 		if(go instanceof Bullet)
 			return;
@@ -52,7 +56,18 @@ function Bullet(args){
 		}
 
 		this.collidable = false;
+
+		for(var i = 0; i < 3; i++){
+			var c = this.center;
+			Game.pushGameObject(GenerateParticle(
+				c.x, c.y, 0, Game.assets['particle-blue']
+			));
+		}
+		
+
 		this.die();
+
+
 	}
 
 	this.collidable = true;

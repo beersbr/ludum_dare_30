@@ -24,6 +24,7 @@
 	"particle-plus": "img/particle-plus.png",
   "particle-green": "img/particle-green.png",
   "particle-purple": "img/particle-purple.png",
+  "particle-blue": "img/particle-blue.png",
   "particle-red": "img/particle-red.png",
 	"particle-ball": "img/particle-ball.png",
 	"status-bar": "img/status-bar.png", 
@@ -35,6 +36,8 @@
   "enemy-snake": "img/enemy-snake.png", 
   "enemy-walrus": "img/enemy-walrus.png", 
 	"item-heart": "img/item-heart.png", 
+  "item-attack-speed": "img/attack_speed_up.png", 
+  "item-attack-power": "img/attack_up_item.png",
 	"status-health-bar": "img/health-bar.png", 
   "status-armor-bar": "img/armor-bar.png",
   "door-basic": "img/door_basic.png"

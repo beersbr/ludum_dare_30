@@ -191,7 +191,7 @@ function Crow(args){
 	};
 
 	this.toRect = function(){
-		return (new Rect(this.pos.x + 5, this.pos.y + 5, this.size.w -10, this.size.h -10));
+		return (new Rect(this.pos.x + 5, this.pos.y + 10, this.size.w -10, this.size.h -20));
 	}
 
 	this._render = function(){
