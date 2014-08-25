@@ -275,7 +275,7 @@ function Snake(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 50; // pixels per second
+	this.moveSpeed = 30; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
@@ -294,14 +294,30 @@ function Snake(args){
 
 	this.animations = [];
 
+	this.zagTime = 0.5;
+	this.updateTime = this.zagTime;
+	this.zagRand = ["rotate90", "rotate270"];
+	this.zagFn = this.zagRand[Math.randomInt(0, 1)];
+
 	// add to current level enemies
 	Game.level.enemies.push(this);
 
 	this._update = function(elapsedTime){
 		var speed = this.moveSpeed * elapsedTime;
 
-		if(!this.dying)
+		if(!this.dying){
 			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+
+			var dir = Game.player.center.sub(this.center).normalize();
+			dir = dir[this.zagFn]().scale(0.5);
+			this.vel = this.vel.add(dir);
+		}
+
+		this.updateTime -= elapsedTime;
+		if(this.updateTime <= 0){
+			this.zagFn = this.zagRand[Math.randomInt(0, 1)];	
+			this.updateTime = this.zagTime;
+		}
 
 		this.vel = this.vel.scale(this.drag);
 		this.pos = this.pos.add(this.vel);
@@ -629,8 +645,6 @@ function DragonBoss(args){
 			console.error("DRAGON POS: ", this.pos);
 			this.dead = true;
 		}
-
-
 	};
 
 	this._render = function(){

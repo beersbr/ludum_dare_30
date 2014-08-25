@@ -220,3 +220,13 @@ Vector.prototype.smallP = function(){
 	else
 	 	return new Vector(0, this.y);
 }
+
+Vector.prototype.rotate90 = function(){
+	// var m = [[0, -1], [1, 0]];
+	return (new Vector(this.y*-1, this.x));
+}
+
+Vector.prototype.rotate270 = function(){
+	return (new Vector(this.y, this.x*-1));
+}
+
