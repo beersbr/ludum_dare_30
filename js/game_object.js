@@ -24,6 +24,18 @@ function GameObject(args) {
 		});
 	}
 
+	this.safePos = function(){
+		if(this.vel.x > 0)
+			this.vel.x = Math.min(this.vel.x, 19.0)
+		if(this.vel.y > 0)
+			this.vel.y = Math.min(this.vel.y, 19.0)
+
+		if(this.vel.x < 0)
+			this.vel.x = Math.max(this.vel.x, -19.0)
+		if(this.vel.y < 0)
+			this.vel.y = Math.max(this.vel.y, -19.0)
+	}
+
 	this.pos = new Vector(
 		(args.x || 0), 
 		(args.y || 0)
@@ -51,7 +63,8 @@ function GameObject(args) {
 	this._update = function(t){}
 	this._render = function(){}
 
-	this.update = function(t){ 
+	this.update = function(t){
+		this.safePos();
 		this._update(t);  
 
 		for(var i in this.animations){

@@ -14,7 +14,7 @@ function Item(args){
 	this.sizeFactor = 1.0;
 	this.rotate = 0
 
-	this.drag = 0.98;
+	this.drag = 0.97;
 
 	this._update = function(t){
 		this.scale += t*2.5;
@@ -50,7 +50,7 @@ function Item(args){
 
 		if(o instanceof Tile){
 			var v = uncollide(this.getRect(), o.getRect());
-			this.vel = this.vel.add(v.scale(2.0));
+			this.vel = this.vel.add(v.scale(0.9));
 		}
 
 		if(!(o instanceof Player))
