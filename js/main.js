@@ -119,19 +119,23 @@ function Player(args){
 				return;
 				
 			var v = uncollide(this.getRect(), o.getRect());
-			if(o.tileDamage) {				
 
-				if(this.wasHit) return;
-				
-				AUDIO.playHit("hit-ouch");
-				
-				this.health -= o.tileDamage;
-				StatusBar.removeHealth({amount:o.tileDamage});
-				this.addAnimation(new TurnRed(this, 0.8), false);
+			if(o.tileDamage) {
+				if(!this.wasHit){
+					AUDIO.playHit("hit-ouch");
+					this.health -= o.tileDamage;
+					StatusBar.removeHealth({amount:o.tileDamage});
+					this.addAnimation(new TurnRed(this, 0.8), false);
 
-				this.wasHit = true;
-				this.hitTime = this.safeTime;
+					this.wasHit = true;
+					this.hitTime = this.safeTime;
+
+					var ret = this.center.sub(o.center).normalize().scale(20.0);
+					this.vel = this.vel.add(ret);
+				}
 			}
+
+
 			this.pos = this.pos.add(v);
 		}
 
