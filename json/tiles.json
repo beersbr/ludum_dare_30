@@ -64,11 +64,23 @@
   	"image":"tile-fire"
   },
   {
-  	"name":"red rock",
-  	"image":"tile-red-rock"
+    "name":"red rock",
+    "image":"tile-red-rock"
   },
   {
-  	"name":"wood",
-  	"image":"tile-wood"
+    "name":"wood",
+    "image":"tile-wood"
+  },
+  {
+    "name":"ice rock",
+    "image":"tile-ice-rock"
+  },
+  {
+    "name":"ice",
+    "image":"tile-ice-1"
+  },
+  {
+    "name":"slick ice",
+    "image":"tile-ice-2"
   }
 ]

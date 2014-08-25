@@ -1,0 +1,2154 @@
+{
+    "name": "World 3 Level 1",
+    "description": "Ice World",
+    "dimensions": [
+        20,
+        14
+    ],
+    "playerStart": [
+        80,
+        480
+    ],
+    "tiles": {
+        "row-1": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-2": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-3": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-4": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-5": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-6": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-7": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-8": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-9": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-10": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-11": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-12": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-13": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-3": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-4": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-5": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-6": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-7": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-8": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-9": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-10": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-11": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-12": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-13": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-14": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-15": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-16": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-17": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-18": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-19": {
+                "image": "",
+                "state": "",
+                "damage": 0,
+                "door": 0,
+                "items": [],
+                "enemies": []
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-14": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        }
+    }
+}
