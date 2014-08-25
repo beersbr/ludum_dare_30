@@ -489,14 +489,12 @@ function DragonBoss(args){
 
 	this.drag = 0.85;
 
-	this.shootTime = 0;
-	this.canShoot = false;
+	this.shootTime = 1;
+	this.canShoot = true;
 
 	this.collidable = true;
 
 	this.animations = [];
-
-	this.crowChance = 0.01;
 
 	// add to current level enemies
 	Game.level.enemies.push(this);
@@ -518,16 +516,6 @@ function DragonBoss(args){
 			this.dead = true;
 		}
 
-		if(Math.random() < this.crowChance){
-			var c = new Crow({
-				x: this.center.x,
-				y: this.center.y,
-				ax: Math.random() * 10,
-				ay: Math.random() * 10,
-				updateState: "spawning"
-			});
-			Game.pushGameObject(c);
-		}
 
 	};
 
