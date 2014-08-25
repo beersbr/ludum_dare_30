@@ -26,7 +26,6 @@ function Player(args){
 
 	this.collidable = true;
 
-
 	this.update = function(elapsedTime){
 
 		var speed = this.moveSpeed * elapsedTime;

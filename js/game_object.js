@@ -12,18 +12,15 @@ function GameObject(args) {
 
 	this.addAnimation = function(anim, last){
 		this.animations.push(anim);
-		var self = this;
-		anim.last = last;
-		anim.done(function(id){
-			var i = self.animations.find(function(e){ console.log(e.id); return e.id == id });
-			
-			console.log(self.animations, i, this.last, id);
 
-			if(this.last){
-				self.dead = true;
+		anim.done(function(id){
+			var i = this.animations.find(function(e){ return e.id == id });
+
+			if(last){
+				this.dead = true;
 			}
 
-			self.animations.splice(i, 1);
+			this.animations.splice(i, 1);
 		});
 	}
 

@@ -1,36 +1,37 @@
-AID = 0;
+
+var AID = 0;
 function Animation(scope, totalTime, construct){
 
 	this.id = AID++;
 
 	this.done = false;
 	this.scope = scope;
-	_done = function(){};
+	var _done = function(){};
 
 	this.state = {};
 
-	construct.bind(scope)(this.state)
+	construct.bind(this.scope)(this.state)
 
 	this.update = function(t){
-		this._update.bind(scope)(t, totalTime, this.state);
+		this._update.bind(this.scope)(t, totalTime, this.state);
 
 		totalTime -= t;
 		if(!isFinite(totalTime))
 			this.done = true;
 		
 		if(totalTime <= 0){
-			console.log("FINISHED ANIM");
+			console.log("FINISHED ANIM: ", this.id);
 			this.done = true;
 		}
 
-		var id = this.id;
+
 		if(this.done == true)
-			_done.bind(this)(id);
+			_done.bind(this.scope)(this.id);
 			
 	}
 
 	this.render = function(){
-		this._render.bind(scope)(this.state);
+		this._render.bind(this.scope)(this.state);
 	}
 
 	this.done = function(cb){
