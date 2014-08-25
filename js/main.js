@@ -10,7 +10,7 @@ function Player(args){
 	this.hv = new Vector(0, 0);
 
 	this.moveSpeed = 50; // pixels per second
-	this.shootSpeed = 8.8; // per second
+	this.shootSpeed = 2.8; // per second
 	this.bulletSpeed = 400; // pixels per second
 	this.bulletDamage = 1;
 
