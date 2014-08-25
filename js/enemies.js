@@ -574,6 +574,8 @@ function BearBoss(args){
 		var item = new ItemHeart({
 			x: this.pos.x, y: this.pos.y,
 			w: 40,  h: 40,
+			vx: Math.cos(Math.randomInt(0, 360))*3,
+			vy: Math.sin(Math.randomInt(0, 360))*3, 
 			image: Game.assets['ItemHeart']
 		});
 
