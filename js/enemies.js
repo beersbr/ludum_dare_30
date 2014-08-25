@@ -299,6 +299,9 @@ function Snake(args){
 	this.zagRand = ["rotate90", "rotate270"];
 	this.zagFn = this.zagRand[Math.randomInt(0, 1)];
 
+
+	this.image = Game.assets['enemy-snake'] || args.image;
+
 	// add to current level enemies
 	Game.level.enemies.push(this);
 
