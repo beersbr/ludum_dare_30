@@ -462,4 +462,113 @@ function BearBoss(args){
 }
 
 BearBoss.prototype = new GameObject;
-BearBoss.constructor = Bear;
+BearBoss.constructor = BearBoss;
+
+
+/******************************
+ *	Dragon  SUPER BOSS
+ ******************************/
+function DragonBoss(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+
+	// look here
+	this.size = new Vector(80, 80);
+
+	this.moveSpeed = 15; // pixels per second
+	this.shootSpeed = 0; // per second
+	this.bulletSpeed = 0; // pixels per second
+	this.bulletDamage = 0;
+
+	this.health = 100;
+	this.armor = 0;
+	this.trinkets = [];
+	this.items = [];
+
+	this.drag = 0.85;
+
+	this.shootTime = 0;
+	this.canShoot = false;
+
+	this.collidable = true;
+
+	this.animations = [];
+
+	this.crowChance = 0.01;
+
+	// add to current level enemies
+	Game.level.enemies.push(this);
+
+	this._update = function(elapsedTime){
+		var speed = this.moveSpeed * elapsedTime;
+
+		if(!this.dying)
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+
+		this.vel = this.vel.scale(this.drag);
+		this.pos = this.pos.add(this.vel);
+
+		if(this.health <= 0 && !this.dying)
+			this.die();
+
+		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600){
+			console.error("DRAGON POS: ", this.pos);
+			this.dead = true;
+		}
+
+		if(Math.random() < this.crowChance){
+			var c = new Crow({
+				x: this.center.x,
+				y: this.center.y,
+				ax: Math.random() * 10,
+				ay: Math.random() * 10,
+				updateState: "spawning"
+			});
+			Game.pushGameObject(c);
+		}
+
+	};
+
+	this._render = function(){
+		this.context.drawImage(this.image, 0, 0, 80, 80, this.pos.x, this.pos.y, this.size.w, this.size.h);
+	}
+
+	this.onCollide = function(o){
+		if(o instanceof Tile){
+			if(o.tileState != "solid")
+				return;
+			
+			var v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);
+		}
+
+		if(o instanceof Bullet){
+			//AUDIO.playHit("hit-dragon");
+			this.addAnimation(new TurnRed(this, 0.3), false);
+
+			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
+			this.vel = this.vel.add(d);
+			this.health -= 1;
+		}
+	}
+
+	this.die = function(){
+
+		this.addAnimation(new Shrink(this, 0.5), true);
+		// this._update = function(){};
+		this.collidable = false;
+		this.dying = true;
+
+
+		// TODO: move into game
+		var selfId = this.id;
+		var idx = Game.level.enemies.find(function(id){ return (selfId == id.id);})
+		Game.level.enemies.splice(idx, 1);
+	}
+
+}
+
+DragonBoss.prototype = new GameObject;
+DragonBoss.constructor = DragonBoss;

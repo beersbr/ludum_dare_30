@@ -14,5 +14,9 @@
 	"Snake": {
 		"name": "Snake",
 		"image": "enemy-snake"
+	},
+	"DragonBoss": {
+		"name": "DragonBoss",
+		"image": "boss-dragon"
 	}
 }
