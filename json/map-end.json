@@ -11,8 +11,9 @@
     ],
     "text":[
     	{
-    		"x":250,
+    		"x":65,
     		"y":200,
+            "size": 20,
     		"value":"Thanks for playing our LD 30 game!"
     	}
     ],
