@@ -94,6 +94,8 @@ function Crow(args){
 
 	GameObject.call(this, args);
 
+	this.image = args.image || Game.assets['enemy-crow'];
+
 	this.moveSpeed = 11; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
@@ -361,6 +363,8 @@ function BearBoss(args){
 
 	this.animations = [];
 
+	this.crowChance = 0.01;
+
 	// add to current level enemies
 	Game.level.enemies.push(this);
 
@@ -379,6 +383,16 @@ function BearBoss(args){
 		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600){
 			console.error("BEAR POS: ", this.pos);
 			this.dead = true;
+		}
+
+		if(Math.random() < this.crowChance){
+			var c = new Crow({
+				x: this.center.x,
+				y: this.center.y,
+				ax: Math.random() * 10,
+				ay: Math.random() * 10
+			});
+			Game.pushGameObject(c);
 		}
 
 	};
