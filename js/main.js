@@ -717,6 +717,7 @@ var Game = (function(){
 	// "map-3-1.json",
 	// "map-3-2.json",
 	// "map-3-3.json",
+	// "map-3-4.json",
 	// "map-4-1.json",
 	// "map-4-2.json",
 	// "map-4-5.json",

@@ -380,6 +380,8 @@ function Walrus(args){
 	if(!args) args = {};
 
 	GameObject.call(this, args);
+	
+	this.image = args.image || Game.assets['enemy-walrus'];
 
 	this.moveSpeed = 10; // pixels per second
 	this.shootSpeed = 0; // per second
@@ -735,6 +737,135 @@ function SnakePitBoss(args){
 
 SnakePitBoss.prototype = new GameObject;
 SnakePitBoss.constructor = SnakePitBoss;
+
+
+/******************************
+ *	PolarBear BOSS
+ ******************************/
+function PolarBearBoss(args){
+	if(!args) args = {};
+
+	GameObject.call(this, args);
+
+
+	// look here
+	this.size = new Vector(80, 80);
+
+	this.moveSpeed = 15; // pixels per second
+	this.shootSpeed = 0; // per second
+	this.bulletSpeed = 0; // pixels per second
+	this.bulletDamage = 0;
+
+	this.health = 30;
+	this.totalHealth = this.health;
+	this.armor = 0;
+	this.trinkets = [];
+	this.items = [];
+
+	this.drag = 0.85;
+
+	this.shootTime = 0;
+	this.canShoot = false;
+
+	this.collidable = true;
+
+	this.animations = [];
+
+	this.walrusChance = 0.01;
+
+
+	// add to current level enemies
+	Game.level.enemies.push(this);
+
+	this._update = function(elapsedTime){
+		var speed = this.moveSpeed * elapsedTime;
+
+		if(!this.dying)
+			this.vel = this.vel.add(Game.player.pos.sub(this.pos).normalize().scale(speed));
+
+		this.vel = this.vel.scale(this.drag);
+		this.pos = this.pos.add(this.vel);
+
+		if(this.health <= 0 && !this.dying)
+			this.die();
+
+		if(this.pos.x < 0 || this.pos.x > 800 || this.pos.y < 0 || this.pos.y > 600){
+			console.error("BEAR POS: ", this.pos);
+			this.dead = true;
+		}
+
+		if(Math.random() < this.walrusChance){
+			var c = new Walrus({
+				x: this.center.x,
+				y: this.center.y,
+				ax: Math.random() * 10,
+				ay: Math.random() * 10,
+				updateState: "spawning"
+			});
+			Game.pushGameObject(c);
+		}
+
+	};
+
+	this._render = function(){
+		this.context.drawImage(this.image, 0, 0, 80, 80, this.pos.x, this.pos.y, this.size.w, this.size.h);
+		this.context.save();
+		this.context.fillStyle = "rgb(200, 50, 50)";
+		var w = (this.size.w*(this.health/this.totalHealth));
+		var tw = this.size.w - w;
+		this.context.fillRect(this.pos.x+(tw/2), this.pos.y-15, w, 5);
+		this.context.restore();
+	}
+
+	this.onCollide = function(o){
+		if(o instanceof Tile){
+			if(o.tileState != "solid")
+				return;
+			
+			var v = uncollide(this.getRect(), o.getRect());
+			this.vel = this.vel.add(v);
+		}
+
+		if(o instanceof Bullet){
+			AUDIO.playHit("hit-bear");
+			this.addAnimation(new TurnRed(this, 0.3), false);
+
+			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
+			this.vel = this.vel.add(d);
+			this.health -= 1;
+		}
+	}
+
+	this.die = function(){
+
+		this.addAnimation(new Shrink(this, 0.5), true);
+		// this._update = function(){};
+		this.collidable = false;
+		this.dying = true;
+
+
+		// Spawns heart
+		var item = new ItemHeart({
+			x: this.pos.x, y: this.pos.y,
+			w: 40,  h: 40,
+			vx: Math.cos(Math.randomInt(0, 360))*3,
+			vy: Math.sin(Math.randomInt(0, 360))*3, 
+			image: Game.assets['ItemHeart']
+		});
+
+		Game.gameObjects.push(item);				
+		
+		// TODO: move into game
+		var selfId = this.id;
+		var idx = Game.level.enemies.find(function(id){ return (selfId == id.id);})
+		Game.level.enemies.splice(idx, 1);
+	}
+
+}
+
+PolarBearBoss.prototype = new GameObject;
+PolarBearBoss.constructor = PolarBearBoss;
+
 
 
 /******************************
