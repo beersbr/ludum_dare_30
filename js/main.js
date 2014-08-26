@@ -412,7 +412,8 @@ function GameLevel(level){
 			var bulletSpeed  = undefined;
 			var bulletDamage = undefined;
 
-			if(Game.player){
+			console.log(Game.currentLevel)
+			if(Game.player && Game.currentLevel != 0){
 				moveSpeed    = Game.player.moveSpeed 
 				shootSpeed   = Game.player.shootSpeed
 				bulletSpeed  = Game.player.bulletSpeed 
