@@ -9,16 +9,16 @@ function Player(args){
 
 	this.hv = new Vector(0, 0);
 
-	this.moveSpeed = 50; // pixels per second
-	this.shootSpeed = 2.8; // per second
-	this.bulletSpeed = 400; // pixels per second
-	this.bulletDamage = 1;
+	this.moveSpeed = args.moveSpeed || 50; // pixels per second
+	this.shootSpeed = args.shootSpeed || 2.8; // per second
+	this.bulletSpeed = args.bulletSpeed || 400; // pixels per second
+	this.bulletDamage = args.bulletDamage || 1;
 
 	this.health = args.health || 3;
 
 	this.armor = args.armor || 0;
 	this.trinkets = [];
-	this.items = [];
+	this.items = [] || args.items;
 
 	this.drag = 0.85;
 	this.dragMod = 0.0;
@@ -122,6 +122,7 @@ function Player(args){
 			y: this.center.y,
 			vx: vdir.x,
 			vy: vdir.y,
+			damage: this.bulletDamage,
 			speed: this.bulletSpeed
 		}));
 	};
@@ -273,14 +274,22 @@ function Player(args){
 		}
 
 		if(o instanceof ItemMoveSpeed){
-			AUDIO.playHit("hit-item");
-			this.MoveSpeed += 3;
+			console.log("MOVE SPEED");
+			this.moveSpeed += 3;
 			// StatusBar.addHealth();
 		}
 
 		if(o instanceof ItemShootSpeed){
+			
 			AUDIO.playHit("hit-item");
 			this.shootSpeed += 0.2;
+			// StatusBar.addHealth();
+		}
+
+		if(o instanceof ItemShootDamage){
+
+			AUDIO.playHit("hit-item");
+			this.bulletDamage += 1;
 			// StatusBar.addHealth();
 		}
 	}
@@ -400,19 +409,31 @@ function GameLevel(level){
 
 			}
 
-			
+			var moveSpeed    = undefined;
+			var shootSpeed   = undefined;
+			var bulletSpeed  = undefined;
+			var bulletDamage = undefined;
+
+			if(Game.player){
+				moveSpeed    = Game.player.moveSpeed 
+				shootSpeed   = Game.player.shootSpeed
+				bulletSpeed  = Game.player.bulletSpeed 
+				bulletDamage = Game.player.bulletDamage
+			}
 
 			// TODO: this will all be based on the level json
 			var player = new Player({
 				x: mapJson.playerStart[0], y: mapJson.playerStart[1],
 				w: 40,  h: 40,
-				health: health
+				health: health,
+				moveSpeed: moveSpeed,
+				shootSpeed: shootSpeed,
+				bulletSpeed: bulletSpeed,
+				bulletDamage: bulletDamage
 			});
 			
 			Game.gameObjects.push(player)
-
 			Game.player = player;
-			
 
 			StatusBar.setHealth(player.health);
 			StatusBar.setArmor(player.armor);
