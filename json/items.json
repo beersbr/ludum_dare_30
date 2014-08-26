@@ -7,7 +7,7 @@
 		"name":"ItemShootDamage",
 		"image":"item-attack-power"
 	},
-	"ItemAttackSpeed":{
+	"ItemShootSpeed":{
 		"name":"ItemShootSpeed",
 		"image":"item-attack-speed"
 	},

@@ -450,22 +450,29 @@ function GameLevel(level){
 					
 					// Add items
 					mapItems = mapTiles[r][c].items;
-					
+					var foundItems = [];
 					for(var i in mapItems) {
-						console.log(i,mapItems[i]);
 						// Check likelyhood of spawn
-						var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000
+						var rnd = (Math.floor(Math.random() * 1000) + 1) / 1000;
 						if(mapItems[i].probability < rnd) break;
-						var item = new window[mapItems[i].name]({
-							x: x, y: y,
-							w: 40,  h: 40,
-							image: Game.assets[mapItems[i].image]
-						});
-		
-						Game.gameObjects.push(item);				
+						
+						foundItems.push(mapItems[i]);
 						
 					}
 					
+					// Pick a random one
+					if(foundItems.length > 0) {
+						
+						var rnd = Math.randomInt(0,foundItems.length - 1);
+						console.log(foundItems,foundItems.length,rnd);
+						var item = new window[foundItems[rnd].name]({
+							x: x, y: y,
+							w: 40,  h: 40,
+							image: Game.assets[foundItems[rnd].image]
+						});
+		
+						Game.gameObjects.push(item);				
+					}
 					
 					// Add enemies
 					var mapEnemies = mapTiles[r][c].enemies;
