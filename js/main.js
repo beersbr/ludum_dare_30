@@ -412,7 +412,8 @@ function GameLevel(level){
 			var bulletSpeed  = undefined;
 			var bulletDamage = undefined;
 
-			if(Game.player){
+			console.log(Game.currentLevel)
+			if(Game.player && Game.currentLevel != 0){
 				moveSpeed    = Game.player.moveSpeed 
 				shootSpeed   = Game.player.shootSpeed
 				bulletSpeed  = Game.player.bulletSpeed 
@@ -729,17 +730,17 @@ var Game = (function(){
 	"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
-	// "map-2-2.json",
-	// "map-2-3.json",
-	// "map-2-4.json",
-	// "map-2-5.json",
-	// "map-3-1.json",
-	// "map-3-2.json",
-	// "map-3-3.json",
-	// "map-3-4.json",
-	// "map-4-1.json",
-	// "map-4-2.json",
-	// "map-4-5.json",
+	"map-2-2.json",
+	"map-2-3.json",
+	"map-2-4.json",
+	"map-2-5.json",
+	"map-3-1.json",
+	"map-3-2.json",
+	"map-3-3.json",
+	"map-3-4.json",
+	"map-4-1.json",
+	"map-4-2.json",
+	"map-4-5.json",
 	"map-end.json"
 	]
 
