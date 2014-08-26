@@ -27,9 +27,8 @@ var AUDIO = (function(){
 	}
 
 	audio.playSong = function(key){
-		return;
 		audio.song = audio.songs[key]
-		audio.song.volume = 0.1;
+		audio.song.volume = 0.08;
 		audio.song.loop = true;
 		audio.song.play();
 	}
