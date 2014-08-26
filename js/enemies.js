@@ -66,7 +66,7 @@ function Bear(args){
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 	}
 
@@ -213,7 +213,7 @@ function Crow(args){
 
 			var d = this.center.sub(o.center).normalize().scale(5.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 
 		if(o instanceof Player){
@@ -350,7 +350,7 @@ function Snake(args){
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 	}
 
@@ -441,7 +441,7 @@ function Walrus(args){
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(8.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 	}
 
@@ -558,7 +558,7 @@ function BearBoss(args){
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 	}
 
@@ -703,7 +703,7 @@ function SnakePitBoss(args){
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 	}
 
@@ -816,7 +816,7 @@ function DragonBoss(args){
 
 			var d = this.pos.sub(Game.player.pos).normalize().scale(3.0);
 			this.vel = this.vel.add(d);
-			this.health -= 1;
+			this.health -= o.damage;
 		}
 	}
 

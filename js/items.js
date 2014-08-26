@@ -58,9 +58,8 @@ function Item(args){
 	}
 
 }
-ItemHeart.prototype = new GameObject;
-ItemHeart.constructor = ItemHeart;
-
+Item.prototype = new GameObject;
+Item.constructor = Item;
 
 /******************************
  *	Heart Item
@@ -106,6 +105,8 @@ function ItemHeart(args){
 		this.dying = true;
 	}
 }
+ItemHeart.prototype = new GameObject;
+ItemHeart.constructor = ItemHeart;
 
 
 /******************************
@@ -137,7 +138,8 @@ function ItemArmor(args){
 		this.dying = true;
 	}
 }
-
+ItemArmor.prototype = new GameObject;
+ItemArmor.constructor = ItemArmor;
 
 /******************************
  *	MoveSpeed Item
@@ -146,7 +148,7 @@ function ItemMoveSpeed(args){
 	GameObject.call(this, args);
 	Item.call(this, args);
 
-	this.image = Game.assets['item-heart'];
+	this.image = Game.assets['item-speed-up'];
 	this.size = new Vector(25, 25);
 
 	this.onCollide = function(o){
@@ -168,6 +170,8 @@ function ItemMoveSpeed(args){
 		this.dying = true;
 	}
 }
+ItemMoveSpeed.prototype = new GameObject;
+ItemMoveSpeed.constructor = ItemMoveSpeed;
 
 
 /******************************
@@ -177,7 +181,7 @@ function ItemShootSpeed(args){
 	GameObject.call(this, args);
 	Item.call(this, args);
 
-	this.image = Game.assets['item-heart'];
+	this.image = Game.assets['item-attack-speed'];
 	this.size = new Vector(25, 25);
 
 	this.onCollide = function(o){
@@ -199,6 +203,8 @@ function ItemShootSpeed(args){
 		this.dying = true;
 	}
 }
+ItemShootSpeed.prototype = new GameObject;
+ItemShootSpeed.constructor = ItemShootSpeed;
 
 
 /******************************
@@ -230,6 +236,8 @@ function ItemShootDamage(args){
 		this.dying = true;
 	}
 }
+ItemShootDamage.prototype = new GameObject;
+ItemShootDamage.constructor = ItemShootDamage;
 
 // var ItemHeart = ItemShootDamage;
 
