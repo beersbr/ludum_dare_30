@@ -723,7 +723,7 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
-	"map-1-5.json",
+	// "map-1-5.json",
 	"map-0-0.json",
 	"map-1-1.json",
 	"map-1-2.json",
@@ -731,19 +731,19 @@ var Game = (function(){
 	"map-1-4.json",
 	"map-1-5.json",
 	"map-2-1.json",
-	// "map-2-2.json",
-	// "map-2-3.json",
-	// "map-2-4.json",
-	// "map-2-5.json",
-	// "map-3-1.json",
-	// "map-3-2.json",
-	// "map-3-3.json",
-	// "map-3-4.json",
-	// "map-4-1.json",
-	// "map-4-2.json",
-	// "map-4-3.json",
-	// "map-4-4.json",
-	// "map-4-5.json",
+	"map-2-2.json",
+	"map-2-3.json",
+	"map-2-4.json",
+	"map-2-5.json",
+	"map-3-1.json",
+	"map-3-2.json",
+	"map-3-3.json",
+	"map-3-4.json",
+	"map-4-1.json",
+	"map-4-2.json",
+	"map-4-3.json",
+	"map-4-4.json",
+	"map-4-5.json",
 	"map-end.json"
 	]
 
