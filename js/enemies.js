@@ -275,7 +275,7 @@ function Snake(args){
 
 	GameObject.call(this, args);
 
-	this.moveSpeed = 30; // pixels per second
+	this.moveSpeed = 25; // pixels per second
 	this.shootSpeed = 0; // per second
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
