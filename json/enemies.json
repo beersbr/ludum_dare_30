@@ -7,6 +7,10 @@
 		"name": "BearBoss",
 		"image": "boss-bear"
 	},
+	"PolarBearBoss":{
+		"name": "PolarBearBoss",
+		"image": "boss-polar-bear"
+	},
 	"Crow": {
 		"name": "Crow",
 		"image": "enemy-crow"
