@@ -1,6 +1,6 @@
 {
-    "name": "World 4 Level 2",
-    "description": "Remember me? How about my brother?!",
+    "name": "World 4 Level 3",
+    "description": "OMG, more snakes?!",
     "dimensions": [
         20,
         14
@@ -468,8 +468,8 @@
                 "state": "passable",
                 "enemies": [
                     {
-                        "name": "BearBoss",
-                        "image": "boss-bear",
+                        "name": "SnakePitBoss",
+                        "image": "boss-snake-pit",
                         "probability": "1"
                     }
                 ]
@@ -1329,8 +1329,8 @@
                 "state": "passable",
                 "enemies": [
                     {
-                        "name": "BearBoss",
-                        "image": "boss-bear",
+                        "name": "SnakePitBoss",
+                        "image": "boss-snake-pit",
                         "probability": "1"
                     }
                 ]
