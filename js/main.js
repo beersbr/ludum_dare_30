@@ -9,7 +9,7 @@ function Player(args){
 
 	this.hv = new Vector(0, 0);
 
-	this.moveSpeed = args.moveSpeed || 50; // pixels per second
+	this.moveSpeed = args.moveSpeed || 48; // pixels per second
 	this.shootSpeed = args.shootSpeed || 2.8; // per second
 	this.bulletSpeed = args.bulletSpeed || 400; // pixels per second
 	this.bulletDamage = args.bulletDamage || 1;
@@ -274,20 +274,18 @@ function Player(args){
 		}
 
 		if(o instanceof ItemMoveSpeed){
-			console.log("MOVE SPEED");
-			this.moveSpeed += 3;
+			AUDIO.playHit("hit-item");
+			this.moveSpeed += 7;
 			// StatusBar.addHealth();
 		}
 
 		if(o instanceof ItemShootSpeed){
-			
 			AUDIO.playHit("hit-item");
-			this.shootSpeed += 0.2;
+			this.shootSpeed += 0.5;
 			// StatusBar.addHealth();
 		}
 
 		if(o instanceof ItemShootDamage){
-
 			AUDIO.playHit("hit-item");
 			this.bulletDamage += 1;
 			// StatusBar.addHealth();
