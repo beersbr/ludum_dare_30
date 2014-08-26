@@ -581,7 +581,40 @@ function BearBoss(args){
 			image: Game.assets['ItemHeart']
 		});
 
-		Game.gameObjects.push(item);				
+		Game.gameObjects.push(item);
+		
+		// Spawn random item
+		allItems = {
+	    "ItemHeart": {
+	        "name": "ItemHeart",
+	        "image": "item-heart"
+	    },
+	    "ItemShootDamage": {
+	        "name": "ItemShootDamage",
+	        "image": "item-attack-power"
+	    },
+	    "ItemShootSpeed": {
+	        "name": "ItemShootSpeed",
+	        "image": "item-attack-speed"
+	    },
+	    "ItemMoveSpeed": {
+	        "name": "ItemMoveSpeed",
+	        "image": "item-speed-up"
+	    }
+		};
+		var itemKeys = ["ItemHeart","ItemShootDamage","ItemShootSpeed","ItemMoveSpeed"];
+
+		var rnd = Math.randomInt(0,itemKeys.length - 1);
+		
+		var item = new window[allItems[itemKeys[rnd]].name]({
+			x: this.pos.x, y: this.pos.y,
+			w: 40,  h: 40,
+			vx: Math.cos(Math.randomInt(0, 360))*3,
+			vy: Math.sin(Math.randomInt(0, 360))*3, 
+			image: Game.assets[allItems[itemKeys[rnd]].image]
+		});
+		
+		Game.gameObjects.push(item);						
 		
 
 		if(Math.random() < this.crowChance){
@@ -726,6 +759,38 @@ function SnakePitBoss(args){
 		
 		Game.gameObjects.push(item);				
 		
+		// Spawn random item
+		allItems = {
+	    "ItemHeart": {
+	        "name": "ItemHeart",
+	        "image": "item-heart"
+	    },
+	    "ItemShootDamage": {
+	        "name": "ItemShootDamage",
+	        "image": "item-attack-power"
+	    },
+	    "ItemShootSpeed": {
+	        "name": "ItemShootSpeed",
+	        "image": "item-attack-speed"
+	    },
+	    "ItemMoveSpeed": {
+	        "name": "ItemMoveSpeed",
+	        "image": "item-speed-up"
+	    }
+		};
+		var itemKeys = ["ItemHeart","ItemShootDamage","ItemShootSpeed","ItemMoveSpeed"];
+
+		var rnd = Math.randomInt(0,itemKeys.length - 1);
+		
+		var item = new window[allItems[itemKeys[rnd]].name]({
+			x: this.pos.x, y: this.pos.y,
+			w: 40,  h: 40,
+			vx: Math.cos(Math.randomInt(0, 360))*3,
+			vy: Math.sin(Math.randomInt(0, 360))*3, 
+			image: Game.assets[allItems[itemKeys[rnd]].image]
+		});
+		
+		Game.gameObjects.push(item);	
 
 		// TODO: move into game
 		var selfId = this.id;
@@ -854,6 +919,40 @@ function PolarBearBoss(args){
 		});
 
 		Game.gameObjects.push(item);				
+		
+		
+		// Spawn random item
+		allItems = {
+	    "ItemHeart": {
+	        "name": "ItemHeart",
+	        "image": "item-heart"
+	    },
+	    "ItemShootDamage": {
+	        "name": "ItemShootDamage",
+	        "image": "item-attack-power"
+	    },
+	    "ItemShootSpeed": {
+	        "name": "ItemShootSpeed",
+	        "image": "item-attack-speed"
+	    },
+	    "ItemMoveSpeed": {
+	        "name": "ItemMoveSpeed",
+	        "image": "item-speed-up"
+	    }
+		};
+		var itemKeys = ["ItemHeart","ItemShootDamage","ItemShootSpeed","ItemMoveSpeed"];
+
+		var rnd = Math.randomInt(0,itemKeys.length - 1);
+		
+		var item = new window[allItems[itemKeys[rnd]].name]({
+			x: this.pos.x, y: this.pos.y,
+			w: 40,  h: 40,
+			vx: Math.cos(Math.randomInt(0, 360))*3,
+			vy: Math.sin(Math.randomInt(0, 360))*3, 
+			image: Game.assets[allItems[itemKeys[rnd]].image]
+		});
+		
+		Game.gameObjects.push(item);	
 		
 		// TODO: move into game
 		var selfId = this.id;

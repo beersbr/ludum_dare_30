@@ -722,6 +722,7 @@ var Game = (function(){
 	game.player = undefined;
 
 	game.levels = [
+	"map-1-5.json",
 	"map-0-0.json",
 	"map-1-1.json",
 	"map-1-2.json",
