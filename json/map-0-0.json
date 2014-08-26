@@ -685,24 +685,7 @@
                 "damage": 0,
                 "door": false,
                 "image": "tile-grass",
-                "state": "passable",
-                "items": [
-                    {
-                        "name": "ItemShootDamage",
-                        "image": "item-attack-power",
-                        "probability": "1"
-                    },
-                    {
-                        "name": "ItemShootSpeed",
-                        "image": "item-attack-speed",
-                        "probability": "1"
-                    },
-                    {
-                        "name": "ItemMoveSpeed",
-                        "image": "item-speed-up",
-                        "probability": "1"
-                    }
-                ]
+                "state": "passable"
             },
             "col-10": {
                 "door": 0,
@@ -825,7 +808,24 @@
                 "door": 0,
                 "image": "tile-grass",
                 "state": "passable",
-                "damage": 0
+                "damage": 0,
+                "items": [
+                    {
+                        "name": "ItemShootDamage",
+                        "image": "item-attack-power",
+                        "probability": "1"
+                    },
+                    {
+                        "name": "ItemShootSpeed",
+                        "image": "item-attack-speed",
+                        "probability": "1"
+                    },
+                    {
+                        "name": "ItemMoveSpeed",
+                        "image": "item-speed-up",
+                        "probability": "1"
+                    }
+                ]
             },
             "col-10": {
                 "door": 0,
