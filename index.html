@@ -21,11 +21,27 @@
 <body>
 	<div class="header">Connected Worlds | Simple Realms</div>
 
+	<div class="btns">
+		<button data-width="1200" data-height="900" id="res-1200-900">1200 x 900</button>
+		<button data-width="1024" data-height="768" id="res-1024-768">1024 x 768</button>
+		<button data-width="800"  data-height="600" id="res-800-600">800 x 600</button>
+		<button data-width="640"  data-height="480" id="res-640-480">640 x 480</button>
+	</div>
+
 	<canvas id="game" width=800 height=600></canvas>
 </body>
 
 <script type="text/javascript">
-Game.init();
+
+window.onload = function(){
+
+	$(".btns > button").on("click", function(){
+		$("#game").css("width", $(this).data("width"))
+		$("#game").css("height", $(this).data("height"))
+	});
+
+	Game.init();
+}
 </script>
 
 </html>

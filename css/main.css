@@ -18,6 +18,21 @@ body {
 	color: white;
 }
 
+.btns {
+	position: absolute;
+	opacity: 0.3;
+	background: #244;
+	padding: 10px;
+}
+
+.btns:hover{
+	opacity: 1.0;
+}
+
+.btns > button{
+	display: block;
+}
+
 canvas#game {
 	
 	/*width: 800px;*/
