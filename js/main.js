@@ -49,13 +49,13 @@ function Player(args){
 
 		var speed = (this.moveSpeed+this.speedMod) * elapsedTime;
 
-		if(KEYBOARD.isKeyDown('a')){
+		if(KEYBOARD.isKeyDown('a') || KEYBOARD.isKeyDown('q')){
 			this.vel.x -= speed;
 		}
 		if(KEYBOARD.isKeyDown('d')){
 			this.vel.x += speed;
 		}
-		if(KEYBOARD.isKeyDown('w')){
+		if(KEYBOARD.isKeyDown('w') || KEYBOARD.isKeyDown('z')){
 			this.vel.y -= speed;
 		}
 		if(KEYBOARD.isKeyDown('s')){
