@@ -1,0 +1,33 @@
+{
+	"name":"",										/* Level Name */
+	"set":1												/* Set id (World) */
+	"setIndex":0									/* Order in set */
+	"playerStartingPosition":{		/* Player starting position coordinates */
+		"x":0,
+		"y":0
+	}
+	"text":[											/* Array of text objects */
+		{
+			"text":"",								/* Text to display */
+			"x":0,										/* Coordinates to display at */
+			"y":0
+		}
+	],
+	"tiles":["A","B","A","A"...],	/* Array of tiles, conventioned by position */
+	
+	"items":[											/* Array of items */
+		{
+			"name":"heart",						/* Item name - cooresponds to items.json */
+			"x":0,										/* Item coordinates */
+			"y":0
+		}
+	],
+	"enemies":[										/* Array of enemies */
+		{
+			"name":"heart",						/* Enemy name - cooresponds to enemies.json */
+			"x":0,										/* Enemy coordinates */
+			"y":0
+		}
+	]
+}
+			

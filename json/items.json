@@ -1,18 +1,16 @@
 {
-	"ItemHeart":{
-		"name":"ItemHeart",
-		"image":"item-heart"
+	"heart":{
+		"name":"heart",
+		"image":"item-hear",
+		"mods":{
+			"hp":1
+		}
 	},
-	"ItemShootDamage":{
-		"name":"ItemShootDamage",
-		"image":"item-attack-power"
-	},
-	"ItemShootSpeed":{
-		"name":"ItemShootSpeed",
-		"image":"item-attack-speed"
-	},
-	"ItemMoveSpeed":{
-		"name":"ItemMoveSpeed",
-		"image":"item-speed-up"
+	"attack-up":{
+		"name":"attack-up",
+		"image":"item-attack-up",
+		"mods":{
+			"projectileDamage":1
+		}					
 	}
 }

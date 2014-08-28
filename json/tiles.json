@@ -1,94 +1,15 @@
-[	
-  {
-  	"name":"grass",
-  	"image":"tile-grass"
-  },
-  {
-  	"name":"sand",
-  	"image":"tile-sand"
-  },
-  {
-  	"name":"stump on grass",
-  	"image":"tile-stump-grass"
-  },
-  {
-  	"name":"stump on dirt",
-  	"image":"tile-stump-dirt"
-  },
-  {
-  	"name":"tree",
-  	"image":"tile-tree"
-  },
-  {
-  	"name":"half sand grass",
-  	"image":"tile-sand-grass-1"
-  },
-  {
-  	"name":"half sand grass",
-  	"image":"tile-sand-grass-2"
-  },
-  {
-  	"name":"half grass sand",
-  	"image":"tile-grass-sand-1"
-  },
-  {
-  	"name":"half grass sand",
-  	"image":"tile-grass-sand-2"
-  },
-  {
-  	"name":"sand top left on grass",
-  	"image":"tile-sggg"
-  },
-  {
-  	"name":"sand top right on grass",
-  	"image":"tile-gsgg"
-  },
-  {
-  	"name":"sand bottom right on grass",
-  	"image":"tile-ggsg"
-  },
-  {
-  	"name":"sand bottom left on grass",
-  	"image":"tile-gggs"
-  },
-  {
-  	"name":"bush",
-  	"image":"tile-brush"
-  },
-  {
-  	"name":"cactus",
-  	"image":"tile-cactus"
-  },
-  {
-  	"name":"fire",
-  	"image":"tile-fire"
-  },
-  {
-    "name":"red rock",
-    "image":"tile-red-rock"
-  },
-  {
-    "name":"wood",
-    "image":"tile-wood"
-  },
-  {
-    "name":"ice rock",
-    "image":"tile-ice-rock"
-  },
-  {
-    "name":"ice",
-    "image":"tile-ice-1"
-  },
-  {
-    "name":"slick ice",
-    "image":"tile-ice-2"
-  },
-  {
-    "name":"door basic",
-    "image":"door-basic"
-  },
-  {
-    "name":"black",
-    "image":"tile-black"
-  }
-]
+{
+	"grass":{
+		"name":"grass",
+		"image":"tile-grass",
+		"passable":true
+	},
+	"lava":{
+		"name":"lava",
+		"image":"tile-lava",
+		"passable":true,
+		"mods":{
+			"hp":-1
+		}					
+	}
+}
