@@ -27,7 +27,6 @@ function GameEntity(args){
 
 
 
-
 IDS = 0;
 function GameObject(args) {
 	if(!args) args = {};

@@ -20,8 +20,16 @@ function Preload(kv, cb){
 	var total = 0, done = 0;
 	var assets = {};
 
-	function onload(){
+	function onLoad(){
 		done += 1;
+		console.log("loaded: ", done, "of", total);
+		if(total == done)
+			cb(assets);
+	}
+
+	function onError(){
+		done += 1;
+		console.error("Could not load image: ", this);
 		if(total == done)
 			cb(assets);
 	}
@@ -30,38 +38,112 @@ function Preload(kv, cb){
 		total += 1;
 		assets[k] = new Image();
 		assets[k].src = kv[k];
-		assets.onload = onload.bind(assets[k]);
+		assets.onload = onLoad.bind(assets[k]);
 	}
 
 	return assets;
 }
 
-window.onload = function(){
+console.log("Preloading...");
+var assets = Preload({
+	"ice": "./img/tile-ice-1.png",
+	"grass": "./img/tile-grass-1.png",
+	"mask-hori": "./img/pixel-mask-hori.png",
+	"mask-vert": "./img/pixel-mask-vert.png",
+	"mask-left-bottom": "./img/pixel-mask-left-bottom.png",
+	"mask-left-top": "./img/pixel-mask-left-top.png",
+	"mask-right-bottom": "./img/pixel-mask-right-bottom.png",
+	"mask-right-top": "./img/pixel-mask-right-top.png"
+},
+function(assets){
+	console.log("Running: ", assets);
 
-	var assets = Preload({
-		ice: "./img/tile-ice-1.png",
-		grass: "./img/tile-grass-1.png"
-	},
-	function(assets){
-		run();
-	});
-
-	var canvas = document.getElementById("canvas");
-	var context = canvas.getContext('2d');
-
-	
-
-
-	var run = function(){
-
-		requestAnimFrame(run);
+	var t = document.getElementById('tiles');
+	for(var a in assets){
+		console.log(assets[a]);
+		t.appendChild(assets[a]);
 	}
+	// run();
+});
+
+var canvas = undefined;
+var context = undefined; 
+
+function maskImage(top, bottom, mask){
+
+	var maskCanvas = document.createElement("canvas");
+	maskCanvas.width = 40;
+	maskCanvas.height = 40;
+	var maskContext = maskCanvas.getContext('2d');
+	maskContext.drawImage(mask, 0, 0, 40, 40);
+	var maskImage = maskContext.getImageData(0, 0, 40, 40);
+
+
+	var topCanvas = document.createElement("canvas");
+	topCanvas.width = 40;
+	topCanvas.height = 40;
+	var topContext = topCanvas.getContext('2d');
+	topContext.drawImage(top, 0, 0, 40, 40);
+	var topImage = topContext.getImageData(0, 0, 40, 40);
+
+	for(var i = 0; i < topImage.data.length; i += 4){
+		var tr = topImage.data[i];
+		var tg = topImage.data[i+1];
+		var tb = topImage.data[i+2];
+		var ta = topImage.data[i+3];
+
+		var mr = maskImage.data[i];
+		var mg = maskImage.data[i+1];
+		var mb = maskImage.data[i+2];
+		var ma = maskImage.data[i+3];
+
+		
+		if(ma > 0){
+			// console.log(i, mr, mg, mb, ma);
+			maskImage.data[i] = tr;
+			maskImage.data[i+1] = tg;
+			maskImage.data[i+2] = tb;
+			maskImage.data[i+3] = 255;
+		}
+	}
+
+	maskContext.putImageData(maskImage, 0, 0);
+
+	var mergedCanvas = document.createElement("canvas");
+	mergedCanvas.width = 40;
+	mergedCanvas.height = 40;
+	var mergedContext = mergedCanvas.getContext('2d');
+
+	mergedContext.drawImage(bottom, 0, 0, 40, 40);
+	mergedContext.drawImage(maskCanvas, 0, 0, 40, 40);
+
+	context.drawImage(mergedCanvas,0, 0, 40, 40, 0, 0, 400, 400);
+
+	var s = document.getElementById("save");
+	s.href = mergedCanvas.toDataURL();
+
+	return mergedCanvas;
+}
+
+var run = function(){
+	requestAnimFrame(run);
+}
+
+window.onload = function(){
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext('2d');
 };
+
 </script>
 </head>
 <body>
+	<div>
+		<ul id='tiles'></ul>
+	</div>
 
 <canvas id="canvas" width="400px" height="400px" ></canvas>
+
+<a id='save' href=""><button>save</button></a>
 
 </body>
 </html>
