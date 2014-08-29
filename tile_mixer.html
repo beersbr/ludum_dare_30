@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tile Mixer</title>
+
+<script type="text/javascript">
+requestAnimFrame = (function() {
+  return window.requestAnimationFrame ||
+     window.webkitRequestAnimationFrame ||
+     window.mozRequestAnimationFrame ||
+     window.oRequestAnimationFrame ||
+     window.msRequestAnimationFrame ||
+     function(/* function FrameRequestCallback */ callback, /* DOMElement Element */ element) {
+       window.setTimeout(callback, 1000/60);
+     };
+})();
+
+function Preload(kv, cb){
+
+	var total = 0, done = 0;
+	var assets = {};
+
+	function onload(){
+		done += 1;
+		if(total == done)
+			cb(assets);
+	}
+
+	for(var k in kv){
+		total += 1;
+		assets[k] = new Image();
+		assets[k].src = kv[k];
+		assets.onload = onload.bind(assets[k]);
+	}
+
+	return assets;
+}
+
+window.onload = function(){
+
+	var assets = Preload({
+		ice: "./img/tile-ice-1.png",
+		grass: "./img/tile-grass-1.png"
+	},
+	function(assets){
+		run();
+	});
+
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext('2d');
+
+	
+
+
+	var run = function(){
+
+		requestAnimFrame(run);
+	}
+};
+</script>
+</head>
+<body>
+
+<canvas id="canvas" width="400px" height="400px" ></canvas>
+
+</body>
+</html>

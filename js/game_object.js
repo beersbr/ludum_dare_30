@@ -1,4 +1,33 @@
 
+function GameObject(args){
+	this.class 		= "gameobject";
+	this.image 		= args.image 	|| new Image;
+	this.pos 		= args.pos 		|| new Vector;
+	this.size 		= args.size 	|| new Vector;
+
+	/**
+	 * getRect
+	 * 
+	 * This method is used for collision. It can be
+	 * overridden for bigger/smaller collision AABB's.
+	 */
+	this.getRect = function(){
+		return (new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h));
+	};
+}
+
+function GameEntity(args){
+	GameObject.call(this, args);
+
+	this.class 		= "gameentity";
+	this.vel 		= args.vel 		|| new Vector;
+	this.drag 		= args.drag 	|| 0.85;
+}
+
+
+
+
+
 IDS = 0;
 function GameObject(args) {
 	if(!args) args = {};
