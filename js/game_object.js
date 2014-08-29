@@ -22,9 +22,14 @@ function GameEntity(args){
 	this.class 		= "gameentity";
 	this.vel 		= args.vel 		|| new Vector;
 	this.drag 		= args.drag 	|| 0.85;
+
+	this.projectile 	= undefined;
+	
+	this.totalHealth 	= args.totalHealth || 0;
+	this.health 		= args.health || args.totalHealth || 0;
+
+
 }
-
-
 
 
 IDS = 0;

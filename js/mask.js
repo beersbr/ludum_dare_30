@@ -1,9 +1,3 @@
-<!doctype html>
-<html>
-<head>
-	<title>Tile Mixer</title>
-
-<script type="text/javascript">
 requestAnimFrame = (function() {
   return window.requestAnimationFrame ||
      window.webkitRequestAnimationFrame ||
@@ -16,13 +10,11 @@ requestAnimFrame = (function() {
 })();
 
 function Preload(kv, cb){
-
 	var total = 0, done = 0;
 	var assets = {};
 
 	function onLoad(){
 		done += 1;
-		console.log("loaded: ", done, "of", total);
 		if(total == done)
 			cb(assets);
 	}
@@ -37,30 +29,30 @@ function Preload(kv, cb){
 	for(var k in kv){
 		total += 1;
 		assets[k] = new Image();
+		assets[k].onload = onLoad.bind(assets[k]);
+		assets[k].onerror = onError.bind(assets[k]);
 		assets[k].src = kv[k];
-		assets.onload = onLoad.bind(assets[k]);
 	}
 
 	return assets;
 }
 
-console.log("Preloading...");
 var assets = Preload({
 	"ice": "./img/tile-ice-1.png",
 	"grass": "./img/tile-grass-1.png",
 	"mask-hori": "./img/pixel-mask-hori.png",
 	"mask-vert": "./img/pixel-mask-vert.png",
-	"mask-left-bottom": "./img/pixel-mask-left-bottom.png",
-	"mask-left-top": "./img/pixel-mask-left-top.png",
 	"mask-right-bottom": "./img/pixel-mask-right-bottom.png",
-	"mask-right-top": "./img/pixel-mask-right-top.png"
+	"mask-left-bottom": "./img/pixel-mask-left-bottom.png",
+	"mask-right-top": "./img/pixel-mask-right-top.png",
+	"mask-left-top": "./img/pixel-mask-left-top.png",
 },
 function(assets){
-	console.log("Running: ", assets);
+	// console.log("Running: ", assets);
 
 	var t = document.getElementById('tiles');
 	for(var a in assets){
-		console.log(assets[a]);
+		assets[a].draggable = true;
 		t.appendChild(assets[a]);
 	}
 	// run();
@@ -132,18 +124,18 @@ var run = function(){
 window.onload = function(){
 	canvas = document.getElementById("canvas");
 	context = canvas.getContext('2d');
+
+	var top = document.getElementById("top");
+	var bottom = document.getElementById("bottom");
+	var mask = document.getElementById("mask");
+
+	top.addEventListener("dragover", function(e){
+		e.stopPropagation();
+		e.preventDefault();
+	}, false);
+
+	top.addEventListener("drop", function(e){
+		e.preventDefault();
+		e.stopPropagation();
+	}, false);
 };
-
-</script>
-</head>
-<body>
-	<div>
-		<ul id='tiles'></ul>
-	</div>
-
-<canvas id="canvas" width="400px" height="400px" ></canvas>
-
-<a id='save' href=""><button>save</button></a>
-
-</body>
-</html>
