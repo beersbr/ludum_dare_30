@@ -6,10 +6,11 @@ function GetId(){
 
 function GameObject(args){
 	this.class 		= "gameobject";
-	this.image 		= args.image 	|| new Image;
 	this.pos 		= args.pos 		|| new Vector;
 	this.size 		= args.size 	|| new Vector;
+
 	this.id 		= GetId();
+	this.type 		= args.type		|| console.log
 
 	/**
 	 * getRenderRect
@@ -31,10 +32,25 @@ function GameObject(args){
 	};
 
 
+	this.getComponent = function(familyId){
+		return (components[familyId]);
+	}
+
+	this.setComponent = function(newComponent){
+		componenets[newComponent.familyId] = newComponent;
+	}
+
 	var components = {};
+	this.clearComponents = function(){
+		components = {};
+	}
+
+
 }
 
-
+/***************************************
+ *  Base Component
+ ***************************************/
 function Component(args){
 	this.type 		= args.type 		|| console.error("No Name");
 	this.owner 		= args.owner 		|| console.error("No Owner");
@@ -43,6 +59,62 @@ function Component(args){
 
 	this.update = function(timestep){};
 }
+
+/***************************************
+ *  Render Base Component
+ ***************************************/
+function ComponentDrawable(args){
+	if(!args) args = {};
+
+	args.type = "Drawable";
+	args.family = "Drawable";
+
+	Component.call(this, args);
+
+	this.size = new Vector;
+	this.render = function(context){};
+}
+
+/***************************************
+ *  Collider Base Component
+ ***************************************/
+function ComponentCollidable(args){
+	if(!args) args = {};
+
+	args.type = "Collidable";
+	args.family = "Collidable";
+
+	Component.call(this, args);
+
+	// the array of collisiion rectangles
+	this.rects = [];
+
+	this.onCollide = function(context){};
+}
+
+
+/***************************************
+ *  Scene Manger
+ ***************************************/
+
+function SceneManager(args){
+	if(!args) args = {};
+
+	this.canvas 	= args.canvas 	|| undefined;
+	this.context 	= args.context 	|| undefined;
+
+	// nine sections on the screen
+
+	this.sections = [];
+	this.objects = [];
+}
+
+
+
+
+
+
+
 
 
 IDS = 0;
