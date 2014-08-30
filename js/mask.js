@@ -129,6 +129,8 @@ window.onload = function(){
 	var bottom = document.getElementById("bottom");
 	var mask = document.getElementById("mask");
 
+	
+
 	top.addEventListener("dragover", function(e){
 		e.stopPropagation();
 		e.preventDefault();

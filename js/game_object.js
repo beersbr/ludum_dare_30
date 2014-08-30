@@ -1,9 +1,24 @@
 
+GetId.ids = 1;
+function GetId(){
+	return GetId.ids++;
+}
+
 function GameObject(args){
 	this.class 		= "gameobject";
 	this.image 		= args.image 	|| new Image;
 	this.pos 		= args.pos 		|| new Vector;
 	this.size 		= args.size 	|| new Vector;
+	this.id 		= GetId();
+
+	/**
+	 * getRenderRect
+	 *
+	 * This method is used for the size of rendering. Should you need a smaller render area.
+	*/
+	this.getRenderRect = function(){
+		return (new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h));
+	};
 
 	/**
 	 * getRect
@@ -11,24 +26,22 @@ function GameObject(args){
 	 * This method is used for collision. It can be
 	 * overridden for bigger/smaller collision AABB's.
 	 */
-	this.getRect = function(){
-		return (new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h));
+	this.getCollisionRects = function(){
+		return [(new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h))];
 	};
+
+
+	var components = {};
 }
 
-function GameEntity(args){
-	GameObject.call(this, args);
 
-	this.class 		= "gameentity";
-	this.vel 		= args.vel 		|| new Vector;
-	this.drag 		= args.drag 	|| 0.85;
+function Component(args){
+	this.type 		= args.type 		|| console.error("No Name");
+	this.owner 		= args.owner 		|| console.error("No Owner");
+	this.familyId	= args.family 		|| console.error("No Family");
+	this.CoponentId = args.component 	|| console.error("No Component");
 
-	this.projectile 	= undefined;
-	
-	this.totalHealth 	= args.totalHealth || 0;
-	this.health 		= args.health || args.totalHealth || 0;
-
-
+	this.update = function(timestep){};
 }
 
 
