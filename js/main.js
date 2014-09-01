@@ -17,7 +17,10 @@ var GAME = (function(){
 
 		game.player = new GameObject({
 			pos: new Vector(300, 300),
-			size: new Vector(40, 40)
+			size: new Vector(40, 40),
+			update: function(timestep){
+				
+			}
 		});
 
 		game.player.setComponent(new ComponentSimpleRectDrawable);

@@ -34,6 +34,10 @@ function GameObject(args){
 	};
 
 
+	this.update = function(timestep){
+
+	}
+
 	this.getComponent = function(familyId){
 		return (components[familyId]);
 	}
@@ -131,8 +135,24 @@ function ComponentKeyboardControllable(args){
 	ComponentControllable.call(this, args);
 
 	var keyboard = KEYBOARD;
+	this.acceleration = args.acceleration || new Vector();
 
-	this.update = function(){
+	this.update = function(timestep){
+		var scaledTimestep = timestep/1000;
+		var scaledAcceleration = args.acceleration.scale(scaledTimestep);
+
+		if(keyboard.keyIsDown('a')){
+			this.owner.vel += scaledAcceleration.x;
+		}
+		if(keyboard.keyIsDown('d')){
+			this.owner.vel -= scaledAcceleration.x;	
+		}
+		if(keyboard.keyIsDown('w')){
+			this.owner.vel -= scaledAcceleration.y;	
+		}
+		if(keyboard.keyIsDown('s')){
+			this.owner.vel += scaledAcceleration.y;	
+		}
 	}
 }
 
