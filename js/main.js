@@ -18,12 +18,10 @@ var GAME = (function(){
 		game.player = new GameObject({
 			pos: new Vector(300, 300),
 			size: new Vector(40, 40),
-			update: function(timestep){
-				
-			}
 		});
 
 		game.player.setComponent(new ComponentSimpleRectDrawable);
+		game.player.setComponent(new ComponentKeyboardControllable);
 		game.scene.addGameObject(game.player);
 	}
 
@@ -33,6 +31,7 @@ var GAME = (function(){
 
 		var timeStep = currentTime - lastTime;
 
+		game.scene.update(timeStep);
 		game.scene.render();
 
 		requestAnimFrame(GameLoop);

@@ -9,6 +9,8 @@ function GameObject(args){
 	this.pos 		= args.pos 		|| new Vector;
 	this.size 		= args.size 	|| new Vector;
 
+	this.vel 		= args.vel 		|| new Vector;
+
 	this.id 		= GetId();
 	this.type 		= args.type		|| console.log
 
@@ -135,24 +137,28 @@ function ComponentKeyboardControllable(args){
 	ComponentControllable.call(this, args);
 
 	var keyboard = KEYBOARD;
-	this.acceleration = args.acceleration || new Vector();
+	this.acceleration = args.acceleration || new Vector(50, 50);
 
 	this.update = function(timestep){
 		var scaledTimestep = timestep/1000;
-		var scaledAcceleration = args.acceleration.scale(scaledTimestep);
+		var scaledAcceleration = this.acceleration.scale(scaledTimestep);
 
-		if(keyboard.keyIsDown('a')){
-			this.owner.vel += scaledAcceleration.x;
+		if(keyboard.isKeyDown('a')){
+			this.owner.vel.x -= scaledAcceleration.x;
 		}
-		if(keyboard.keyIsDown('d')){
-			this.owner.vel -= scaledAcceleration.x;	
+		if(keyboard.isKeyDown('d')){
+			this.owner.vel.x += scaledAcceleration.x;	
 		}
-		if(keyboard.keyIsDown('w')){
-			this.owner.vel -= scaledAcceleration.y;	
+		if(keyboard.isKeyDown('w')){
+			this.owner.vel.y -= scaledAcceleration.y;	
 		}
-		if(keyboard.keyIsDown('s')){
-			this.owner.vel += scaledAcceleration.y;	
+		if(keyboard.isKeyDown('s')){
+			this.owner.vel.y += scaledAcceleration.y;	
 		}
+
+		var drag = 0.85;
+		this.owner.vel = this.owner.vel.scale(drag);
+		this.owner.pos = this.owner.pos.add(this.owner.vel);
 	}
 }
 
@@ -195,10 +201,13 @@ function SceneManager(args){
 	this.gameObjects = [];
 
 
-	this.update = function(){
+	this.update = function(timestep){
+		for(var i = 0; i < this.gameObjects.length; i++){
+			var c = this.gameObjects[i].getComponent("Controllable");
 
+			if(c) c.update(timestep);
+		}
 	}
-
 
 	this.render = function(){
 		this.context.save();
@@ -208,7 +217,8 @@ function SceneManager(args){
 
 		for(var i = 0; i < this.gameObjects.length; i++){
 			var c = this.gameObjects[i].getComponent("Drawable");
-			c.render(this.context);
+
+			if(c) c.render(this.context);
 		}
 	}
 
