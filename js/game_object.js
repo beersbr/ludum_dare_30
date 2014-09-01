@@ -12,6 +12,8 @@ function GameObject(args){
 	this.id 		= GetId();
 	this.type 		= args.type		|| console.log
 
+	var components = {};
+
 	/**
 	 * getRenderRect
 	 *
@@ -37,10 +39,11 @@ function GameObject(args){
 	}
 
 	this.setComponent = function(newComponent){
-		componenets[newComponent.familyId] = newComponent;
+		newComponent.owner = this;
+		components[newComponent.familyId] = newComponent;
 	}
 
-	var components = {};
+	
 	this.clearComponents = function(){
 		components = {};
 	}
@@ -52,10 +55,9 @@ function GameObject(args){
  *  Base Component
  ***************************************/
 function Component(args){
-	this.type 		= args.type 		|| console.error("No Name");
-	this.owner 		= args.owner 		|| console.error("No Owner");
-	this.familyId	= args.family 		|| console.error("No Family");
-	this.CoponentId = args.component 	|| console.error("No Component");
+	this.type 		= args.type 		|| console.warn("No Name");
+	this.owner 		= args.owner 		|| console.warn("No Owner");
+	this.familyId	= args.family 		|| console.warn("No Family");
 
 	this.update = function(timestep){};
 }
@@ -75,6 +77,20 @@ function ComponentDrawable(args){
 	this.render = function(context){};
 }
 
+function ComponentSimpleRectDrawable(args){
+	if(!args) args = {};
+	args.type = "SimpleRectDrawable";
+
+	ComponentDrawable.call(this, args);
+
+	this.render = function(context){
+		context.save();
+		context.fillStyle = "rgb(255, 0, 255)";
+		context.fillRect(this.owner.pos.x, this.owner.pos.y, this.owner.size.w, this.owner.size.h);
+		context.restore();
+	}
+}
+
 /***************************************
  *  Collider Base Component
  ***************************************/
@@ -92,6 +108,34 @@ function ComponentCollidable(args){
 	this.onCollide = function(context){};
 }
 
+/***************************************
+ *  Controllable Base Component
+ ***************************************/
+function ComponentControllable(args){
+	if(!args) args = {};
+
+	args.type = "Controllable";
+	args.family = "Controllable";
+
+	Component.call(this, args);
+
+	this.update = function(){};
+}
+
+
+function ComponentKeyboardControllable(args){
+	if(!args) args = {};
+
+	args.type = "KeyboardControllable";
+
+	ComponentControllable.call(this, args);
+
+	var keyboard = KEYBOARD;
+
+	this.update = function(){
+	}
+}
+
 
 /***************************************
  *  Scene Manger
@@ -104,19 +148,77 @@ function SceneManager(args){
 	this.context 	= args.context 	|| undefined;
 
 	// nine sections on the screen
+	this.numSections = 9;
+	this.sectionRows = 3;
+	this.sectionCols = 3;
+
+	this.sceneWidth = 800;
+	this.sceneHeight = 600;
 
 	this.sections = [];
-	this.objects = [];
+
+	this.sectionWidth = this.sceneWidth/this.sectionCols;
+	this.sectionHeight = this.sceneHeight/this.sectionRows;
+
+	this.sceneGetSection = function(go){
+		var pos = go.pos;
+		var cellX = this.sectionWidth % pos.x;
+		var cellY = this.sectionHeight % pos.y;
+
+		var sceneSection = cellX+(cellY*cellX);
+		this.sections[sceneSection] = this.sections[sceneSection] || [];
+		this.sections[sceneSection].push(go);
+	};
+
+	this.scene = undefined;
+
+	this.gameObjects = [];
+
+
+	this.update = function(){
+
+	}
+
+
+	this.render = function(){
+		this.context.save();
+		this.context.fillStyle = "rgb(0, 0, 0)";
+		this.context.fillRect(0, 0, 800, 600);
+		this.context.restore();
+
+		for(var i = 0; i < this.gameObjects.length; i++){
+			var c = this.gameObjects[i].getComponent("Drawable");
+			c.render(this.context);
+		}
+	}
+
+	this.addGameObject = function(go){
+		this.gameObjects.push(go);
+	}
+
+	this.removeGameObject = function(id){
+		this.gameObject.findIndex(function(idx){ return idx.id == id; });
+	}
 }
 
 
+function Scene(){
 
+	this.run = function(){
 
+	};
 
+	this.update = function(){
+			
+	};
 
+	this.draw = function(){
 
+	}
 
+}
 
+/*
 IDS = 0;
 function GameObject(args) {
 	if(!args) args = {};
@@ -252,3 +354,4 @@ Object.defineProperty(GameObject.prototype, "renderable", {
 		}
 	}
 });
+*/
