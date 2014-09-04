@@ -16,25 +16,6 @@ function GameObject(args){
 
 	var components = {};
 
-	/**
-	 * getRenderRect
-	 *
-	 * This method is used for the size of rendering. Should you need a smaller render area.
-	*/
-	this.getRenderRect = function(){
-		return (new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h));
-	};
-
-	/**
-	 * getRect
-	 * 
-	 * This method is used for collision. It can be
-	 * overridden for bigger/smaller collision AABB's.
-	 */
-	this.getCollisionRects = function(){
-		return [(new Rect(this.pos.x, this.pos.y, this.size.w, this.size.h))];
-	};
-
 
 	this.update = function(timestep){
 
@@ -95,6 +76,15 @@ function ComponentSimpleRectDrawable(args){
 		context.fillRect(this.owner.pos.x, this.owner.pos.y, this.owner.size.w, this.owner.size.h);
 		context.restore();
 	}
+}
+
+function ComponentImageDrawable(args){
+	if(!args) args = {};
+	args.type = "ImageDrawable";
+
+	ComponentDrawable.call(this, args);
+
+	this.image = args.image || console.warn("No Image set for");
 }
 
 /***************************************
@@ -162,6 +152,10 @@ function ComponentKeyboardControllable(args){
 	}
 }
 
+/***************************************
+ *  Tile Base Component
+ ***************************************/
+ 
 
 /***************************************
  *  Scene Manger
@@ -245,7 +239,6 @@ function Scene(){
 	this.draw = function(){
 
 	}
-
 }
 
 /*
