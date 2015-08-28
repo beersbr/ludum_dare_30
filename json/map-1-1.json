@@ -1,0 +1,1737 @@
+{
+    "name": "World 1 Level 1",
+    "description": "Game and controls introduction.",
+    "dimensions": [
+        20,
+        14
+    ],
+    "playerStart": [
+        80,
+        480
+    ],
+    "tiles": {
+        "row-1": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-2": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-ggsg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-gggs",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-3": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-4": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-ggsg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass-sand-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-gggs",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-5": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-stump-dirt",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-6": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-gsgg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand-grass-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sggg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-ggsg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass-sand-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass-sand-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-7": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-grass",
+                "state": "passable",
+                "enemies": []
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-ggsg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass-sand-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-gggs",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "damage": 0,
+                "door": true,
+                "image": "tile-tree",
+                "state": "solid"
+            }
+        },
+        "row-8": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-stump-dirt",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Crow",
+                        "image": "enemy-crow",
+                        "probability": "1"
+                    }
+                ]
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-tree",
+                "state": "solid"
+            }
+        },
+        "row-9": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-gsgg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-sand-grass-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sggg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-gsgg",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand-grass-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand-grass-2",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-10": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-11": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-12": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0,
+                "items": [
+                    {
+                        "name": "ItemHeart",
+                        "image": "item-heart",
+                        "probability": 1
+                    }
+                ]
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-13": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-grass-sand-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand-grass-1",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-grass",
+                "state": "passable",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        },
+        "row-14": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-stump-grass",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-stump-grass",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-tree",
+                "state": "solid",
+                "damage": 0
+            }
+        }
+    }
+}

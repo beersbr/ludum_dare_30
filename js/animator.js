@@ -23,8 +23,10 @@ function Animation(scope, totalTime, construct){
 			this.done = true;
 		}
 
+
 		if(this.done == true)
-			_done.bind(this.scope)(this.id);			
+			_done.bind(this.scope)(this.id);
+			
 	}
 
 	this.render = function(){
@@ -37,6 +39,7 @@ function Animation(scope, totalTime, construct){
 }
 
 function TurnRed(scope, totalTime){
+
 	Animation.call(this, scope, totalTime, function(s){
 		s.image = this.image;
 		s.canvas = $("<canvas width='"+s.image.width+"px' height'"+s.image.height+"px'>")[0];
@@ -60,6 +63,7 @@ function TurnRed(scope, totalTime){
 		var canvas = $("<canvas width='"+s.image.width+"px' height='"+s.image.height+"px'>")[0];
 		var context = canvas.getContext('2d');
 		context.putImageData(s.pixelData, 0, 0);
+
 		this.context.drawImage(canvas, 0, 0, this.image.width, this.image.height, this.pos.x, this.pos.y, this.size.w, this.size.h);
 	}
 }
@@ -85,4 +89,5 @@ function Shrink(scope, totalTime){
 	this.render = function(t, timeLeft, s){
 
 	}
+
 }

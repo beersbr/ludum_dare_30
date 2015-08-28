@@ -1,0 +1,1729 @@
+{
+    "name": "World 2 Level 4",
+    "description": "Ice World",
+    "dimensions": [
+        20,
+        14
+    ],
+    "playerStart": [
+        80,
+        480
+    ],
+    "tiles": {
+        "row-1": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-2": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-3": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-4": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-5": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-6": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-7": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": true,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "PolarBearBoss",
+                        "image": "boss-polar-bear",
+                        "probability": "1"
+                    }
+                ]
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-8": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-9": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-10": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-11": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-12": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-13": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "slick"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-2",
+                "state": "passable"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        },
+        "row-14": {
+            "col-1": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-3": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-4": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-5": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-6": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-8": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-9": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-10": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-14": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-19": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-ice-rock",
+                "state": "solid"
+            }
+        }
+    }
+}

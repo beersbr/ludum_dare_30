@@ -29,8 +29,3 @@
 ### Citations
 Font press-start-2p: http://www.fontspace.com/codeman38/press-start-2p
 
-
-
-## Version 1.2
-
-* Behaviors

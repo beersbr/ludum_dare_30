@@ -1,0 +1,1785 @@
+{
+    "name": "World 3 Level 4",
+    "description": "Lots of snakes",
+    "dimensions": [
+        20,
+        14
+    ],
+    "playerStart": [
+        80,
+        280
+    ],
+    "tiles": {
+        "row-1": {
+            "col-1": {
+                "damage": 1,
+                "door": false,
+                "image": "tile-cactus",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-3": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-5": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-8": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-10": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-11": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-14": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-16": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-20": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-2": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            }
+        },
+        "row-3": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-13": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": ".5"
+                    }
+                ]
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-4": {
+            "col-1": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "damage": "1",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": "1"
+                    }
+                ]
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            }
+        },
+        "row-5": {
+            "col-1": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": ".33"
+                    }
+                ]
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 1,
+                "door": false,
+                "image": "tile-cactus",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            }
+        },
+        "row-6": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": ".33"
+                    }
+                ]
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": 1,
+                "door": false,
+                "image": "tile-cactus",
+                "state": "solid"
+            }
+        },
+        "row-7": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-14": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": ".75"
+                    }
+                ]
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-8": {
+            "col-1": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": "0",
+                "door": true,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-9": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": ".67"
+                    }
+                ]
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-10": {
+            "col-1": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": "1"
+                    }
+                ]
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 1,
+                "door": false,
+                "image": "tile-cactus",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": 1,
+                "door": false,
+                "image": "tile-cactus",
+                "state": "solid"
+            }
+        },
+        "row-11": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-13": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": ".5"
+                    }
+                ]
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "damage": "1",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-12": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "damage": 0,
+                "door": false,
+                "image": "tile-sand",
+                "state": "passable",
+                "enemies": [
+                    {
+                        "name": "Snake",
+                        "image": "enemy-snake",
+                        "probability": "1"
+                    }
+                ]
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            }
+        },
+        "row-13": {
+            "col-1": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-2": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-5": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-6": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-7": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-10": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-11": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-14": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-17": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-19": {
+                "door": 0,
+                "image": "tile-sand",
+                "state": "passable",
+                "damage": "0"
+            },
+            "col-20": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            }
+        },
+        "row-14": {
+            "col-1": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-2": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-3": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-4": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-5": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-6": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-7": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-8": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-9": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-10": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-11": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-12": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-13": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-14": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-15": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-16": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-17": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-18": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            },
+            "col-19": {
+                "damage": "0",
+                "door": false,
+                "image": "tile-brush",
+                "state": "solid"
+            },
+            "col-20": {
+                "door": 0,
+                "image": "tile-cactus",
+                "state": "solid",
+                "damage": "1"
+            }
+        }
+    }
+}

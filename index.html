@@ -6,7 +6,14 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="./js/keyboard.js"></script>
 	<script type="text/javascript" src="./js/util.js"></script>
+	<script type="text/javascript" src="./js/audio_handler.js"></script>
+	<script type="text/javascript" src="./js/animator.js"></script>
+	<script type="text/javascript" src="./js/asset_handler.js"></script>
+	<script type="text/javascript" src="./js/particle.js"></script>
 	<script type="text/javascript" src="./js/game_object.js"></script>
+	<script type="text/javascript" src="./js/projectile.js"></script>
+	<script type="text/javascript" src="./js/enemies.js"></script>
+	<script type="text/javascript" src="./js/items.js"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -29,12 +36,11 @@
 window.onload = function(){
 
 	$(".btns > button").on("click", function(){
-		$("#game").css("width", $(this).data("width"));
-		$("#game").css("height", $(this).data("height"));
+		$("#game").css("width", $(this).data("width"))
+		$("#game").css("height", $(this).data("height"))
 	});
 
-	GAME.init();
-	GAME.run();
+	Game.init();
 }
 </script>
 

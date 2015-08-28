@@ -661,7 +661,7 @@ function SnakePitBoss(args){
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
 
-	this.health = 7;
+	this.health = 10;
 	this.totalHealth = this.health;
 	this.armor = 0;
 	this.trinkets = [];
@@ -821,7 +821,7 @@ function PolarBearBoss(args){
 	this.bulletSpeed = 0; // pixels per second
 	this.bulletDamage = 0;
 
-	this.health = 30;
+	this.health = 20;
 	this.totalHealth = this.health;
 	this.armor = 0;
 	this.trinkets = [];

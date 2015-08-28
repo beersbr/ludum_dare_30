@@ -13,13 +13,13 @@ requestAnimFrame = (function() {
 Array.prototype.find = function(fn){
 	var r = -1;
 	for(var i in this){
-		if(fn.call(this, this[i])){
+		if(fn(this[i])){
 			r = i;
 			break;
 		}
 	}
 	return r;
-};
+}
 
 Object.defineProperty(Array.prototype, "find", { enumerable: false });
 
@@ -27,8 +27,8 @@ Object.defineProperty(Array.prototype, "find", { enumerable: false });
 Array.prototype.findIndex = function(fn){
 	var r = [];
 	for(var i in this){
-		if(fn.call(this, this[i]))
-			r.push(parseInt(i));
+		if(fn(this[i]))
+			r.push(i);
 	}
 	return r;
 }
