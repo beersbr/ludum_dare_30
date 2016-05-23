@@ -35,15 +35,15 @@ body {
 
 canvas#game {
 	
-	/*width: 800px;*/
-	/*height: 600px;*/
+	width: 800px;
+	height: 600px;
 
 	/*width: 1024px;
 	height: 768px;*/
 	
 
-	width: 1200px;
-	height: 900px;
+	/*width: 1200px;
+	height: 900px;*/
 	background: black;
 	position: relative;
 	left: 50%;
